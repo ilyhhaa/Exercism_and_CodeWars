@@ -19,7 +19,7 @@ namespace ForTest.Interest_is_Interesting
             {
                 return 0.5f;
             }
-            if (balance > 1000 && balance <= 500)
+            if (balance > 1000 && balance <= 5000)
             {
                 return 1.621f;
             }
