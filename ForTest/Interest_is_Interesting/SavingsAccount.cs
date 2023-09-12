@@ -36,9 +36,9 @@ namespace ForTest.Interest_is_Interesting
 
         public static decimal Interest(decimal balance)
         {
-            decimal InterestRateResult = (decimal)InterestRate(balance);
+            
 
-            return (balance*(decimal)InterestRate(balance))/100;
+            return (decimal)InterestRate(balance)*(balance/100);
         }
 
         public static decimal AnnualBalanceUpdate(decimal balance)
@@ -48,21 +48,21 @@ namespace ForTest.Interest_is_Interesting
             return balance += InterestResult;
         }
 
-        public static int YearsBeforeDesiredBalance(decimal balance = 200, decimal targetBalance = 400)
+        public static int YearsBeforeDesiredBalance(decimal balance, decimal targetBalance)
         {
-           
-
-            decimal prom = 0;
-
+            
             int years = 0;
 
-            while (balance!=targetBalance)
+
+           while (balance < targetBalance) 
             {
-                prom = balance+=AnnualBalanceUpdate(balance);
+                balance = AnnualBalanceUpdate(balance);
                 years++;
             }
+                
             return years;
-            
+
+           
         }
 
 
