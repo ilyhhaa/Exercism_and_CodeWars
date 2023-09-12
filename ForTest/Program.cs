@@ -1,13 +1,14 @@
 ﻿using System.Reflection;
 using System;
-
+using ForTest.Interest_is_Interesting;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        SavingsAccount.YearsBeforeDesiredBalance(100,200);
 
-        
+
 
 
 
@@ -15,28 +16,4 @@ internal class Program
 
     
 }
-static class SavingsAccount
-{
-    public static float InterestRate(decimal balance)
-    {
-        if (balance <= 0)
-        {
-            return 3.213f;
-        }
-        if (balance > 0 && balance <= 1000)
-        {
-            return 0.5f;
-        }
-        if (balance > 1000 && balance <= 5000)
-        {
-            return 1.621f;
-        }
-        if (balance > 5000)
-        {
-            return 2.475f;
-        }
-        return 3.213f;
 
-    }
-
-}
