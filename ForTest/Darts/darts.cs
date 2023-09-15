@@ -10,15 +10,22 @@ namespace ForTest.Darts
     {
         public static int Score(double x, double y)
         {
-            int res = 0;
+            var distanceFromCenter = Math.Sqrt(x * x + y * y);
 
-            int InCircle = (x <=5 && y >=-5) || (x >=-5 && y <=5) ? res += 10 :res+=0;
+            if (distanceFromCenter > 10.0)
+                return 0;
 
-            int MiddleCircle = (x < 10 && y > -10) || (x > -10 && y < 10) ? res += 5 : res += 0;
+            if (distanceFromCenter > 5.0)
+                return 1;
 
-            int OutCircle = (x > 10 || y < -10)||(x<-10 ||y>10)? res+=0 : res+=0 ;
+            if (distanceFromCenter > 1.0)
+                return 5;
 
-            return res;
+            return 10;
+
+
+
+           
         }
     }
 
