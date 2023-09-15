@@ -22,9 +22,6 @@ namespace ForTest.Darts
                 return 5;
 
             return 10;
-
-
-
            
         }
     }
