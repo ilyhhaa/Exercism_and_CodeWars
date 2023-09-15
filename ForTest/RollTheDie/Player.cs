@@ -8,14 +8,15 @@ namespace ForTest.RollTheDie
 {
     public class Player
     {
+        Random Random = new Random();
         public int RollDie()
         {
-            throw new NotImplementedException("Please implement the Player.RollDie() method");
+            return Random.Next(1,18);
         }
 
         public double GenerateSpellStrength()
         {
-            throw new NotImplementedException("Please implement the Player.GenerateSpellStrength() method");
+            return (double)Random.Next(0, 100);
         }
     }
 
