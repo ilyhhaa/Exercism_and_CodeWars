@@ -457,10 +457,10 @@ public class Kata8
 }
 
 
-public static class Kata
+public static class Kata9
 {
     public static string boolToWord(bool word)
     {
-        return word == true
+        return word == true ? "Yes" : "No";
     }
 }
