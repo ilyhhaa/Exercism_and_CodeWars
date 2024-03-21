@@ -518,3 +518,39 @@ public class Kata11
     public static bool CheckForFactor(int num, int factor) => num%factor == 0;
     
 }
+
+/*
+ * Given the triangle of consecutive odd numbers:
+
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+...
+Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+1 -->  1
+2 --> 3 + 5 = 8
+
+ */
+
+
+public static class Kata12
+{
+    public static long RowSumOddNumbers(long n)
+    {
+        long firstNumber = (n - 1) * n + 1;
+
+
+        long rowSum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            rowSum += firstNumber + 2 * i;
+        }
+
+        return rowSum;
+
+
+    }
+}
