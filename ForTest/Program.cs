@@ -1,7 +1,11 @@
 ﻿using ForTest.DifferenceOfSquares;
 using ForTest.Interest_is_Interesting;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 internal class Program
@@ -462,5 +466,33 @@ public static class Kata9
     public static string boolToWord(bool word)
     {
         return word == true ? "Yes" : "No";
+    }
+}
+
+/*Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+The function takes a name as its only argument, and returns one of the following strings:*/
+public class Kata10
+{
+    public static string AreYouPlayingBanjo(string name)
+    {
+        return name.ToUpper().StartsWith('R') ? $"{name} plays banjo" : $"{name} does not play banjo";
+    }
+}
+
+public class MinMax
+{
+
+    /*Story
+    Ben has a very simple idea to make some profit: he buys something and sells it again.Of course, this wouldn't give him any profit at all if he was simply to buy and sell it at the same price. Instead, he's going to buy it for the lowest possible price and sell it at the highest.
+
+    Task
+    Write a function that returns both the minimum and maximum number of the given list/array.*/
+   
+    
+    public static int[] minMax(int[] lst)
+    {
+       return new int[2] {lst.Min(),lst.Max()};
     }
 }
