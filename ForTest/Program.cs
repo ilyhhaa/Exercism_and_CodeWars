@@ -553,4 +553,11 @@ public static class Kata12
 
 
     }
+
+
+    public static long RowSumOddNumbers2(long n)
+    {
+        return (long)Math.Pow(n, 3); //Ohhh
+
+    }
 }
