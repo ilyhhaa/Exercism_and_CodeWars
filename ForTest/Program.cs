@@ -1,5 +1,6 @@
 ﻿using ForTest.DifferenceOfSquares;
 using ForTest.Interest_is_Interesting;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 
 
@@ -422,4 +423,44 @@ public static class kata7
         }
     }
     
+}
+
+
+public class Kata8
+{
+    public static int FinalGrade(int exam, int projects)
+    {
+
+        if ((exam > 90 && projects > 10) || (exam > 90 || projects > 10))
+        {
+            return 100;
+        }
+        else if((exam>75 && projects > 5)||(exam > 75 || projects > 5))
+        {
+            return 90;
+        }
+        else if ((exam>50 && projects >= 2)|| (exam > 50 || projects>2))
+        {
+            return 75;
+        }
+        else if((exam<50  && projects < 2) || (exam<50 || projects<2))
+        {
+            return 0;
+        }
+        else
+        {
+            return 0;
+        }
+
+
+    }
+}
+
+
+public static class Kata
+{
+    public static string boolToWord(bool word)
+    {
+        return word == true
+    }
 }
