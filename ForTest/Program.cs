@@ -12,8 +12,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Printer.PrinterError("abczz");
-        Console.ReadLine();
+        
     }
 }
 
@@ -547,6 +546,6 @@ public class Printer
 
 
 
-        return $"{a - b}" + "/" + $"{a}";
+        return $"{a-b}" + "/" + $"{a}";
     }
 }
