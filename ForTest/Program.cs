@@ -13,8 +13,6 @@ internal class Program
     private static void Main(string[] args)
     {
         Console.ReadLine();
-        
-
     }
 }
 
@@ -23,8 +21,6 @@ class Difference
 {
     public static int CalculateSquareOfSum(int max)
     {
-
-
         int sum = 0;
 
         for (int i = 1; i < max; i++)
@@ -33,14 +29,10 @@ class Difference
         }
 
         return sum * sum;
-
-
-
     }
 
     public static int CalculateSumOfSquares(int max)
     {
-
         int sum = 0;
 
         for (int i = 0; i < max; i++)
@@ -50,7 +42,6 @@ class Difference
 
         return sum;
     }
-
     public static int CalculateDifferenceOfSquares(int max)
     {
         int x = CalculateSquareOfSum(max);
@@ -108,8 +99,6 @@ class Triangle
             }
             else return false;
         }
-
-
         else return false;
     }
 
@@ -163,31 +152,26 @@ class RemoteControlCar
     {
         this.Speed = speed;
         this.BatteryDrain = batteryDrain;
-
     }
 
 
 
     public bool BatteryDrained()
     {
-        if (Battery == 0 || Battery <= 0) //попробовать убрать <=0;
+        if (Battery == 0 || Battery <= 0)
         {
-            return true;
+          return true;
         }
         return false;
     }
 
     public int DistanceDriven()
     {
-
         return CurrentDistance;
-
-
     }
 
     public void Drive()
     {
-
         if (Speed != 0 || Speed! < 0)
         {
             Battery -= BatteryDrain;
@@ -200,7 +184,6 @@ class RemoteControlCar
         }
 
     }
-
     public static RemoteControlCar Nitro()
     {
         throw new NotImplementedException("Please implement the (static) RemoteControlCar.Nitro() method");
@@ -252,16 +235,9 @@ public static class PhoneNumber
         {
             t1.Item1 = false;
         }
-
-
-
-
-
-
         t1.Item3 = phoneNumber.Substring(9);
 
         return t1;
-
     }
 
     public static bool IsFake((bool IsNewYork, bool IsFake, string LocalNumber) phoneNumberInfo)
@@ -321,13 +297,9 @@ public static class Kata2
 
 public class Kata3
 {
-
-
-
     public static string UpdateLight(string current)
     {
         {
-
             if (current == "yellow")
             {
                 return "red";
@@ -338,7 +310,6 @@ public class Kata3
             }
             else return "yellow";
         }
-
     }
 }
 
@@ -348,9 +319,6 @@ public static class Kata4
     public static bool XO(string input)
     {
         return input.ToLower().Count(s => s == 'x') == input.ToLower().Count(s => s == 'o');
-
-
-
     }
 }
 
@@ -362,13 +330,7 @@ public class Kata5
     }
     public static int CockroachSpeed(double x)
     {
-
-
-
-
         return Convert.ToInt32(Math.Truncate((Math.Round(x * 100000d / 3600d, 2))));
-
-
     }
 }
 
@@ -381,9 +343,6 @@ public class kata6
         var sorted = new string(comb.OrderBy(s => s).ToArray());
 
         return sorted;
-
-
-
 
     }
 }
@@ -541,23 +500,16 @@ public static class Kata12
     public static long RowSumOddNumbers(long n)
     {
         long firstNumber = (n - 1) * n + 1;
-
-
         long rowSum = 0;
         for (int i = 0; i < n; i++)
         {
             rowSum += firstNumber + 2 * i;
         }
-
         return rowSum;
 
-
     }
-
-
     public static long RowSumOddNumbers2(long n)
     {
         return (long)Math.Pow(n, 3); //Ohhh
-
     }
 }
