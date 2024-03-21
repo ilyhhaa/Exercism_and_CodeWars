@@ -6,12 +6,13 @@ using System;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-
+using System.Text;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        Printer.PrinterError("abczz");
         Console.ReadLine();
     }
 }
@@ -511,5 +512,41 @@ public static class Kata12
     public static long RowSumOddNumbers2(long n)
     {
         return (long)Math.Pow(n, 3); //Ohhh
+    }
+}
+
+
+/*
+ * 
+ * In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
+
+The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
+
+Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
+
+You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
+
+The string has a length greater or equal to one and contains only letters from ato z.
+ * 
+ */
+
+public class Printer
+{
+    public static string PrinterError(string s)
+    {
+        return s.Where(c => c > 'm').Count() + "/" + s.Length;
+    }
+    
+    public static string PrinterErrorFORFUNxD(string s)
+    {
+        byte[] ascii_Res = Encoding.ASCII.GetBytes(s);
+
+        var a = ascii_Res.OrderBy(x => x).ToList().Count();
+
+        var b = ascii_Res.ToList().RemoveAll(x => x > 109);
+
+
+
+        return $"{a - b}" + "/" + $"{a}";
     }
 }
