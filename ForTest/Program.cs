@@ -621,3 +621,38 @@ public static class Kata15
 
     }
 }
+
+
+/*
+ * 
+ * input
+an array of integers, all numbers in the array are either even or odd except one
+
+output
+The number does not match the array.
+ * 
+ * 
+ * 
+ */
+
+public class Kata16
+{
+    public static int Find(int[] integers)
+    {
+       var a =  integers.ToList().Count(p => p % 2 == 0);
+
+        int res = 0;
+
+        if (a==1)
+        {
+            res = Array.Find(integers, num => num % 2 == 0);
+        }
+        else
+        {
+            res = Array.Find(integers, num => num % 2 != 0);
+        }
+
+        return res;
+       
+    }
+}
