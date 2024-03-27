@@ -576,3 +576,48 @@ public class Kata13
 
     }
 }
+
+public class Kata14_1
+{
+    public static int FindShort(string s)
+    {
+        return s.Split(' ').ToList().OrderBy(s => s.Length).FirstOrDefault().Count();
+        
+    }
+}
+
+
+
+
+
+
+
+public static class Kata15
+{
+    public static string AlphabetPosition(string text)
+    {
+        StringBuilder result = new StringBuilder();
+
+        foreach (char c in text)
+        {
+            if (char.IsLetter(c))
+            {
+                char lowerC = char.ToLower(c);
+                int position = lowerC - 'a' + 1;
+                result.Append(position).Append(" ");
+            }
+        }
+
+       
+        if (result.Length > 0)
+            result.Length--;
+
+        return result.ToString();
+
+
+        //return string.Join(" ", text.ToLower().Where(char.IsLetter).Select(x => x - 'a' + 1));
+
+
+
+    }
+}
