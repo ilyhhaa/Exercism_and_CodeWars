@@ -7,12 +7,13 @@ using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text;
+using System.Text.RegularExpressions;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        var a = Arge.NbYear(1000, 0.02, 50, 1200);
+        var a = Kata17.DuplicateEncode("aab");
 
         Console.WriteLine(a);
         Console.ReadLine();
@@ -676,5 +677,30 @@ class Arge
         }
         return years;
 
+    }
+}
+
+public class Kata17
+{
+    public static string DuplicateEncode(string word)
+    {
+        Dictionary<char, int> charCounts = new Dictionary<char, int>();
+        foreach (char c in word)
+        {
+            if (charCounts.ContainsKey(c))
+                charCounts[c]++;
+            else
+                charCounts[c] = 1;
+        }
+        string result = "";
+        foreach (char c in word)
+        {
+            if (charCounts[c] == 1)
+                result += "(";
+            else
+                result += ")";
+        }
+
+        return result;
     }
 }
