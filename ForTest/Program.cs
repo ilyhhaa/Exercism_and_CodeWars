@@ -713,3 +713,33 @@ public class Kata18
         return string.Join(" ", words);
     }
 }
+
+
+/*public class DirReduction
+{
+
+    static string[] SimplifyDirections(string[] arr)
+    {
+        Stack<string> stack = new Stack<string>();
+        Dictionary<string, string> opposites = new Dictionary<string, string>
+            {
+                { "NORTH", "SOUTH" },
+                { "SOUTH", "NORTH" },
+                { "EAST", "WEST" },
+                { "WEST", "EAST" }
+            };
+
+        foreach (string direction in arr)
+        {
+            if (stack.Count > 0 && stack.Peek() == opposites[direction])
+            {
+                stack.Pop();
+            }
+            else
+            {
+                stack.Push(direction);
+            }
+        }
+
+        return stack.ToArray();
+    }*/ //Разберись что пошло не по плану
