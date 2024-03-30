@@ -704,3 +704,12 @@ public class Kata17
         return result;
     }
 }
+
+
+public class Kata18
+{
+    public static string Smash(string[] words)
+    {
+        return string.Join(" ", words);
+    }
+}
