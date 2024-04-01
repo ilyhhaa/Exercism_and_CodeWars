@@ -755,3 +755,26 @@ public class Kata19
         }
     }
 }
+
+public class Kata20
+{
+    public static string HighAndLow(string numbers)
+    {
+       var sstring = numbers.Split(" ", ',');
+
+        List<int> values = new List<int>();
+
+        for (int i = 0; i < sstring.Length; i++)
+        {
+            int res = Int32.Parse(sstring[i]);
+            values.Add(res);
+
+        }
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        return stringBuilder.Append($"{values.Max()}" + " " + $"{values.Min()}").ToString();
+
+        
+   }
+}
