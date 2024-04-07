@@ -803,3 +803,44 @@ public class Kata22
         return ints.ToArray();
     }
 }
+
+*Digital root is the recursive sum of all the digits in a number.
+
+Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+Examples
+
+    16  -->  1 + 6 = 7
+   942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6 */
+    
+    public class Number
+{
+    public static int DigitalRoot(long n)
+    {
+        List<int> ints = new List<int>();
+        do
+        {
+            ints.Clear();
+            var a = n.ToString().ToCharArray();
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                int f = int.Parse(a[i].ToString());
+
+                ints.Add(f);
+               
+               
+
+
+            }
+            n = ints.Sum();
+            
+
+        } while (ints.Count()!=1);
+
+        return ints.First();
+        
+        
+    }
+}
