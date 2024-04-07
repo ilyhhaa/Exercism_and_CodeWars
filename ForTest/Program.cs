@@ -778,3 +778,28 @@ public class Kata20
         
    }
 }
+public class Kata22
+{
+    public static int[] Divisors(int n)
+    {
+        List<int> ints = new List<int>();
+
+        if (n==null)
+        {
+
+        }
+
+        for (int i = 2; i < n-1; i++)
+        {
+            if (n%i==0)
+            {
+                ints.Add(i);
+            }
+        }
+        if (ints.Count==0)
+        {
+            return null;
+        }
+        return ints.ToArray();
+    }
+}
