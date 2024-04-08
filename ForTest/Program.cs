@@ -859,3 +859,30 @@ public class Number
     }
 }
 */
+
+  public class Sum
+{
+    public static int GetSum(int a, int b)
+    {
+
+
+        if (a == b)
+        {
+            return a;
+        }
+        if (a > b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        int sum = 0;
+        for (int i = a; i <= b; i++)
+        {
+            sum += i;
+        }
+
+        return sum;
+    }
+
+}
