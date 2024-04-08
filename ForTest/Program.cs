@@ -844,3 +844,18 @@ Examples
         
     }
 }
+///Есть такое решение и его надо запомнить !!!!
+/*
+public class Number
+{
+    // See: https://en.wikipedia.org/wiki/Digital_root#Congruence_formula
+    public static int DigitalRoot(long number)
+    {
+        if (number == 0)
+            return 0;
+        if (number % 9 == 0)
+            return 9;
+        return (int)(number % 9);
+    }
+}
+*/
