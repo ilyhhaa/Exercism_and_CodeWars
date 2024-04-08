@@ -886,3 +886,11 @@ public class Number
     }
 
 }
+
+public class Kata23
+{
+    public static bool BetterThanAverage(int[] ClassPoints, int YourPoints)
+    {
+        return ClassPoints.Average() < YourPoints;
+    }
+}
