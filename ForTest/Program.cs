@@ -894,3 +894,13 @@ public class Kata23
         return ClassPoints.Average() < YourPoints;
     }
 }
+
+public static class SpacesRemover
+  {
+    public static string NoSpace(string input)
+    {
+        return new string(input.ToCharArray()
+        .Where(c => !Char.IsWhiteSpace(c))
+        .ToArray());
+    }  
+  }
