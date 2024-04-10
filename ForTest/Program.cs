@@ -902,5 +902,6 @@ public static class SpacesRemover
         return new string(input.ToCharArray()
         .Where(c => !Char.IsWhiteSpace(c))
         .ToArray());
-    }  
+
+        //return input.Replace(" ", ""); Запомнить записать  
   }
