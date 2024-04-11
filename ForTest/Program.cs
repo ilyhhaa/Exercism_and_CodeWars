@@ -966,3 +966,47 @@ solution('abc', 'd') // returns false
         return str.EndsWith(ending);
     }
 }
+
+/*
+ In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+Example
+
+ListFilterer.GetIntegersFromList(new List<object>(){1, 2, "a", "b"}) => {1, 2}
+ListFilterer.GetIntegersFromList(new List<object>(){1, "a", "b", 0, 15}) => {1, 0, 15}
+ListFilterer.GetIntegersFromList(new List<object>(){1, 2, "a", "b", "aasf", "1", "123", 123}) => {1, 2, 231}
+ 
+ 
+ */
+public class ListFilterer
+{
+    public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+    {
+
+        return listOfItems.OfType<int>();
+    }
+}
+
+
+/*
+ Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+The binary number returned should be a string.
+
+Examples:(Input1, Input2 --> Output (explanation)))
+
+1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+ 
+ */
+
+public static class Kata26
+{
+    public static string AddBinary(int a, int b) => Convert.ToString((a + b), 2);
+    
+}
+
+
+/*
+ Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero numbers.
+ */
