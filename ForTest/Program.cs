@@ -1018,3 +1018,26 @@ public static class Kata26
 	  return (n%x==0 &&n%y==0) ? true:false;
 	}
 }
+
+	public class kata27
+{
+    public static string BooleanToString(bool b)
+    {
+        return b.ToString();
+    }
+}
+
+/*
+ 
+ You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20 
+ */
+public class Kata28
+{
+    public static int PositiveSum(int[] arr)
+    {
+        return arr.Where(c => c < 0).Sum();
+                  
+    }
+}
