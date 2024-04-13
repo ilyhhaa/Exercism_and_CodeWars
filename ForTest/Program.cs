@@ -896,7 +896,7 @@ public class Kata23
 }
 
 public static class SpacesRemover
-  {
+{
     public static string NoSpace(string input)
     {
         return new string(input.ToCharArray()
@@ -904,7 +904,7 @@ public static class SpacesRemover
         .ToArray());
 
         //return input.Replace(" ", ""); Запомнить записать  
-  }
+    }
 
     /*
     
@@ -920,25 +920,25 @@ Note: If the number is a multiple of both 3 and 5, only count it once
     */
 
     public static class Mult35
-{
-  public static int Solution(int value)
-  {
-    if (value<0)
+    {
+        public static int Solution(int value)
         {
-            return 0;
-        }
-
-        List<int> ints = new List<int>();
-        for (int i = 1; i < value; i++)
-        {
-            if (i%3==0 || i%5==0)
+            if (value < 0)
             {
-                ints.Add(i);
+                return 0;
             }
+
+            List<int> ints = new List<int>();
+            for (int i = 1; i < value; i++)
+            {
+                if (i % 3 == 0 || i % 5 == 0)
+                {
+                    ints.Add(i);
+                }
+            }
+            ints.ToHashSet();
+            return ints.Sum();
         }
-        ints.ToHashSet();
-        return ints.Sum();
-    }
 
         /*
 public static class Kata
@@ -948,7 +948,7 @@ public static class Kata
         Запомнить разобрать проработать!
         
         */
-  }
+    }
 
     /*
     Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
@@ -960,88 +960,88 @@ solution('abc', 'd') // returns false
     */
 
     public class Kata25
-{
-    public static bool Solution(string str, string ending)
     {
-        return str.EndsWith(ending);
+        public static bool Solution(string str, string ending)
+        {
+            return str.EndsWith(ending);
+        }
     }
-}
 
-/*
- In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+    /*
+     In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
-Example
+    Example
 
-ListFilterer.GetIntegersFromList(new List<object>(){1, 2, "a", "b"}) => {1, 2}
-ListFilterer.GetIntegersFromList(new List<object>(){1, "a", "b", 0, 15}) => {1, 0, 15}
-ListFilterer.GetIntegersFromList(new List<object>(){1, 2, "a", "b", "aasf", "1", "123", 123}) => {1, 2, 231}
- 
- 
- */
-public class ListFilterer
-{
-    public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+    ListFilterer.GetIntegersFromList(new List<object>(){1, 2, "a", "b"}) => {1, 2}
+    ListFilterer.GetIntegersFromList(new List<object>(){1, "a", "b", 0, 15}) => {1, 0, 15}
+    ListFilterer.GetIntegersFromList(new List<object>(){1, 2, "a", "b", "aasf", "1", "123", 123}) => {1, 2, 231}
+
+
+     */
+    public class ListFilterer
     {
+        public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+        {
 
-        return listOfItems.OfType<int>();
+            return listOfItems.OfType<int>();
+        }
     }
-}
 
 
-/*
- Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+    /*
+     Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 
-The binary number returned should be a string.
+    The binary number returned should be a string.
 
-Examples:(Input1, Input2 --> Output (explanation)))
+    Examples:(Input1, Input2 --> Output (explanation)))
 
-1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
-5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
- 
- */
+    1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+    5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 
-public static class Kata26
-{
-    public static string AddBinary(int a, int b) => Convert.ToString((a + b), 2);
-    
-}
+     */
 
-
-/*
- Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero numbers.
- */
-
-    public class DivisibleNb 
-{
-	public static bool IsDivisible(int n, int x, int y) 
-  {
-	  return (n%x==0 &&n%y==0) ? true:false;
-	}
-}
-
-	public class kata27
-{
-    public static string BooleanToString(bool b)
+    public static class Kata26
     {
-        return b.ToString();
+        public static string AddBinary(int a, int b) => Convert.ToString((a + b), 2);
+
     }
-}
 
-/*
- 
- You get an array of numbers, return the sum of all of the positives ones.
 
-Example [1,-4,7,12] => 1 + 7 + 12 = 20 
- */
-public class Kata28
-{
-    public static int PositiveSum(int[] arr)
+    /*
+     Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero numbers.
+     */
+
+    public class DivisibleNb
     {
-        return arr.Where(c => c < 0).Sum();
-                  
+        public static bool IsDivisible(int n, int x, int y)
+        {
+            return (n % x == 0 && n % y == 0) ? true : false;
+        }
     }
-}
-	/*
+
+    public class kata27
+    {
+        public static string BooleanToString(bool b)
+        {
+            return b.ToString();
+        }
+    }
+
+    /*
+
+     You get an array of numbers, return the sum of all of the positives ones.
+
+    Example [1,-4,7,12] => 1 + 7 + 12 = 20 
+     */
+    public class Kata28
+    {
+        public static int PositiveSum(int[] arr)
+        {
+            return arr.Where(c => c < 0).Sum();
+
+        }
+    }
+    /*
  Make me a window. I'll give you a number (num). You return a window.
 
 Rules:
@@ -1066,16 +1066,17 @@ N = 3
 Note: there should be no trailing new line characters at the end.
  */
 
-static class KataWindow
-{
-    public static string MakeAWindow(int num)
+    static class KataWindow
     {
-        string line = new string('.', num);
-        string pane = "|" + string.Join("|", Enumerable.Repeat(line, 2)) + "|";
-        string window = string.Join("\n", Enumerable.Repeat(pane, num)) + "\n" +
-                        "|" + string.Join("+", Enumerable.Repeat(new string('-', num), 2)) + "|\n" +
-                        string.Join("\n", Enumerable.Repeat(pane, num));
+        public static string MakeAWindow(int num)
+        {
+            string line = new string('.', num);
+            string pane = "|" + string.Join("|", Enumerable.Repeat(line, 2)) + "|";
+            string window = string.Join("\n", Enumerable.Repeat(pane, num)) + "\n" +
+                            "|" + string.Join("+", Enumerable.Repeat(new string('-', num), 2)) + "|\n" +
+                            string.Join("\n", Enumerable.Repeat(pane, num));
 
-        return new string('-', num * 2 + 3) + "\n" + window + "\n" + new string('-', num * 2 + 3);
+            return new string('-', num * 2 + 3) + "\n" + window + "\n" + new string('-', num * 2 + 3);
+        }
     }
 }
