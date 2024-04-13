@@ -13,9 +13,12 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var a = Kata29.binaryArrayToNumber(new int[] { 1, 1, 1, 1 });
+        var a = LineNumbering.Number(new List<string> { "a", "b", "c" });
 
-        Console.WriteLine(a);
+        foreach (var item in a)
+        {
+            Console.WriteLine(item);
+        }
         Console.ReadLine();
     }
 }
@@ -1105,4 +1108,26 @@ class Kata29
         return Convert.ToInt32(string.Join("", BinaryArray), 2);
     }
 }
+/*Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+Examples: (Input --> Output)
+
+[] --> []
+["a", "b", "c"] --> ["1: a", "2: b", "3: c"]*/
+public class LineNumbering
+{
+    public static List<string> Number(List<string> lines)
+    {
+        List<string> numberedLines = new List<string>();
+        for (int i = 0; i < lines.Count; i++)
+        {
+            string numberedLine = $"{i + 1}: {lines[i]}";
+            numberedLines.Add(numberedLine);
+        }
+        return numberedLines;
+    }
+}
