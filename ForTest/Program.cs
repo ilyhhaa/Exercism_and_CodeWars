@@ -13,7 +13,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var a = Kata17.DuplicateEncode("aab");
+        var a = Kata29.binaryArrayToNumber(new int[] { 1, 1, 1, 1 });
 
         Console.WriteLine(a);
         Console.ReadLine();
@@ -1080,3 +1080,29 @@ Note: there should be no trailing new line characters at the end.
         }
     }
 }
+
+/*Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+Examples:
+
+Testing: [0, 0, 0, 1] ==> 1
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 0, 1] ==> 5
+Testing: [1, 0, 0, 1] ==> 9
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 1, 0] ==> 6
+Testing: [1, 1, 1, 1] ==> 15
+Testing: [1, 0, 1, 1] ==> 11
+
+Задачка с подвохом
+ */ 
+class Kata29
+{
+    public static int binaryArrayToNumber(int[] BinaryArray)
+    {
+        return Convert.ToInt32(string.Join("", BinaryArray), 2);
+    }
+}
+
