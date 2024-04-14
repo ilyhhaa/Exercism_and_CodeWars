@@ -1207,3 +1207,34 @@ public static class Kata33
         return Enumerable.Range(1, num).Sum();
     }
 }
+
+/*
+ Create a function isAlt() that accepts a string as an argument and validates whether the vowels (a, e, i, o, u) and consonants are in alternate order.
+
+Kata.IsAlt("amazon")
+// true
+Kata.IsAlt("apple")
+// false
+Kata.IsAlt("banana")
+// true*/
+
+public class Kata34
+{
+    public static bool IsAlt(string word)
+    {
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+        for (int i = 0; i < word.Length - 1; i++)
+        {
+            bool isVowel1 = Array.Exists(vowels, v => v == word[i]);
+            bool isVowel2 = Array.Exists(vowels, v => v == word[i + 1]);
+
+            if (isVowel1 == isVowel2)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
