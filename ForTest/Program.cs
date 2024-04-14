@@ -8,17 +8,14 @@ using System.Security.Cryptography.X509Certificates;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        var a = LineNumbering.Number(new List<string> { "a", "b", "c" });
-
-        foreach (var item in a)
-        {
-            Console.WriteLine(item);
-        }
+        var a = Kata33.summation(8);
+        Console.WriteLine( a );
         Console.ReadLine();
     }
 }
@@ -1193,5 +1190,20 @@ public static class Kata32
         line += (char)0b_0110_0100; // d
         line += (char)0b_0010_0001; // !
         return line;
+    }
+}
+
+/*
+ Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0. Your function only needs to return the result, what is shown between parentheses in the example below is how you reach that result and it's not part of it, see the sample tests.
+
+For example (Input -> Output):
+
+2 -> 3 (1 + 2)
+8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)*/
+public static class Kata33
+{
+    public static int summation(int num)
+    {
+        return Enumerable.Range(0, num+1).Sum();
     }
 }
