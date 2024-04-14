@@ -1204,6 +1204,6 @@ public static class Kata33
 {
     public static int summation(int num)
     {
-        return Enumerable.Range(0, num+1).Sum();
+        return Enumerable.Range(1, num).Sum();
     }
 }
