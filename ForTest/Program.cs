@@ -1155,3 +1155,43 @@ public class Kata30
         return result;
     }
 }
+
+/*
+ You are given two interior angles (in degrees) of a triangle.
+
+Write a function to return the 3rd.
+
+Note: only positive integers will be tested.
+
+https://en.wikipedia.org/wiki/Triangle
+
+*/
+class Kata31
+{
+    public static int OtherAngle(int a, int b)
+    {
+        return 180 - a - b;
+    }
+}
+
+public static class Kata32
+{
+    // Write a public static method "greet" that returns "hello world!"
+    public static string greet()
+    {
+        string line = "";
+        line += (char)0b_0110_1000; // h
+        line += (char)0b_0110_0101; // e
+        line += (char)0b_0110_1100; // l
+        line += (char)0b_0110_1100; // l
+        line += (char)0b_0110_1111; // o
+        line += (char)0b_0010_0000; // 
+        line += (char)0b_0111_0111; // w
+        line += (char)0b_0110_1111; // o
+        line += (char)0b_0111_0010; // r
+        line += (char)0b_0110_1100; // l
+        line += (char)0b_0110_0100; // d
+        line += (char)0b_0010_0001; // !
+        return line;
+    }
+}
