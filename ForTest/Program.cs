@@ -1256,3 +1256,19 @@ class Kata35
         return str.Count(c=>c == letter);
     }
 }
+
+/*
+ Complete the solution so that the function will break up camel casing, using a space between words.
+
+Example
+"camelCasing"  =>  "camel Casing"
+"identifier"   =>  "identifier"
+""             =>  ""
+*/
+public class Kata36
+{
+    public static string BreakCamelCase(string str)
+    {
+        return string.Concat(str.Select(c => char.IsUpper(c) ? " " + c.ToString() : c.ToString()));
+    }
+}
