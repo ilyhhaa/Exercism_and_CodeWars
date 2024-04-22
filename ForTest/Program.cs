@@ -1272,3 +1272,34 @@ public class Kata36
         return string.Concat(str.Select(c => char.IsUpper(c) ? " " + c.ToString() : c.ToString()));
     }
 }
+
+class NumberEven
+{
+    public bool IsEven(double n) => n % 2 == 0;
+    
+}
+
+//совсем не выглядит как 7Kuy
+
+/*
+ write function accum:
+
+Examples:
+
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"*/
+
+public class Accumul
+    {
+        public static string Accum(string s)
+        {
+            string result = "";
+            for (int i = 0; i < s.Length; i++)
+            {
+                string part = s[i].ToString().ToUpper() + new string(s[i], i).ToLower();
+                result += (i != 0 ? "-" : "") + part;
+            }
+            return result;
+        }
+    }
