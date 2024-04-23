@@ -1324,9 +1324,27 @@ public class Kata37
         {
             throw new ArgumentException("Inputs should both be numbers that are above zero");
         }
+       
 
         double hypotenuse = Math.Sqrt(a * a + b * b);
 
         return Math.Round(hypotenuse, 3);
+    }
+}
+
+/*Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+Return your answer as a number.*/
+
+public class Kata38
+{
+    public static int SumMix(object[] x)
+    {
+        int sum = 0;
+        foreach (var item in x)
+        {
+            sum += Convert.ToInt32(item);
+        }
+        return sum;
     }
 }
