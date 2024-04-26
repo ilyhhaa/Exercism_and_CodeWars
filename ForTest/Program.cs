@@ -16,7 +16,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var a = Kata33.summation(8);
+        var a = Kata40.High("man i need a taxi up to ubud");
         Console.WriteLine( a );
         Console.ReadLine();
     }
@@ -1401,5 +1401,43 @@ class AverageSolution
     {
         if(array.Length==0) return 0;
         return array.Average();
+    }
+}
+
+/*Given a string of words, you need to find the highest scoring word.
+
+Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+
+For example, the score of abad is 8 (1 + 2 + 1 + 4).
+
+You need to return the highest scoring word as a string.
+
+If two words score the same, return the word that appears earliest in the original string.
+
+All letters will be lowercase and all inputs will be valid.*/
+
+public class Kata40
+{
+    public static string High(string s)
+    {
+        var res = s.Split(',').ToList();
+        int max = 0;
+        Dictionary<int,string> dict = new Dictionary<int,string>();
+
+        foreach (var item in res)
+        {
+            
+            for (int i = 0; i < item.Length; i++)
+            {
+                char letter = 'a';
+                max += letter - 'a' + 1;
+
+                
+            }
+            dict.Add(max, item.ToString());
+
+        }
+
+        return dict[dict.Keys.Max()];
     }
 }
