@@ -1394,3 +1394,12 @@ public class Kata39
 
     }
 }
+
+class AverageSolution
+{
+    public static double FindAverage(double[] array)
+    {
+        if(array.Length==0) return 0;
+        return array.Average();
+    }
+}
