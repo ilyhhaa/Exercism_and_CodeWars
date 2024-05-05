@@ -9,6 +9,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System.Net;
 
 //~>goyUi
 
@@ -1439,5 +1440,40 @@ public class Kata40
         }
 
         return dict[dict.Keys.Max()];
+    }
+}
+
+
+/*Take the following IPv4 address: 128.32.10.1. This address has 4 octets where each octet is a single byte (or 8 bits).
+
+1st octet 128 has the binary representation: 10000000
+2nd octet 32 has the binary representation: 00100000
+3rd octet 10 has the binary representation: 00001010
+4th octet 1 has the binary representation: 00000001
+So 128.32.10.1 == 10000000.00100000.00001010.00000001
+
+Because the above IP address has 32 bits, we can represent it as the 32 bit number: 2149583361.
+
+Write a function ip_to_int32(ip) ( JS: ipToInt32(ip) ) that takes an IPv4 address and returns a 32 bit number.*/
+
+//using System;
+//using System.Net;
+public class IPConvert
+{
+    public static uint ToInt32(string ip)
+    {
+        if (!IPAddress.TryParse(ip, out IPAddress address))
+            return 0;
+
+
+        byte[] addressBytes = address.GetAddressBytes();
+        uint intAddress = (uint)(addressBytes[0] << 24 | addressBytes[1] << 16 | addressBytes[2] << 8 | addressBytes[3]);
+        return intAddress;
+    }
+
+    public static string UInt32ToIp(uint address)
+    {
+
+        return new IPAddress(address).ToString();
     }
 }
