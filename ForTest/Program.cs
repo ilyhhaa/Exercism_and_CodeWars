@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
-//~>goyUi
+
 
 internal class Program
 {
