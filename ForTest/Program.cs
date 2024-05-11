@@ -11,9 +11,6 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
-//1~>1967845LLQ
-// ~>rtghk165379Qq
-//delete this sec src
 
 
 
