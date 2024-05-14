@@ -1820,3 +1820,20 @@ public class SolutionRotateIMG {
     }
     }
 }
+public class SolutionMovesZero
+{
+    public void MoveZeroes(int[] nums)
+    {
+
+        var listofInts = nums.ToList();
+        listofInts.RemoveAll(a => a == 0);
+
+        for (int i = nums.Length-listofInts.Count; i >0; i--)
+        {
+            listofInts.Add(0);
+        }
+
+        listofInts.ToArray();
+
+    }
+}
