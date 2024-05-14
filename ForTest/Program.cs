@@ -1847,3 +1847,9 @@ public class Solution {
     }
     }
 }
+
+public static bool IsUpperCase(this string text)
+    {
+        string NoWhiteSpaces = text.Replace(" ", "");
+        return text.Count(a => char.IsUpper(a)) == NoWhiteSpaces.Length ? true : false;
+    }
