@@ -18,9 +18,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var a = Kata40.High("man i need a taxi up to ubud");
-        Console.WriteLine( a );
-        Console.ReadLine();
+        
     }
 }
 
