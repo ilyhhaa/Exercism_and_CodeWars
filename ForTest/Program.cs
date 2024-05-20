@@ -1949,3 +1949,11 @@ public class KataFindNeedle
 
     }
 }
+//sort stirng[] by length of words inside
+public class KataSortByLength
+{
+    public static string[] SortByLength(string[] array)
+    {
+        return array.OrderBy(a => a.Length).ToArray();
+    }
+}
