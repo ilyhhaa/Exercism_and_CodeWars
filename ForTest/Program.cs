@@ -1940,3 +1940,12 @@ public class ASum
 
     }
 }
+//find "needle" in object[]
+public class KataFindNeedle
+{
+    public static string FindNeedle(object[] haystack)
+    {
+        return string.Concat($"found the needle at position {Array.IndexOf(haystack, "needle")}");
+
+    }
+}
