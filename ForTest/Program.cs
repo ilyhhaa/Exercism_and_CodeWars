@@ -1973,10 +1973,49 @@ public static class GetVowel
 }
 
 
+public class Multiplier
+{
+    public static int Multiply(int x)
+    {
+        return x%2== 0 ? x*8: x*9;
+    }
+
+
+}
+
+public static class Strungssum
+{
+    public static string StringsSum(string s1, string s2)
+    {
+        int a = s1 == string.Empty ? 0 : Int32.Parse(s1);
+
+        int b = s2 == string.Empty ? 0 : Int32.Parse(s2);
+
+
+        return (a + b).ToString();
+        
+    }
+}
+
+
+public static class SumWithoutHighestAndLowestNumber
+
+{
+    public static int Sum(int[] numbers)
+    {
+        return numbers == null || numbers.Length < 2
+            ? 0
+            : numbers.Sum() - numbers.Max() - numbers.Min();
+    }
+}
 internal class Program
 {
     private static void Main(string[] args)
     {
+
+        var a = Strungssum.StringsSum("10", "10");
+
+        Console.WriteLine(a);
 
     }
 }
