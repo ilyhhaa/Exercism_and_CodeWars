@@ -2008,6 +2008,14 @@ public static class SumWithoutHighestAndLowestNumber
             : numbers.Sum() - numbers.Max() - numbers.Min();
     }
 }
+
+public class RemoveExclamationMarks_
+{
+    public static string RemoveExclamationMarks(string s)
+    {
+        return s.Replace("!", "");
+    }
+}
 internal class Program
 {
     private static void Main(string[] args)
