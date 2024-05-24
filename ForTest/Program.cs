@@ -12,17 +12,6 @@ using System.Linq;
 using System.Net;
 
 
-
-
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        
-    }
-}
-
-
 class Difference
 {
     public static int CalculateSquareOfSum(int max)
@@ -1955,5 +1944,39 @@ public class KataSortByLength
     public static string[] SortByLength(string[] array)
     {
         return array.OrderBy(a => a.Length).ToArray();
+    }
+}
+
+
+public static class CenturyFY
+{
+    public static int СenturyFromYear(int year)
+    {
+        if (year % 100 == 0)
+        {
+            return year / 100;
+        }
+        else
+        {
+            return (year / 100) + 1;
+        }
+    }
+}
+
+//O(1)
+public static class GetVowel
+{
+    public static int GetVowelCount(string str)
+    {
+        return str.Count(a => a == 97 || a == 101 || a == 105 || a == 111 || a == 117);
+    }
+}
+
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+
     }
 }
