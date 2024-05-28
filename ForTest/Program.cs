@@ -11,7 +11,33 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
-/*Create a function with two arguments that will return an array of the first n multiples of x.
+/*An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+
+Note: anagrams are case insensitive
+
+Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+
+Examples
+
+"foefet" is an anagram of "toffee"
+
+"Buckethead" is an anagram of "DeathCubeK"*/
+
+public class KataAnagram
+{
+  public static bool IsAnagram(string test, string original)
+  {
+    string cleanedTest = new string(test.ToLower().Where(char.IsLetter).ToArray());
+        string cleanedOriginal = new string(original.ToLower().Where(char.IsLetter).ToArray());
+
+        char[] sortedTest = cleanedTest.ToCharArray();
+        char[] sortedOriginal = cleanedOriginal.ToCharArray();
+        Array.Sort(sortedTest);
+        Array.Sort(sortedOriginal);
+
+        return sortedTest.SequenceEqual(sortedOriginal);
+  }
+}/*Create a function with two arguments that will return an array of the first n multiples of x.
 
 Assume both the given number and the number of times to count will be positive numbers greater than 0.
 
