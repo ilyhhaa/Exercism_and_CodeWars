@@ -11,6 +11,17 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
+public class RoundedKata
+{
+  public static int RoundToNext5(int n)
+  {
+   int rounded = (int)Math.Ceiling((double)n / 5) * 5;
+
+        return rounded;
+  }
+}
+
+
 /*An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
 
 Note: anagrams are case insensitive
