@@ -11,6 +11,28 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
+
+
+
+/*Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+
+For example:
+
+SortNumbers(new int[] { 1, 2, 10, 50, 5 }); // should return new int[] { 1, 2, 5, 10, 50 }
+SortNumbers(null); // should return new int[] { }*/
+public class KataSort
+{
+    public static int[] SortNumbers(int[] nums)
+    {
+        if (nums == null || nums.Length == 0)
+        {
+            return new int[0];
+        }
+
+        return nums.OrderBy(n => n).ToArray();
+    }
+}
+
 /*Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
 
 Task Overview:
