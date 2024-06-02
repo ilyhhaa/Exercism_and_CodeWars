@@ -12,6 +12,21 @@ using System.Linq;
 using System.Net;
 
 
+/*Fix the function
+I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
+
+Can you help me fix the function?*/
+
+
+public class KataISITKYU100
+{
+    public static int AddFive(int num)
+    {
+        int total = num + 5;
+        return total;
+    }
+}
+
 
 /*Enough is enough!
 Alice and Bob were on a holiday. Both of them took many pictures of the places they've been, and now they want to show Charlie their entire collection. However, Charlie doesn't like these sessions, since the motif usually repeats. He isn't fond of seeing the Eiffel tower 40 times.
