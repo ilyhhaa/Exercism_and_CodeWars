@@ -12,6 +12,31 @@ using System.Linq;
 using System.Net;
 
 
+/*altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
+
+"hello world".ToAlternatingCase() == "HELLO WORLD"
+"HELLO WORLD".ToAlternatingCase() == "hello world"
+"hello WORLD".ToAlternatingCase() == "HELLO world"
+"HeLLo WoRLD".ToAlternatingCase() == "hEllO wOrld"
+"12345".ToAlternatingCase() == "12345" // Non-alphabetical characters are unaffected
+"1a2b3c4d5e".ToAlternatingCase() == "1A2B3C4D5E"
+"String.ToAlternatingCase".ToAlternatingCase() == "sTRING.tOaLTERNATINGcASE"*/
+
+public static class StringExt
+{
+    public static string ToAlternatingCase(this string s)
+    {
+        char[] result = new char[s.Length];
+        for (int i = 0; i < s.Length; i++)
+        {
+            char c = s[i];
+            result[i] = char.IsLower(c) ? char.ToUpper(c) : char.ToLower(c);
+        }
+        return new string(result);
+    }
+}
+
 /*There is a bus moving in the city which takes and drops some people at each bus stop.
 
 You are provided with a list (or array) of integer pairs. Elements of each pair represent the number of people that get on the bus (the first item) and the number of people that get off the bus (the second item) at a bus stop.
