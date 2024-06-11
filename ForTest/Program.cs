@@ -11,9 +11,22 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
+/*Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24*/
 
-
+public class KataKUY8 
+{
+    public static int Grow(int[] x)
+    {
+        int result = 1;
+        foreach (int value in x)
+        {
+            result *= value;
+        }
+        return result;
+    }
+}
 
 /*The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
 
