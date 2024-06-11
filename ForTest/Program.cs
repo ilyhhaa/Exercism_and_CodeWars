@@ -11,6 +11,10 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
+
+
+
+
 /*The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
 
 maxSequence [-2, 1, -3, 4, -1, 2, 1, -5, 4]
@@ -37,6 +41,19 @@ public static class KataSubarray
         }
 
         return maxSum;
+
+        //Cleanest on Codewars ! Запомнить.
+
+        /*int max = 0, res = 0, sum = 0;
+        foreach(var item in arr)
+        {
+            sum += item;
+            max = sum > max ? max : sum;
+            res = res > sum - max ? res : sum - max;
+        }
+        return res;*/
+
+
 
     }
 }
