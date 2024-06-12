@@ -10,13 +10,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
+using ForTest._2MonthAlgoFights;
 
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        
+        Main(args);
        
 
     }
