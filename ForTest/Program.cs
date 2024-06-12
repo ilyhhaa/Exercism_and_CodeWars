@@ -11,6 +11,35 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 
+
+/*The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+What if the string is empty? Then the result should be empty object literal, {}.*/
+public class KataDictionary
+{
+    public static Dictionary<char, int> Count(string str)
+    {
+        Dictionary<char, int> charCount = new Dictionary<char, int>();
+
+        foreach (char c in str)
+        {
+            if (charCount.ContainsKey(c))
+            {
+                charCount[c]++;
+            }
+            else
+            {
+                charCount[c] = 1;
+            }
+        }
+
+        return charCount;
+
+        /*return str.GroupBy(c => c).ToDictionary(g => g.Key, g => g.Count()); - BEst Codewars Pract*/
+    }
+}
+
+
 /*Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 
 [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24*/
