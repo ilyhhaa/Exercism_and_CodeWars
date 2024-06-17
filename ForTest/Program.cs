@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net;
 using ForTest._2MonthAlgoFights;
+using System.Net.WebSockets;
 
 /*Write a method that will search an array of strings for all strings that contain another string, ignoring capitalization. Then return an array of the found strings.
 
@@ -97,7 +98,7 @@ Python, Rust, Scala: None
 Julia: nothing
 Nim: none(int) (See options)*/
 
-    public class Kata
+    public class KataFirstNONConsecutive
     {
         public static object FirstNonConsecutive(int[] arr)
         {
@@ -112,13 +113,36 @@ Nim: none(int) (See options)*/
 
         }
     }
+
+    /*A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.*/
+
+    //a=97
+    //z=122
+    public static class KataIsPanagram
+    {
+        public static bool IsPangram(string str)
+        {
+            var lowerCaseStr = str.ToLower();
+            var alphabet = Enumerable.Range('a', 26).Select(i => (char)i);
+
+            return alphabet.All(letter => lowerCaseStr.Contains(letter));
+
+        }
+    }
+
     internal class Program
     {
         private static void Main(string[] args)
         {
 
+            var a = KataIsPanagram.IsPangram("The quick brown fox jumps over the lazy dog.");
 
+            Console.WriteLine(a);
+            Console.ReadLine();
 
         }
     }
 }
+
