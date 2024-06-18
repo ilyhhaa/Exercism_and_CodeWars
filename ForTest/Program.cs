@@ -13,6 +13,39 @@ using System.Net;
 using ForTest._2MonthAlgoFights;
 using System.Net.WebSockets;
 
+internal class Program
+    {
+        private static void Main(string[] args)
+        {
+
+            var a = KataIsPanagram.IsPangram("The quick brown fox jumps over the lazy dog.");
+
+            Console.WriteLine(a);
+            Console.ReadLine();
+
+        }
+    }
+
+
+/*Build a function that returns an array of integers from n to 1 where n>0.
+
+Example : n=5 --> [5,4,3,2,1]
+
+*/
+
+public static class KataRevSeq
+{
+  public static int[] ReverseSeq(int n)
+  {
+   int[] result = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        result[i] = n - i;
+    }
+    return result;
+  }
+}
+
 /*Write a method that will search an array of strings for all strings that contain another string, ignoring capitalization. Then return an array of the found strings.
 
 The method takes two parameters, the query string and the array of strings to search, and returns an array.
@@ -162,17 +195,6 @@ public class KataAnotherTwoSum
   }
 }
 
-    internal class Program
-    {
-        private static void Main(string[] args)
-        {
-
-            var a = KataIsPanagram.IsPangram("The quick brown fox jumps over the lazy dog.");
-
-            Console.WriteLine(a);
-            Console.ReadLine();
-
-        }
-    }
+    
 }
 
