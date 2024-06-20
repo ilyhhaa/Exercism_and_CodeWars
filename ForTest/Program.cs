@@ -27,6 +27,43 @@ internal class Program
     }
 
 
+/*Your goal is to return multiplication table for number that is always an integer from 1 to 10.
+
+For example, a multiplication table (string) for number == 5 looks like below:
+
+1 * 5 = 5
+2 * 5 = 10
+3 * 5 = 15
+4 * 5 = 20
+5 * 5 = 25
+6 * 5 = 30
+7 * 5 = 35
+8 * 5 = 40
+9 * 5 = 45
+10 * 5 = 50
+P. S. You can use \n in string to jump to the next line.*/
+
+
+public static class KataMultiplTable
+{
+    public static string MultiTable(int number)
+    {
+       StringBuilder table = new StringBuilder();
+
+    for (int i = 1; i <= 10; i++)
+    {
+        int result = i * number;
+        table.Append($"{i} * {number} = {result}");
+        if (i < 10)
+        {
+            table.AppendLine();
+        }
+    }
+
+    return table.ToString();
+    }
+}
+
 /*Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
 
 For example,
