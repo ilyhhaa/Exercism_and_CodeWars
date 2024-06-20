@@ -27,6 +27,24 @@ internal class Program
     }
 
 
+
+/*We need a function that can transform a number (integer) into a string.
+
+What ways of achieving this do you know?
+
+Examples (input --> output):
+123  --> "123"
+999  --> "999"
+-100 --> "-100"*/
+
+public class 8kyu
+{
+  public static string NumberToString(int num)
+  {
+    return num.ToString();
+  }
+}
+
 /*Build a function that returns an array of integers from n to 1 where n>0.
 
 Example : n=5 --> [5,4,3,2,1]
