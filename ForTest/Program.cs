@@ -26,6 +26,38 @@ internal class Program
         }
     }
 
+/*Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+Examples
+replace("Hi!") === "H!!"
+replace("!Hi! Hi!") === "!H!! H!!"
+replace("aeiou") === "!!!!!"
+replace("ABCDE") === "!BCD!"
+*/
+
+public static class KataReplace
+{
+  public static string Replace(string s)
+  {
+     char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+    StringBuilder result = new StringBuilder();
+
+    foreach (char c in s)
+    {
+        if (vowels.Contains(c))
+        {
+            result.Append('!');
+        }
+        else
+        {
+            result.Append(c);
+        }
+    }
+
+    return result.ToString();
+  }
+}
+
 /*Numbers ending with zeros are boring.
 
 They might be fun in your world, but not here.
