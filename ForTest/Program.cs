@@ -33,6 +33,14 @@ replace("Hi!") === "H!!"
 replace("!Hi! Hi!") === "!H!! H!!"
 replace("aeiou") === "!!!!!"
 replace("ABCDE") === "!BCD!"
+
+
+public static class Kata
+{
+  public static string Replace(string s)
+   => Regex.Replace(s, @"[aeiou]","!", RegexOptions.IgnoreCase);
+} - запомнить решение через регулярные выражения
+
 */
 
 public static class KataReplace
@@ -57,6 +65,9 @@ public static class KataReplace
     return result.ToString();
   }
 }
+
+
+
 
 /*Numbers ending with zeros are boring.
 
