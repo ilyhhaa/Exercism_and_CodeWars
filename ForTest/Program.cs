@@ -25,6 +25,29 @@ internal class Program
 
         }
     }
+
+
+/*Task
+
+Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).*/
+
+class KataDelete
+{
+    public static long MinValue(int[] a)
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        var r = a.Distinct().OrderBy(b => b).ToArray();
+
+        for (int i = 0; i < r.Length; i++)
+        {
+            stringBuilder.Append(r[i]);
+        }
+
+        return long.Parse(stringBuilder.ToString());
+ 
+    }
+}
 /*Define a function that removes duplicates from an array of non negative numbers and returns it as a result.
 
 The order of the sequence has to stay the same.
