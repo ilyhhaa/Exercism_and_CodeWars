@@ -45,7 +45,8 @@ class KataDelete
         }
 
         return long.Parse(stringBuilder.ToString());
- 
+ /*var res = string.Concat(a.OrderBy(x => x).Distinct());
+        return Convert.ToInt64(res);*/ reworked
     }
 }
 /*Define a function that removes duplicates from an array of non negative numbers and returns it as a result.
