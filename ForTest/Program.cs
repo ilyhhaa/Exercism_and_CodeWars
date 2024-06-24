@@ -27,6 +27,40 @@ internal class Program
     }
 
 
+/*Write a function named sumDigits which takes a number as input and 
+ * returns the sum 
+ * of the absolute value of each of the number's decimal digits.
+
+For example: (Input --> Output)
+
+10 --> 1
+99 --> 18
+-32 --> 5*/
+public class KataSumDigits
+{
+   /* //firstВариант
+    public static int SumDigits(int number) 
+        
+     {
+
+
+        var a = number.ToString();
+        int r = 0;
+
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (!char.IsNumber(a[i]))
+            {
+                continue;
+            }
+
+            r += Int32.Parse(a[i].ToString());
+        }
+
+        return r;
+    }*/
+}
+
 /*Task
 
 Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).*/
