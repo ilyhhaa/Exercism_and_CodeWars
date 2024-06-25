@@ -38,6 +38,9 @@ For example: (Input --> Output)
 -32 --> 5*/
 public class KataSumDigits
 {
+    //Переписал
+    //public static int SumDigits(int number)=> Math.Abs(number).ToString().Select(n => int.Parse(n.ToString())).Sum();
+    
    /* //firstВариант
     public static int SumDigits(int number) 
         
