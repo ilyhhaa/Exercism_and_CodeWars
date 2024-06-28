@@ -26,6 +26,54 @@ internal class Program
         }
     }
 
+/*Task
+Given a square matrix, your task is to reverse the order of elements on both of its longest diagonals.
+
+The longest diagonals of a square matrix are defined as follows:
+
+the first longest diagonal goes from the top left corner to the bottom right one;
+the second longest diagonal goes from the top right corner to the bottom left one.
+Example
+For the matrix
+
+1, 2, 3
+4, 5, 6
+7, 8, 9
+the output should be:
+
+9, 2, 7
+4, 5, 6
+3, 8, 1
+Input/Output
+[input] 2D integer array matrix
+
+Constraints: 1 ≤ matrix.length ≤ 10, matrix.length = matrix[i].length, 1 ≤ matrix[i][j] ≤ 1000
+
+[output] 2D integer array
+
+Matrix with the order of elements on its longest diagonals reversed.*/
+
+public class KataReverseOnDiagonals
+{
+    public int[][] ReverseOnDiagonals(int[][] matrix)
+    {
+
+
+        int n = matrix.Length;
+        for (int i = 0; i < n / 2; i++)
+        {
+            int temp = matrix[i][i];
+            matrix[i][i] = matrix[n - 1 - i][n - 1 - i];
+            matrix[n - 1 - i][n - 1 - i] = temp;
+            temp = matrix[i][n - 1 - i];
+            matrix[i][n - 1 - i] = matrix[n - 1 - i][i];
+            matrix[n - 1 - i][i] = temp;
+        }
+        return matrix;
+    }
+}
+
+
 /*Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 
 Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
@@ -37,7 +85,7 @@ Examples:
 * With `name` not given 
   or `name` = ""        => return "Hello, World!"*/
 
-public static class Kata
+public static class KataNotEightNINE
 {
     public static string Hello(string name)
     {
