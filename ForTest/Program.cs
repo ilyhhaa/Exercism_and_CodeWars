@@ -18,13 +18,32 @@ internal class Program
         private static void Main(string[] args)
         {
 
-            var a = KataIsPanagram.IsPangram("The quick brown fox jumps over the lazy dog.");
+            
 
-            Console.WriteLine(a);
+            
             Console.ReadLine();
 
         }
     }
+
+
+/*You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+
+Write a program that returns the girl's age (0-9) as an integer.
+
+Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.*/
+
+
+public class KataEightAgain
+{
+    public static int GetAge(string inputString)
+    {
+        int.TryParse(inputString.Substring(0, 1), out int age);
+
+        return age;
+    }
+}
+
 
 
 /*Write a function named sumDigits which takes a number as input and 
@@ -83,7 +102,7 @@ class KataDelete
 
         return long.Parse(stringBuilder.ToString());
  /*var res = string.Concat(a.OrderBy(x => x).Distinct());
-        return Convert.ToInt64(res);*/ reworked
+        return Convert.ToInt64(res);*/ //reworked
     }
 }
 /*Define a function that removes duplicates from an array of non negative numbers and returns it as a result.
@@ -291,7 +310,7 @@ Examples (input --> output):
 999  --> "999"
 -100 --> "-100"*/
 
-public class 8kyu
+public class Eightkyu
 {
   public static string NumberToString(int num)
   {
