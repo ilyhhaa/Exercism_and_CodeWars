@@ -27,6 +27,36 @@ internal class Program
     }
 
 
+/*Your task, is to create N×N multiplication table, of size provided in parameter.
+
+For example, when given size is 3:
+
+1 2 3
+2 4 6
+3 6 9
+For the given example, the return value should be:
+
+[[1,2,3],[2,4,6],[3,6,9]]
+*/
+
+class Solution6kyu
+{
+    public static int[,] MultiplicationTable(int size)
+    {
+        int[,] table = new int[size, size];
+
+        for (int row = 0; row < size; row++)
+        {
+            for (int col = 0; col < size; col++)
+            {
+                table[row, col] = (row + 1) * (col + 1);
+            }
+        }
+
+        return table;
+    }
+}
+
 /*Terminal game move function
 In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
 
