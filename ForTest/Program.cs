@@ -17,11 +17,13 @@ internal class Program
     {
         private static void Main(string[] args)
         {
+        int[] ints = { 1, 1, 2, 3 };
 
-            
+        var a = KataSumNoDuplicates.SumNoDuplicates(ints);
 
-            
-            Console.ReadLine();
+        Console.WriteLine(a);
+
+        Console.ReadLine();
 
         }
     }
@@ -31,6 +33,37 @@ internal class Program
 
 For instance, for the list [3, 4, 3, 6] the function should return 10,
 and for the list [1, 10, 3, 10, 10] the function should return 4.*/
+
+public class KataSumNoDuplicates
+{
+    public static int SumNoDuplicates(int[] arr)
+    {
+        Dictionary<int, int> countMap = new Dictionary<int, int>();
+
+        foreach (int num in arr)
+        {
+            if (countMap.ContainsKey(num))
+            {
+                countMap[num]++;
+            }
+            else
+            {
+                countMap[num] = 1;
+            }
+        }
+
+        int sum = 0;
+        foreach (int num in arr)
+        {
+            if (countMap[num] == 1)
+            {
+                sum += num;
+            }
+        }
+
+        return sum;
+    }
+}
 
 
 /*ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
