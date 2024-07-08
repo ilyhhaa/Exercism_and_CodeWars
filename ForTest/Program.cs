@@ -48,8 +48,9 @@ public class KataDistancesFromAverage
         }
        
         return result.ToArray();
-       
 
+        /*double average = input.Average();
+    return input.Select(i => Math.Round(average - i, 2)).ToArray();*/
     }
 }
 
