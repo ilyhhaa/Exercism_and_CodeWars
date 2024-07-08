@@ -29,8 +29,6 @@ For example:
 [1, 2, 3] --> [2, 4, 6]
 */
 
-
-
 public class KataMaps
 {
     public static int[] Maps(int[] x)
@@ -38,8 +36,6 @@ public class KataMaps
         return x.Select(x => x * 2).ToArray();
     }
 }
-
-
 
 /*Santa believes in fairness and wants to give each giftee a present in turn rather than handing all of an individual's presents to them, then all to the next person, and so on.
 
@@ -120,7 +116,6 @@ public class KataSumNoDuplicates
         return sum;
     }
 }
-
 
 /*ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 
@@ -292,8 +287,6 @@ public static class KataNotEightNINE
         }
     }
 }
-
-
 /*You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
 
 Write a program that returns the girl's age (0-9) as an integer.
@@ -310,8 +303,6 @@ public class KataEightAgain
         return age;
     }
 }
-
-
 
 /*Write a function named sumDigits which takes a number as input and 
  * returns the sum 
@@ -331,8 +322,6 @@ public class KataSumDigits
     public static int SumDigits(int number) 
         
      {
-
-
         var a = number.ToString();
         int r = 0;
 
@@ -351,7 +340,6 @@ public class KataSumDigits
 }
 
 /*Task
-
 Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).*/
 
 class KataDelete
@@ -389,8 +377,6 @@ public class KataDeleteDuplicates
       return a.ToHashSet().ToArray();
     }
   }
-
-
 /*Americans are odd people: in their buildings, the first floor is actually the ground floor and there is no 13th floor (due to superstition).
 
 Write a function that given a floor in the american system returns the floor in the european system.
@@ -407,8 +393,6 @@ Examples
 5  =>  4
 15  =>  13
 -3  =>  -3*/
-
-
 public static class KataGetRealFloor
 {
   public static int GetRealFloor(int n)
@@ -438,7 +422,6 @@ replace("Hi!") === "H!!"
 replace("!Hi! Hi!") === "!H!! H!!"
 replace("aeiou") === "!!!!!"
 replace("ABCDE") === "!BCD!"
-
 
 public static class Kata
 {
@@ -470,10 +453,6 @@ public static class KataReplace
     return result.ToString();
   }
 }
-
-
-
-
 /*Numbers ending with zeros are boring.
 
 They might be fun in your world, but not here.
@@ -497,9 +476,6 @@ public class NoBoring
         return n;
     }
 }
-
-
-
 /*Your goal is to return multiplication table for number that is always an integer from 1 to 10.
 
 For example, a multiplication table (string) for number == 5 looks like below:
@@ -515,7 +491,6 @@ For example, a multiplication table (string) for number == 5 looks like below:
 9 * 5 = 45
 10 * 5 = 50
 P. S. You can use \n in string to jump to the next line.*/
-
 
 public static class KataMultiplTable
 {
@@ -548,7 +523,6 @@ For example,
   true,  true,  true,  true ,
   false, false, true,  true]
 The correct answer would be 17.*/
-
 
 public static class KataCountingSheep
 {
