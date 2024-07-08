@@ -22,6 +22,23 @@ internal class Program
         }
     }
 
+/*Given an array of integers, return a new array with each value doubled.
+
+For example:
+
+[1, 2, 3] --> [2, 4, 6]
+*/
+
+
+
+public class KataMaps
+{
+    public static int[] Maps(int[] x)
+    {
+        return x.Select(x => x * 2).ToArray();
+    }
+}
+
 
 
 /*Santa believes in fairness and wants to give each giftee a present in turn rather than handing all of an individual's presents to them, then all to the next person, and so on.
