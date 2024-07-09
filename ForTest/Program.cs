@@ -23,6 +23,33 @@ internal class Program
     }
 
 
+/*Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+
+Hint for R users:
+
+The length of string is not always the same as the number of characters
+For example: (Input1, Input2) --> output
+
+("1", "22") --> "1221"
+("22", "1") --> "1221"
+ShortLongShort.solution("1", "22"); // returns "1221"
+ShortLongShort.solution("22", "1"); // returns "1221"*/
+
+public class ShortLongShort
+{
+    public static string Solution(string a, string b)
+    {
+        int lenA = a.Length;
+        int lenB = b.Length;
+
+        if (lenA > lenB)
+            return b + a + b;
+        else
+            return a + b + a;
+    }
+}
+
+
 /*Given a starting list/array of data, it could make some statistical sense to know how much each value differs from the average.
 
 If for example during a week of work you have collected 55,95,62,36,48 contacts for your business, it might be interesting to know the total (296), the average (59.2), but also how much you moved away from the average each single day.
