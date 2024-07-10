@@ -22,6 +22,27 @@ internal class Program
         }
     }
 
+
+/*n this Kata, you will be given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:
+
+make as few changes as possible.
+if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+For example:
+
+solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase.
+solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
+solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
+More examples in test cases. Good luck!*/
+
+
+class Kata_Fix_String_Case
+{
+    public static string Solve(string s)
+    {
+        return s.Count(char.IsLower) < s.Length / 2 ? s.ToUpper() : s.ToLower();
+    }
+}
+
 /*Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
 
 For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
