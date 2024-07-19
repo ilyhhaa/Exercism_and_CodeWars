@@ -17,14 +17,29 @@ internal class Program
     {
         private static void Main(string[] args)
         {
-        var a = KataEncodeDecode.Encode("Ala has a cat");
-        Console.WriteLine(a);
-
-        var b = KataEncodeDecode.Decode("Gug hgs g cgt");
-
-        Console.WriteLine(b);
+       
     }
     }
+/*Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+
+Examples (input -> output)
+6, "I"     -> "IIIIII"
+5, "Hello" -> "HelloHelloHelloHelloHello"*/
+
+public static class KataRepeatStr
+{
+    public static string RepeatStr(int n, string s)
+    {
+        StringBuilder sb = new StringBuilder(s.Length * n);
+        for (int i = 0; i < n; i++)
+        {
+            sb.Append(s);
+        }
+        return sb.ToString();
+
+        // return String.Concat(Enumerable.Repeat(s, n)); Что еще за Repeat()????
+    }
+}
 
 
 /*Introduction
