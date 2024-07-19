@@ -17,10 +17,93 @@ internal class Program
     {
         private static void Main(string[] args)
         {
-       
+        var a = KataEncodeDecode.Encode("Ala has a cat");
+        Console.WriteLine(a);
 
-        }
+        var b = KataEncodeDecode.Decode("Gug hgs g cgt");
+
+        Console.WriteLine(b);
     }
+    }
+
+
+/*Introduction
+The GADERYPOLUKI is a simple substitution cypher used in scouting to encrypt messages. The encryption is based on short, easy to remember key. The key is written as paired letters, which are in the cipher simple replacement.
+
+The most frequently used key is "GA-DE-RY-PO-LU-KI".
+
+ G => A
+ g => a
+ a => g
+ A => G
+ D => E
+  etc.
+The letters, which are not on the list of substitutes, stays in the encrypted text without changes.
+
+Task
+Your task is to help scouts to encrypt and decrypt thier messages. Write the Encode and Decode functions.
+
+Input/Output
+The input string consists of lowercase and uperrcase characters and white . The substitution has to be case-sensitive.
+
+Example
+ Encode("ABCD")          // => GBCE 
+ Encode("Ala has a cat") // => Gug hgs g cgt 
+ Encode("gaderypoluki"); // => agedyropulik
+ Decode("Gug hgs g cgt") // => Ala has a cat 
+ Decode("agedyropulik")  // => gaderypoluki
+ Decode("GBCE")          // => ABCD*/
+
+
+
+public class KataEncodeDecode
+{
+    private static readonly Dictionary<char, char> Pairs = new Dictionary<char, char>()
+    {
+        {'g','a' }, { 'd','e' }, { 'r','y' }, {'p','o' }, { 'l','u' }, { 'k','i' },
+        {'a','g' }, { 'e','d' }, { 'y','r' }, {'o','p' }, { 'u','l' }, { 'i','k' },
+        {'G','A' }, { 'D','E' }, { 'R','Y' }, {'P','O' }, { 'L','U' }, { 'K','I' },
+        {'A','G' }, { 'E','D' }, { 'Y','R' }, {'O','P' }, { 'U','L' }, { 'I','K' }
+    };
+
+    public static string Encode(string str)
+    {
+        return Transform(str, Pairs);
+    }
+
+    public static string Decode(string str)
+    {
+        var reversePairs = Pairs.ToDictionary(kvp => kvp.Value, kvp => kvp.Key);
+        return Transform(str, reversePairs);
+    }
+
+    private static string Transform(string str, Dictionary<char, char> pairs)
+    {
+        var result = new StringBuilder();
+
+        foreach (var ch in str)
+        {
+            result.Append(pairs.ContainsKey(ch) ? pairs[ch] : ch);
+        }
+
+        return result.ToString();
+    }
+
+    /*
+     * 
+     * ШОК Контент с кодварс
+     * using System.Linq;
+  public class Kata
+  {
+        public static string Encode(string str) => Decode(str);
+        public static string Decode(string str)
+        {
+            var s = "GDRPLKgdrplkAEYOUIaeyoui";
+            var t = "AEYOUIaeyouiGDRPLKgdrplk";
+            return string.Concat(str.Select(x => s.IndexOf(x) < 0 ? x : t[s.IndexOf(x)]));
+        }
+  }*/
+}
 
 
 /*You will be given an array of non-negative integers and positive integer bin width.
