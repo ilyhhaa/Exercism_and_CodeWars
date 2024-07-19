@@ -20,6 +20,39 @@ internal class Program
        
     }
     }
+
+
+
+/*Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+Examples:
+
+* 'abc' =>  ['ab', 'c_']
+* 'abcdef' => ['ab', 'cd', 'ef']*/
+
+public class SplitString
+{
+    public static string[] Solution(string str)
+    {
+        List<string> list = new List<string>();
+        for (int i = 0; i < str.Length; i += 2)
+        {
+            if (i + 1 < str.Length)
+            {
+                list.Add(str.Substring(i, 2));
+            }
+            else
+            {
+                list.Add(str[i] + "_");
+            }
+        }
+
+        return list.ToArray();
+    }
+}
+
+
+
 /*Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 
 Examples (input -> output)
