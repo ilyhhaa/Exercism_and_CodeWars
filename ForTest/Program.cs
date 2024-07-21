@@ -21,6 +21,33 @@ internal class Program
     }
     }
 
+/*This kata requires you to write a function which merges two strings together.
+ * It does so by merging the end of the first string with the start
+ * of the second string together when they are an exact match.
+
+"abcde" + "cdefgh" => "abcdefgh"
+"abaab" + "aabab" => "abaabab"
+"abc" + "def" => "abcdef"
+"abc" + "abc" => "abc"
+NOTE: The algorithm should always use the longest possible overlap.
+
+"abaabaab" + "aabaabab" would be "abaabaabab" and not "abaabaabaabab"*/
+public class KataMergeStrings
+{
+    public static string MergeStrings(string first, string second)
+    {
+        int maxOverlap = 0;
+        for (int i = 1; i <= Math.Min(first.Length, second.Length); i++)
+        {
+            if (first.Substring(first.Length - i) == second.Substring(0, i))
+            {
+                maxOverlap = i;
+            }
+        }
+        return first + second.Substring(maxOverlap);
+    }
+}
+
 
 
 /*Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
