@@ -1,18 +1,4 @@
-﻿using ForTest.DifferenceOfSquares;
-using ForTest.Interest_is_Interesting;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography.X509Certificates;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Linq;
-using System.Net;
-using ForTest._2MonthAlgoFights;
-using System.Net.WebSockets;
-
+﻿using System.Text;
 internal class Program
 {
     private static void Main(string[] args)
@@ -20,10 +6,7 @@ internal class Program
 
     }
 }
-
-
 //Is it letter????
-
 public class Kata
 {
     public static bool IsItLetter(char c)
@@ -35,8 +18,6 @@ public class Kata
         return char.IsLetter(c);
     }
 }
-
-
 /*Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
 
 (In this case, all triangles must have surface greater than 0 to be accepted).
@@ -78,6 +59,8 @@ public class KataMergeStrings
 {
     public static string MergeStrings(string first, string second)
     {
+
+
         int maxOverlap = 0;
         for (int i = 1; i <= Math.Min(first.Length, second.Length); i++)
         {
