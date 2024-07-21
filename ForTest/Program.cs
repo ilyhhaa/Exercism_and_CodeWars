@@ -59,8 +59,6 @@ public class KataMergeStrings
 {
     public static string MergeStrings(string first, string second)
     {
-
-
         int maxOverlap = 0;
         for (int i = 1; i <= Math.Min(first.Length, second.Length); i++)
         {
@@ -223,7 +221,6 @@ public static class KataHistogram
             uint binIndex = number / binWidth;
             histogram[binIndex]++;
         }
-
         return histogram;
     }
 }
@@ -266,8 +263,6 @@ public class Kata_ROT13
         return string.Empty;
 
     }
-
-
 }
 /*Kids drink toddy.
 Teens drink coke.
@@ -321,16 +316,12 @@ public static class KataCheckCoupon
 {
     public static bool CheckCoupon(string enteredCode, string correctCode, string currentDate, string expirationDate)
     {
-
         if (enteredCode != correctCode)
         {
             return false;
         }
-
         DateTime currentDateParsed = DateTime.Parse(currentDate);
         DateTime expirationDateParsed = DateTime.Parse(expirationDate);
-
-
         return currentDateParsed <= expirationDateParsed;
     }
 }
@@ -344,7 +335,6 @@ S is misinterpreted as 5
 O is misinterpreted as 0
 I is misinterpreted as 1
 The test cases contain numbers only by mistake.
-
 */
 public class KataCorrect
 {
@@ -357,7 +347,6 @@ public class KataCorrect
         text = text.Replace('5', 'S')
                    .Replace('0', 'O')
                    .Replace('1', 'I');
-
         return text;
     }
 }
@@ -406,8 +395,6 @@ public class KataCountPositivesSumNegatives
     solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
     solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
     More examples in test cases. Good luck!*/
-
-
     class Kata_Fix_String_Case
     {
         public static string Solve(string s)
@@ -444,7 +431,6 @@ public class KataCountPositivesSumNegatives
     ("22", "1") --> "1221"
     ShortLongShort.solution("1", "22"); // returns "1221"
     ShortLongShort.solution("22", "1"); // returns "1221"*/
-
     public class ShortLongShort
     {
         public static string Solution(string a, string b)
@@ -642,7 +628,6 @@ public class KataCountPositivesSumNegatives
 
     [[1,2,3],[2,4,6],[3,6,9]]
     */
-
     class Solution6kyu
     {
         public static int[,] MultiplicationTable(int size)
@@ -660,7 +645,6 @@ public class KataCountPositivesSumNegatives
             return table;
         }
     }
-
     /*Terminal game move function
     In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
 
@@ -678,7 +662,6 @@ public class KataCountPositivesSumNegatives
             return newPosition;
         }
     }
-
     /*What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
 
     Example(Input --> Output)
