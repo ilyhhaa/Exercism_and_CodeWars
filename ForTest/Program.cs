@@ -1,9 +1,25 @@
-﻿using System.Text;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Text;
 internal class Program
 {
     private static void Main(string[] args)
     {
 
+    }
+}
+
+/*You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+
+Complete the method which accepts such an array, and returns that single different number.
+
+The input array will always be valid! (odd-length >= 3)*/
+
+class SolutionStray
+{
+    public static int Stray(int[] numbers)
+    {
+        var grouped = numbers.GroupBy(n => n);
+        return grouped.Single(g => g.Count() == 1).Key;
     }
 }
 
