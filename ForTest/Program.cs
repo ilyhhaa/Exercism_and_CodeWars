@@ -8,6 +8,40 @@ internal class Program
     }
 }
 
+/*Write a function that accepts two integers and returns the remainder of dividing the larger value by the smaller value.
+
+Divison by zero should throw a DivideByZeroException.
+
+Examples:
+n = 17
+m = 5
+result = 2 (remainder of `17 / 5`)
+
+n = 13
+m = 72
+result = 7 (remainder of `72 / 13`)
+
+n = 0
+m = -1
+result = 0 (remainder of `0 / -1`)
+
+n = 0
+m = 1
+result - division by zero (refer to the specifications on how to handle this in your language)*/
+
+public class KataRemainder
+{
+    public static int Remainder(int a, int b)
+    {
+        if (b == 0)
+        {
+            throw new DivideByZeroException("Division by zero is not allowed.");
+        }
+
+        return Math.Max(a, b) % Math.Min(a, b);
+    }
+}
+
 /*Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
 In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained (Read the notes for more detail about it)
 Example
