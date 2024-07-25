@@ -8,6 +8,43 @@ internal class Program
     }
 }
 
+/*Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained (Read the notes for more detail about it)
+Example
+With the numbers are 1, 2 and 3 , here are some ways of placing signs and brackets:
+
+1 * (2 + 3) = 5
+1 * 2 * 3 = 6
+1 + 2 * 3 = 7
+(1 + 2) * 3 = 9
+So the maximum value that you can obtain is 9.
+
+Notes
+The numbers are always positive.
+The numbers are in the range (1  ≤  a, b, c  ≤  10).
+You can use the same operation more than once.
+It's not necessary to place all the signs and brackets.
+Repetition in numbers may occur .
+You cannot swap the operands. For instance, in the given example you cannot get expression (1 + 3) * 2 = 8.
+Input >> Output Examples:
+expressionsMatter(1,2,3)  ==>  return 9*/
+
+public class KataExpMatter
+{
+    public static int ExpressionsMatter(int a, int b, int c)
+    {
+        int option1 = a * (b + c);
+        int option2 = a * b * c;
+        int option3 = a + b * c;
+        int option4 = (a + b) * c;
+        int option5 = a + b + c;
+
+        return Math.Max(Math.Max(Math.Max(Math.Max(option1, option2), option3), option4), option5);
+    }
+}
+
+
+
 /*Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer. You don't need to validate the form of the Roman numeral.
 
 Modern Roman numerals are written by expressing each decimal digit of the number to be encoded separately, starting with the leftmost digit and skipping any 0s. So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and 2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI", uses each letter in descending order.
