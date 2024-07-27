@@ -7,6 +7,20 @@ internal class Program
 
     }
 }
+/*When provided with a letter, return its position in the alphabet.
+
+Input :: "a"
+
+Ouput :: "Position of alphabet: 1"*/
+public class KataPosition
+{
+  public static string Position(char alphabet)
+  {
+    int position = char.ToLower(alphabet) - 'a' + 1;
+    return $"Position of alphabet: {position}";
+  }
+}
+
 
 /*Your start-up's BA has told marketing that your website has a large audience in Scandinavia and surrounding countries. Marketing thinks it would be great to welcome visitors to the site in their own language. Luckily you already use an API that detects the user's location, so this is an easy win.
 
