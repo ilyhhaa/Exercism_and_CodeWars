@@ -7,6 +7,25 @@ internal class Program
 
     }
 }
+/*Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
+
+If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+ball1 = new Ball();
+ball2 = new Ball("super");
+
+ball1.ballType     //=> "regular"
+ball2.ballType     //=> "super"*/
+
+public class Ball
+{
+    public string ballType { get; set; }
+
+    public Ball(string ballType = "regular")
+    {
+        this.ballType = ballType;
+    }
+}
 /*Starting with .NET Framework 3.5, C# supports a Where (in the System.Linq namespace) method which allows a user to filter arrays based on a predicate. Use the Where method to complete the function given.
 
 Enumerable.Where documentation: https://msdn.microsoft.com/en-us/library/bb534803(v=vs.110).aspx
