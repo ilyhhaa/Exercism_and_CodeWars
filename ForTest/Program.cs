@@ -7,6 +7,25 @@ internal class Program
 
     }
 }
+/*Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
+
+The pipes connecting your level's stages together need to be fixed before you receive any more complaints.
+
+The pipes are correct when each pipe after the first is 1 more than the previous one.
+
+Task
+
+Given a list of unique numbers sorted in ascending order, return a new list so that the values increment by 1 for each index from the minimum value up to the maximum value (both included).*/
+
+public class Fixer
+{
+  public static List<int> PipeFix(List<int> numbers)
+  {
+    int min = numbers.First();
+        int max = numbers.Last();
+        return Enumerable.Range(min, max - min + 1).ToList();
+  }
+}
 /*Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
 
 If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
