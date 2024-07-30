@@ -7,6 +7,25 @@ internal class Program
 
     }
 }
+/*Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+
+Examples
+
+"Hi!"     ---> "Hi"
+"Hi!!!"   ---> "Hi!!"
+"!Hi"     ---> "!Hi"
+"!Hi!"    ---> "!Hi"
+"Hi! Hi!" ---> "Hi! Hi"
+"Hi"      ---> "Hi"*/
+
+public class KataRemove
+{
+  public static string Remove(string s)
+  {
+   return s.EndsWith("!") ? s.Substring(0, s.Length - 1) : s;
+  }
+}
+
 
 /*Write a function that always returns 5
 
