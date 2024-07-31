@@ -7,6 +7,34 @@ internal class Program
 
     }
 }
+/*To find the volume (centimeters cubed) of a cuboid you use the formula:
+
+volume = Length * Width * Height
+
+But someone forgot to use proper record keeping, so we only have the volume, and the length of a single side!
+
+It's up to you to find out whether the cuboid has equal sides (= is a cube).
+
+Return true if the cuboid could have equal sides, return false otherwise.
+
+Return false for invalid numbers too (e.g volume or side is less than or equal to 0).
+
+*/
+
+public class CubeChecker
+  {
+    public bool IsCube(double volume, double side)
+    {
+      if (volume <= 0 || side <= 0)
+    {
+        return false;
+    }
+    double sideCubed = Math.Pow(side, 3);
+    return volume == sideCubed;
+    }
+  }
+
+
 /*You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
 
 Considering these factors, write a function that tells you if it is possible to get to the pump or not.
