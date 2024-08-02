@@ -7,6 +7,22 @@ internal class Program
 
     }
 }
+/*Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+Examples
+
+"hello"     -->  "hll"
+"codewars"  -->  "cdwrs"
+"goodbye"   -->  "gdby"
+"HELLO"     -->  "HELLO"*/
+
+public class KataShortcut
+{
+  public static string Shortcut(string input)
+  {
+    string vowels = "aeiou";
+    return new string(input.Where(c => !vowels.Contains(c)).ToArray());
+  }
 
 /*Your function takes two arguments:
 
