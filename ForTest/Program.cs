@@ -8,6 +8,24 @@ internal class Program
     }
 
 }
+/*In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.*/
+
+
+public class KataFindMultiples
+{
+    public static List<int> FindMultiples(int integer, int limit)
+    {
+        List<int> multiples = new List<int>();
+        for (int i = integer; i <= limit; i += integer)
+        {
+            multiples.Add(i);
+        }
+        return multiples;
+    }
+}
+
 /*Your boss decided to save money by purchasing some cut-rate optical character recognition software for scanning in the text of old novels to your database. At first it seems to capture words okay, but you quickly notice that it throws in a lot of numbers at random places in the text.
 
 Examples (input -> output)
