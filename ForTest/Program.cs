@@ -8,6 +8,35 @@ internal class Program
     }
 
 }
+/*An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+Example: (Input --> Output)
+
+"Dermatoglyphics" --> true
+"aba" --> false
+"moOse" --> false (ignore letter case*/
+
+public class KataIsIsogram
+{
+  public static bool IsIsogram(string str) 
+  {
+    if (string.IsNullOrEmpty(str))
+        return true;
+
+    str = str.ToLower();
+    var charSet = new HashSet<char>();
+
+    foreach (char c in str)
+    {
+        if (charSet.Contains(c))
+            return false;
+        charSet.Add(c);
+    }
+
+    return true;
+  }
+}
+
 /*In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
 
 For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.*/
