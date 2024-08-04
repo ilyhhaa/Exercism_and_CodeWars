@@ -9,6 +9,34 @@ internal class Program
 
 }
 
+/*n and m are natural numbers (positive integers)
+m is excluded from the multiples
+Examples
+
+Kata.SumMul(2, 9)   => 2 + 4 + 6 + 8 = 20
+Kata.SumMul(3, 13)  => 3 + 6 + 9 + 12 = 30
+Kata.SumMul(4, 123) => 4 + 8 + 12 + ... = 1860
+Kata.SumMul(4, 1)   // throws ArgumentException
+Kata.SumMul(0, 20)  // throws ArgumentException*/
+
+public class KataSumMul
+{
+  public static int SumMul(int n, int m)
+  {
+    if (n <= 0 || m <= 0 || m <= n)
+        throw new ArgumentException("n and m must be positive integers and m must be greater than n");
+
+    int sum = 0;
+    for (int i = n; i < m; i += n)
+    {
+        sum += i;
+    }
+
+    return sum;
+  }
+}
+
+
 /*Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he wants to know how many years 'Y' this sum 'P' has to be kept in the bank in order for it to amount to a desired sum of money 'D'.
 
 The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. After paying taxes 'T' for the year the new sum is re-invested.
