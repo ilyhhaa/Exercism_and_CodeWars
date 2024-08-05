@@ -8,6 +8,27 @@ internal class Program
     }
 
 }
+/*Complete the function which converts a binary number (given as a string) to a decimal number.*/
+
+public  class BinToDec 
+{
+    public int binToDec(string s)
+    {
+        int decimalValue = 0;
+        int baseValue = 1;
+
+        for (int i = s.Length - 1; i >= 0; i--)
+        {
+            if (s[i] == '1')
+            {
+                decimalValue += baseValue;
+            }
+            baseValue *= 2;
+        }
+
+        return decimalValue;
+    }
+}
 
 
 /*In this kata you will create a function that takes in a list and returns a list with the reverse order.
