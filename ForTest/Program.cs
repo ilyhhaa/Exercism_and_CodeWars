@@ -9,7 +9,16 @@ internal class Program
 
 }
 
+/*Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.*/
 
+public static class Game
+{
+  public static float Combat(float health, float damage)
+  {
+    float newHealth = health - damage;
+    return newHealth < 0 ? 0 : newHealth;
+  }
+}
 
 /*The following was a question that I received during a technical interview for an entry level software developer position. I thought I'd post it here so that everyone could give it a go:
 
