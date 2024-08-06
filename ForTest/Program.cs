@@ -9,6 +9,22 @@ internal class Program
 
 }
 
+
+/*The following was a question that I received during a technical interview for an entry level software developer position. I thought I'd post it here so that everyone could give it a go:
+
+You are given an unsorted array containing all the integers from 0 to 100 inclusively. However, one number is missing. Write a function to find and return this number. What are the time and space complexities of your solution?*/
+
+public static class KataMissingNo
+{
+    public static int MissingNo(int[] nums)
+    {
+        int n = 100;
+    int expectedSum = n * (n + 1) / 2;
+    int actualSum = nums.Sum();
+    return expectedSum - actualSum;
+    }
+}
+
 /*The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the savings over the normal high street price would effectively cover the cost of your holiday.
 
 You will be given the high street price (normPrice, in £ (Pounds)), the duty free discount (discount, in percent) and the cost of the holiday (in £).
