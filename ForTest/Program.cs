@@ -8,6 +8,33 @@ internal class Program
     }
 
 }
+/*Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, your task is to find the sum of the minimum values in each row.
+
+For Example:
+
+[ [ 1, 2, 3, 4, 5 ]        #  minimum value of row is 1
+, [ 5, 6, 7, 8, 9 ]        #  minimum value of row is 5
+, [ 20, 21, 34, 56, 100 ]  #  minimum value of row is 20
+]
+So the function should return 26 because the sum of the minimums is 1 + 5 + 20 = 26.
+
+Note: You will always be given a non-empty list containing positive values.*/
+
+class KataSumOfMinimums
+{
+  public static int SumOfMinimums(int[,] numbers)
+  {
+    int sum = 0;
+    for (int i = 0; i < numbers.GetLength(0); i++)
+    {
+        int min = Enumerable.Range(0, numbers.GetLength(1))
+                            .Select(j => numbers[i, j])
+                            .Min();
+        sum += min;
+    }
+    return sum;
+  }
+}
 
 /*Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.*/
 
