@@ -8,6 +8,34 @@ internal class Program
     }
 
 }
+
+/*You are given a string containing a sequence of character sequences separated by commas.
+
+Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+
+If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value (represented as a generic value NULL in the examples below).
+
+Examples
+"1,2,3"      =>  "2"
+"1,2,3,4"    =>  "2 3"
+"1,2,3,4,5"  =>  "2 3 4"
+
+""     =>  NULL
+"1"    =>  NULL
+"1,2"  =>  NULL*/
+
+public static class KataArray
+{
+    public static string Array(string s)
+    {
+        var sequences = s.Split(',');
+        if (sequences.Length < 3)
+            return null;
+
+        return string.Join(" ", sequences.Skip(1).Take(sequences.Length - 2));
+    }
+}
+
 /*Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
 
 The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
