@@ -8,6 +8,27 @@ internal class Program
     }
 
 }
+
+/*Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him.
+
+Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message:
+
+If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+If he doesn't get 10 hoops, return the string "Keep at it until you get it".*/
+
+
+public class KataHoopCount
+{
+    public static string HoopCount(int n)
+    {
+        return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
+    }
+}
+
+
+
+
+
 /*In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example: 5! = 5 * 4 * 3 * 2 * 1 = 120. By convention the value of 0! is 1.
 
 Write a function to calculate factorial for a given input. If input is below 0 or above 12 throw an exception of type ArgumentOutOfRangeException (C#) or IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError (JavaScript) or ValueError (Python) or return -1 (C).
