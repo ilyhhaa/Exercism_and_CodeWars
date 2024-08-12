@@ -8,6 +8,22 @@ internal class Program
     }
 
 }
+/*Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
+
+The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
+
+Upper or lower case letter does not matter -- "eNglisH" is also correct.
+
+Return value as boolean values, true for the string to contains "English", false for it does not.*/
+
+
+static class KataSpeakEnglish
+{
+    public static bool SpeakEnglish(string sentence)
+    {
+        return sentence.ToLower().Contains("english");
+    }
+}
 
 /*Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him.
 
@@ -369,7 +385,7 @@ public class KataSetAlarm
 
 
 
-public class Kata
+public class KataGet_SIZE
     {
         public static int[] Get_size(int w,int h,int d)
         {
