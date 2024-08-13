@@ -9,6 +9,23 @@ internal class Program
 
 }
 
+/*There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), calculate the total cost of the mangoes.
+
+Examples
+mango(2, 3) ==> 6    # 2 mangoes for $3 per unit = $6; no mango for free
+mango(3, 3) ==> 6    # 2 mangoes for $3 per unit = $6; +1 mango for free
+mango(5, 3) ==> 12   # 4 mangoes for $3 per unit = $12; +1 mango for free
+mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free*/
+
+public class KataMango
+{
+    public static int Mango(int quantity, int price)
+    {
+        int paidMangoes = quantity - (quantity / 3);
+        int totalCost = paidMangoes * price;
+        return totalCost;
+    }
+}
 
 /*Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
 
