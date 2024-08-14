@@ -208,9 +208,9 @@ Write a function to calculate factorial for a given input. If input is below 0 o
 
 public static class KataFactorial
 {
-  public static int Factorial(int n)
-  {
-    if (n < 0 || n > 12)
+    public static int Factorial(int n)
+    {
+        if (n < 0 || n > 12)
         {
             throw new ArgumentOutOfRangeException(nameof(n), "Invalid input))))).");
         }
@@ -221,11 +221,11 @@ public static class KataFactorial
             result *= i;
         }
         return result;
-  }
+    }
 }
 public class KataSquare
 {
- public static double Square(double number)
+    public static double Square(double number)
     {
         return number * number;
     }
@@ -245,29 +245,29 @@ Note: You will always be given a non-empty list containing positive values.*/
 
 class KataSumOfMinimums
 {
-  public static int SumOfMinimums(int[,] numbers)
-  {
-    int sum = 0;
-    for (int i = 0; i < numbers.GetLength(0); i++)
+    public static int SumOfMinimums(int[,] numbers)
     {
-        int min = Enumerable.Range(0, numbers.GetLength(1))
-                            .Select(j => numbers[i, j])
-                            .Min();
-        sum += min;
+        int sum = 0;
+        for (int i = 0; i < numbers.GetLength(0); i++)
+        {
+            int min = Enumerable.Range(0, numbers.GetLength(1))
+                                .Select(j => numbers[i, j])
+                                .Min();
+            sum += min;
+        }
+        return sum;
     }
-    return sum;
-  }
 }
 
 /*Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.*/
 
 public static class Game
 {
-  public static float Combat(float health, float damage)
-  {
-    float newHealth = health - damage;
-    return newHealth < 0 ? 0 : newHealth;
-  }
+    public static float Combat(float health, float damage)
+    {
+        float newHealth = health - damage;
+        return newHealth < 0 ? 0 : newHealth;
+    }
 }
 
 /*The following was a question that I received during a technical interview for an entry level software developer position. I thought I'd post it here so that everyone could give it a go:
@@ -279,9 +279,9 @@ public static class KataMissingNo
     public static int MissingNo(int[] nums)
     {
         int n = 100;
-    int expectedSum = n * (n + 1) / 2;
-    int actualSum = nums.Sum();
-    return expectedSum - actualSum;
+        int expectedSum = n * (n + 1) / 2;
+        int actualSum = nums.Sum();
+        return expectedSum - actualSum;
 
 
         //return 5050 - nums.Sum();
@@ -300,12 +300,12 @@ All inputs will be integers. Please return an integer. Round down.*/
 
 public class KataDutyFree
 {
-  public static int DutyFree(int normPrice, int Discount, int hol)
-  {
-    double savingsPerBottle = normPrice * (Discount / 100.0);
-    int bottlesNeeded = (int)(hol / savingsPerBottle);
-    return bottlesNeeded;
-  }
+    public static int DutyFree(int normPrice, int Discount, int hol)
+    {
+        double savingsPerBottle = normPrice * (Discount / 100.0);
+        int bottlesNeeded = (int)(hol / savingsPerBottle);
+        return bottlesNeeded;
+    }
 }
 /*Fellow code warrior, we need your help! We seem to have lost one of our sequence elements, and we need your help to retrieve it!
 
@@ -335,7 +335,7 @@ public static class KataGetMissing
 
 /*Complete the function which converts a binary number (given as a string) to a decimal number.*/
 
-public class BinToDec 
+public class BinToDec
 {
     public int binToDec(string s)
     {
@@ -386,19 +386,19 @@ Kata.SumMul(0, 20)  // throws ArgumentException*/
 
 public class KataSumMul
 {
-  public static int SumMul(int n, int m)
-  {
-    if (n <= 0 || m <= 0 || m <= n)
-        throw new ArgumentException("n and m must be positive integers and m must be greater than n");
-
-    int sum = 0;
-    for (int i = n; i < m; i += n)
+    public static int SumMul(int n, int m)
     {
-        sum += i;
-    }
+        if (n <= 0 || m <= 0 || m <= n)
+            throw new ArgumentException("n and m must be positive integers and m must be greater than n");
 
-    return sum;
-  }
+        int sum = 0;
+        for (int i = n; i < m; i += n)
+        {
+            sum += i;
+        }
+
+        return sum;
+    }
 }
 
 
@@ -430,22 +430,22 @@ Assumption: Assume that Desired Principal 'D' is always greater than the initial
 
 public class KataCalcYears
 {
-  public static int CalculateYears(double principal, double interest,  double tax, double desiredPrincipal)
-        {
-          if (principal >= desiredPrincipal)
-        return 0;
-
-    int years = 0;
-    while (principal < desiredPrincipal)
+    public static int CalculateYears(double principal, double interest, double tax, double desiredPrincipal)
     {
-        double interestEarned = principal * interest;
-        double interestAfterTax = interestEarned * (1 - tax);
-        principal += interestAfterTax;
-        years++;
-    }
+        if (principal >= desiredPrincipal)
+            return 0;
 
-    return years;
+        int years = 0;
+        while (principal < desiredPrincipal)
+        {
+            double interestEarned = principal * interest;
+            double interestAfterTax = interestEarned * (1 - tax);
+            principal += interestAfterTax;
+            years++;
         }
+
+        return years;
+    }
 }
 
 
@@ -459,23 +459,23 @@ Example: (Input --> Output)
 
 public class KataIsIsogram
 {
-  public static bool IsIsogram(string str) 
-  {
-    if (string.IsNullOrEmpty(str))
-        return true;
-
-    str = str.ToLower();
-    var charSet = new HashSet<char>();
-
-    foreach (char c in str)
+    public static bool IsIsogram(string str)
     {
-        if (charSet.Contains(c))
-            return false;
-        charSet.Add(c);
-    }
+        if (string.IsNullOrEmpty(str))
+            return true;
 
-    return true;
-  }
+        str = str.ToLower();
+        var charSet = new HashSet<char>();
+
+        foreach (char c in str)
+        {
+            if (charSet.Contains(c))
+                return false;
+            charSet.Add(c);
+        }
+
+        return true;
+    }
 }
 
 /*In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
@@ -533,14 +533,14 @@ public class KataSetAlarm
 }
 /*Write a function that returns the total surface area and volume of a box as an array: [area, volume]*/
 public class KataGet_SIZE
+{
+    public static int[] Get_size(int w, int h, int d)
     {
-        public static int[] Get_size(int w,int h,int d)
-        {
-           int surfaceArea = 2 * (w * h + h * d + d * w);
-    int volume = w * h * d;
-    return new int[] { surfaceArea, volume };
-        }
+        int surfaceArea = 2 * (w * h + h * d + d * w);
+        int volume = w * h * d;
+        return new int[] { surfaceArea, volume };
     }
+}
 
 /*Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
 
