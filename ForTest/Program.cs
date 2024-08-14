@@ -65,8 +65,6 @@ public static class KatanearestSq
         return diff1 > diff2 ? belowN : aboveN;
     }
 }
-
-
 /*Your task is to write a function which returns the sum of a sequence of integers.
 
 The sequence is defined by 3 non-negative values: begin, end, step.
@@ -202,11 +200,6 @@ public class KataHoopCount
         return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
     }
 }
-
-
-
-
-
 /*In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example: 5! = 5 * 4 * 3 * 2 * 1 = 120. By convention the value of 0! is 1.
 
 Write a function to calculate factorial for a given input. If input is below 0 or above 12 throw an exception of type ArgumentOutOfRangeException (C#) or IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError (JavaScript) or ValueError (Python) or return -1 (C).
@@ -230,8 +223,6 @@ public static class KataFactorial
         return result;
   }
 }
-
-
 public class KataSquare
 {
  public static double Square(double number)
@@ -540,13 +531,7 @@ public class KataSetAlarm
         return employed && !vacation;
     }
 }
-
-
-
 /*Write a function that returns the total surface area and volume of a box as an array: [area, volume]*/
-
-
-
 public class KataGet_SIZE
     {
         public static int[] Get_size(int w,int h,int d)
