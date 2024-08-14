@@ -9,6 +9,31 @@ internal class Program
 
 }
 
+/*Your task is to find the nearest square number, nearest_sq(n) or nearestSq(n), of a positive integer n.
+
+For example, if n = 111, then nearest\_sq(n) (nearestSq(n)) equals 121, since 111 is closer to 121, the square of 11, than 100, the square of 10.
+
+If the n is already the perfect square (e.g. n = 144, n = 81, etc.), you need to just return n.*/
+
+public static class KatanearestSq
+{
+    public static int NearestSq(int n)
+    {
+        double sqrt = Math.Sqrt(n);
+        if (Math.Abs(sqrt - Math.Floor(sqrt)) < 1e-9)
+            return n;
+
+        int aboveN = (int)Math.Pow(Math.Ceiling(sqrt), 2);
+        int belowN = (int)Math.Pow(Math.Floor(sqrt), 2);
+
+        int diff1 = aboveN - n;
+        int diff2 = n - belowN;
+
+        return diff1 > diff2 ? belowN : aboveN;
+    }
+}
+
+
 /*Your task is to write a function which returns the sum of a sequence of integers.
 
 The sequence is defined by 3 non-negative values: begin, end, step.
@@ -62,7 +87,7 @@ Examples (Input -> Output)
 * [42, 54, 65, 87, 0]             -> min = 0, max = 87
 * [5]                             -> min = 5, max = 5*/
 
-public class Kata
+public class KataMINMAX
 {
     public int Min(int[] list)
     {
