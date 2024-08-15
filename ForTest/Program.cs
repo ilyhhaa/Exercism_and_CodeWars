@@ -9,6 +9,18 @@ internal class Program
 
 }
 
+/*Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+
+*/
+
+public class KataGetVolumeofCuboid
+{
+    public static double GetVolumeOfCuboid(double length, double width, double height)
+    {
+        return length * width * height;
+    }
+}
+
 /*Write function bmi that calculates body mass index (bmi = weight / height2).
 
 if bmi <= 18.5 return "Underweight"
