@@ -19,6 +19,8 @@ public class KataGetVolumeofCuboid
     {
         return length * width * height;
     }
+
+    //public static double getVolumeOfCubiod(double length, double width, double height) => length * width * height;
 }
 
 /*Write function bmi that calculates body mass index (bmi = weight / height2).
