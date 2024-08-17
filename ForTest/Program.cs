@@ -9,6 +9,23 @@ internal class Program
 
 }
 
+/*Create a function named (Combine_names) that accepts two parameters (first and last name). The function should return the full name.
+
+Example:
+
+CombineNames("James", "Stevens")
+returns:
+
+"James Stevens"*/
+public static class KataCombineNames
+{
+
+    public static string Combine_names(string a, string b)
+    {
+        return $"{a} {b}";
+    }
+}
+
 /*Write a small function that returns the values of an array that are not odd.
 
 All values in the array will be integers. Return the good values in the order they are given.*/
