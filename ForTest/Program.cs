@@ -1,12 +1,31 @@
 ﻿
+using System.Numerics;
 using System.Text;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine(KataFlipNumber.FlipNumber("0123456789")); 
+
     }
 
+    /*Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+      Examples
+        n = 0  ==> [1]        # [2^0]
+         n = 1  ==> [1, 2]     # [2^0, 2^1]
+         n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]*/
+
+    public class Kata
+    {
+        public static BigInteger[] PowersOfTwo(int n)
+        {
+            BigInteger[] result = new BigInteger[n + 1];
+            for (int i = 0; i <= n; i++)
+            {
+                result[i] = BigInteger.Pow(2, i);
+            }
+            return result;
+        }
+    }
 }
 /*You are going to be given a string. Your job is to return that string in a certain order that I will explain below:
 
@@ -59,7 +78,7 @@ public class NoOddities
 {
     public static int[] NoOdds(int[] values)
     {
-        return values.Where(x => x%2==0).ToArray();
+        return values.Where(x => x % 2 == 0).ToArray();
     }
 }
 
