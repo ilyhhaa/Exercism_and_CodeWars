@@ -4,10 +4,35 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-
+        Console.WriteLine(KataFlipNumber.FlipNumber("0123456789")); 
     }
 
 }
+/*You are going to be given a string. Your job is to return that string in a certain order that I will explain below:
+
+Let's say you start with this: "012345"
+
+The first thing you do is reverse it:"543210"
+Then you will take the string from the 1st position and reverse it again:"501234"
+Then you will take the string from the 2nd position and reverse it again:"504321"
+Then you will take the string from the 3rd position and reverse it again:"504123"
+
+Continue this pattern until you have done every single position, and then you will return the string you have created. For this particular number, you would return:"504132"*/
+
+public class KataFlipNumber
+{
+    public static string FlipNumber(string n)
+    {
+        char[] arr = n.ToCharArray();
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Array.Reverse(arr, i, arr.Length - i);
+        }
+        return new string(arr);
+    }
+}
+
 
 /*Create a function named (Combine_names) that accepts two parameters (first and last name). The function should return the full name.
 
