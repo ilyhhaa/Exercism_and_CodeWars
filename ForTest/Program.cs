@@ -8,6 +8,21 @@ internal class Program
 
     }
 
+    /*Each number should be formatted that it is rounded to two decimal places. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
+
+       Example:    
+       5.5589 is rounded 5.56   
+       3.3424 is rounded 3.34*/
+
+
+    public class Numbers
+    {
+        public static double TwoDecimalPlaces(double number)
+        {
+            return Math.Round(number * 100.0) / 100.0;
+        }
+    }
+
     /*Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
       Examples
         n = 0  ==> [1]        # [2^0]
