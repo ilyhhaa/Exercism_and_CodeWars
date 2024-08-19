@@ -1,11 +1,27 @@
 ﻿
 using System.Numerics;
 using System.Text;
+using System.Text.RegularExpressions;
 internal class Program
 {
     private static void Main(string[] args)
     {
 
+    }
+    /*Write a simple regex to validate a username. Allowed characters are:
+
+      lowercase letters,
+      numbers,
+       underscore
+       Length should be between 4 and 16 characters (both included).*/
+    public class KataValidateUs
+    {
+        public static bool ValidateUsr(string username)
+        {
+            string pattern = @"^[a-z0-9_]{4,16}$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(username);
+        }
     }
 
     /*Each number should be formatted that it is rounded to two decimal places. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
