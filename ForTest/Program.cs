@@ -8,6 +8,43 @@ internal class Program
     {
 
     }
+
+    /*Our football team has finished the championship.
+
+Our team's match results are recorded in a collection of strings. Each match is represented by a string in the format "x:y", where x is our team's score and y is our opponents score.
+
+For example: ["3:1", "2:2", "0:1", ...]
+
+Points are awarded for each match as follows:
+
+if x > y: 3 points (win)
+if x < y: 0 points (loss)
+if x = y: 1 point (tie)
+We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
+
+Notes:
+
+our team always plays 10 matches in the championship
+0 <= x <= 4
+0 <= y <= 4
+*/
+
+    public static class KataTotalPoints
+    {
+        public static int TotalPoints(string[] games)
+        {
+            return games.Sum(match =>
+            {
+                var scores = match.Split(':');
+                int ourScore = int.Parse(scores[0]);
+                int opponentScore = int.Parse(scores[1]);
+
+                return ourScore > opponentScore ? 3 :
+                       ourScore == opponentScore ? 1 : 0;
+            });
+        }
+    }
+
     /*Write a simple regex to validate a username. Allowed characters are:
 
       lowercase letters,
