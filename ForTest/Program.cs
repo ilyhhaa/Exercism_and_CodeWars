@@ -8,6 +8,31 @@ internal class Program
     {
 
     }
+
+
+    /*Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+Note: in C#, you'll always get the input as a string, so the above applies if the string isn't representing a double value.*/
+
+
+    public class KataProblem
+    {
+        public static string Problem(string a)
+        {
+            try
+            {
+                double value = double.Parse(a);
+                double result = value * 50 + 6;
+                return result.ToString();
+            }
+            catch (FormatException)
+            {
+                return "Error";
+            }
+        }
+    }
+
+
     /*Your task is to write a function which returns the n-th term of the following series, which is the sum of the first n terms of the sequence (n is the input parameter).
 
 S
