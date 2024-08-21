@@ -9,6 +9,20 @@ internal class Program
 
     }
 
+    /*Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+[1, 2, 3, 4, 5] --> [-1, -2, -3, -4, -5]
+[1, -2, 3, -4, 5] --> [-1, 2, -3, 4, -5]
+[] --> []*/
+
+    public static class ArraysInversion
+    {
+        public static int[] InvertValues(int[] input)
+        {
+            return input.Select(n => -n).ToArray();
+        }
+    }
+
     /*Your task is to sum the differences between consecutive pairs in the array in descending order.
 
 Example
