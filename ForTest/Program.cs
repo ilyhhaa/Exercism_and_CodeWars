@@ -9,6 +9,47 @@ internal class Program
 
     }
 
+    /*Complete the method which accepts an array of integers, and returns one of the following:
+
+"yes, ascending" - if the numbers in the array are sorted in an ascending order
+"yes, descending" - if the numbers in the array are sorted in a descending order
+"no" - otherwise
+You can assume the array will always be valid, and there will always be one correct answer.*/
+
+    public class KataIsSortAndHow
+    {
+        public static string IsSortedAndHow(int[] array)
+        {
+            bool isAscending = true;
+            bool isDescending = true;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] < array[i - 1])
+                {
+                    isAscending = false;
+                }
+                else if (array[i] > array[i - 1])
+                {
+                    isDescending = false;
+                }
+            }
+
+            if (isAscending)
+            {
+                return "yes, ascending";
+            }
+            else if (isDescending)
+            {
+                return "yes, descending";
+            }
+            else
+            {
+                return "no";
+            }
+        }
+    }
+
 
     /*Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
 
