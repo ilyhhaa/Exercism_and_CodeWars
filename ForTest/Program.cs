@@ -9,6 +9,22 @@ internal class Program
 
     }
 
+    /*Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+Example
+[2, 1, 10]  -->  9
+In descending order: [10, 2, 1]
+
+Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9*/
+
+    public static class KataSumOfDiffer
+    {
+        public static int SumOfDifferences(int[] arr)
+        {
+            return arr.Length > 1 ? arr.Max() - arr.Min() : 0;
+        }
+    }
+
     /*Complete the method which accepts an array of integers, and returns one of the following:
 
 "yes, ascending" - if the numbers in the array are sorted in an ascending order
@@ -20,33 +36,9 @@ You can assume the array will always be valid, and there will always be one corr
     {
         public static string IsSortedAndHow(int[] array)
         {
-            bool isAscending = true;
-            bool isDescending = true;
-
-            for (int i = 1; i < array.Length; i++)
-            {
-                if (array[i] < array[i - 1])
-                {
-                    isAscending = false;
-                }
-                else if (array[i] > array[i - 1])
-                {
-                    isDescending = false;
-                }
-            }
-
-            if (isAscending)
-            {
-                return "yes, ascending";
-            }
-            else if (isDescending)
-            {
-                return "yes, descending";
-            }
-            else
-            {
-                return "no";
-            }
+            if (array.OrderBy(a => a).SequenceEqual(array)) return "yes, ascending";
+            if (array.OrderByDescending(a => a).SequenceEqual(array)) return "yes, descending";
+            return "no";
         }
     }
 
