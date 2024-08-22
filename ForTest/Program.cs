@@ -8,6 +8,33 @@ internal class Program
     {
 
     }
+
+
+    /*Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
+
+If you need help, here's a reference:
+
+https://docs.microsoft.com/en-us/dotnet/api/system.array?view=netcore-3.1*/
+
+    public static class KataTake
+    {
+        public static int[] Take(int[] arr, int n)
+        {
+            if (n > arr.Length)
+            {
+
+                return arr;
+            }
+
+            int[] result = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                result[i] = arr[i];
+            }
+            return result;
+        }
+    }
+
     /*I have a cat and a dog.
 
 I got them at the same time as kitten/puppy. That was humanYears years ago.
