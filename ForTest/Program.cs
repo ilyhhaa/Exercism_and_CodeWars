@@ -9,6 +9,30 @@ internal class Program
 
     }
 
+    /*Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+Examples
+"www.codewars.com#about" --> "www.codewars.com"
+"www.codewars.com?page=1" -->"www.codewars.com?page=1"
+    */
+
+    public static class KataRemoveUrls
+    {
+        public static string RemoveUrlAnchor(string url)
+        {
+            int anchorIndex = url.IndexOf('#');
+            if (anchorIndex >= 0)
+            {
+                return url.Substring(0, anchorIndex);
+            }
+            else
+            {
+                return url;
+
+            }
+        }
+    }
+
     /*My grandfather always predicted how old people would get, and right before he passed away he revealed his secret!
 
 In honor of my grandfather's memory we will write a function using his formula!
