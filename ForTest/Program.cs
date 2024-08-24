@@ -9,6 +9,21 @@ internal class Program
 
     }
 
+    /*Debugging sayHello function
+The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your job to fix the code and get the program working again!
+
+Example output:
+
+Hello, Mr. Spock*/
+
+    public class KataSayHello
+    {
+        public static string SayHello(string name)
+        {
+            return $"Hello, {name}";
+        }
+    }
+
     /*Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
 
 Example:
@@ -17,7 +32,7 @@ Example:
 This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
     */
 
-    public class KataSayHello
+    public class KataSayHelloCity
     {
         public static string SayHello(string[] name, string city, string state) =>
     $"Hello, {string.Join(" ", name)}! Welcome to {city}, {state}!";
