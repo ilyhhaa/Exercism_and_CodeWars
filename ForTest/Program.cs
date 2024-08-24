@@ -9,6 +9,20 @@ internal class Program
 
     }
 
+    /*Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
+
+Example:
+
+['John', 'Smith'], 'Phoenix', 'Arizona'
+This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
+    */
+
+    public class KataSayHello
+    {
+        public static string SayHello(string[] name, string city, string state) =>
+    $"Hello, {string.Join(" ", name)}! Welcome to {city}, {state}!";
+    }
+
     /*Philip's just turned four and he wants to know how old he will be in various years in the future such as 2090 or 3044. His parents can't keep up calculating this so they've begged you to help them out by writing a programme that can answer Philip's endless questions.
 
 Your task is to write a function that takes two parameters: the year of birth and the year to count years in relation to. As Philip is getting more curious every day he may soon want to know how many years it was until he would be born, so your function needs to work with both dates in the future and in the past.
@@ -629,7 +643,7 @@ Some random tests might fail due to a bug in the JavaScript implementation. Simp
     derive(5, 9) --> this should output "45x^8" */
 
 
-    public class Kata
+    public class KataDerive
     {
         public static string Derive(double coefficient, double exponent)
         {
