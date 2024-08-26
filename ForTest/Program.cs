@@ -35,6 +35,7 @@ Your function should return the 20 year estimate of the stairs climbed using the
             long twentyYearEstimate = totalStairs * 20;
             return twentyYearEstimate;
         }
+        // public static long StairsIn20(int[][] stairs) => stairs.Sum(x => x.Sum()) * 20;
     }
 
     //Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
