@@ -8,6 +8,17 @@ internal class Program
     {
 
     }
+
+    //Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+    public class KataInclude
+    {
+        public static bool Include(int[] arr, int item)
+        {
+            return arr.Contains(item);
+        }
+    }
+
+
     /*Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'
 
 Examples (Input -> Output)
