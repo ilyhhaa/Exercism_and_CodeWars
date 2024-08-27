@@ -9,6 +9,41 @@ internal class Program
 
     }
 
+    /*You are required to create a simple calculator that returns the result of addition, subtraction, multiplication or division of two numbers.
+
+Your function will accept three arguments:
+The first and second argument should be numbers.
+The third argument should represent a sign indicating the operation to perform on these two numbers.
+
+If the sign is not a valid sign, throw an ArgumentException.
+
+Example:
+Kata.Calculator(1, 2, '+') => 3
+Kata.Calculator(1, 2, '$') // throws ArgumentException*/
+
+    public class KataCalc
+    {
+        public static double Calculator(double a, double b, char op)
+        {
+            switch (op)
+            {
+                case '+':
+                    return a + b;
+                case '-':
+                    return a - b;
+                case '*':
+                    return a * b;
+                case '/':
+                    if (b == 0)
+                        throw new ArgumentException("Division by zero is not allowed.");
+                    return a / b;
+                default:
+                    throw new ArgumentException("Invalid operation sign.");
+            }
+        }
+    }
+
+
     /*The wide-mouth frog is particularly interested in the eating habits of other creatures.
 
 He just can't stop asking the creatures he encounters what they like to eat. But, then he meets the alligator who just LOVES to eat wide-mouthed frogs!
@@ -18,7 +53,7 @@ When he meets the alligator, it then makes a tiny mouth.
 Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog. If this one is an alligator (case-insensitive) return small otherwise return wide.*/
 
 
-    public class Kata
+    public class KataMouthSize
     {
         public static string MouthSize(string animal)
         {
