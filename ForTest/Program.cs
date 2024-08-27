@@ -8,6 +8,24 @@ internal class Program
     {
 
     }
+
+    /*The wide-mouth frog is particularly interested in the eating habits of other creatures.
+
+He just can't stop asking the creatures he encounters what they like to eat. But, then he meets the alligator who just LOVES to eat wide-mouthed frogs!
+
+When he meets the alligator, it then makes a tiny mouth.
+
+Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog. If this one is an alligator (case-insensitive) return small otherwise return wide.*/
+
+
+    public class Kata
+    {
+        public static string MouthSize(string animal)
+        {
+            return animal.ToLower() == "alligator" ? "small" : "wide";
+        }
+    }
+
     /*Suzuki is a monk who climbs a large staircase to the monastery as part of a ritual. Some days he climbs more stairs than others depending on the number of students he must train in the morning. He is curious how many stairs might be climbed over the next 20 years and has spent a year marking down his daily progress.
 
 The sum of all the stairs logged in a year will be used for estimating the number he might climb in 20.
