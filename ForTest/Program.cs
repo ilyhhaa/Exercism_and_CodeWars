@@ -9,6 +9,28 @@ internal class Program
 
     }
 
+    /*Write a function that takes a positive integer n, sums all the cubed values from 1 to n (inclusive), and returns that sum.
+
+Assume that the input n will always be a positive integer.
+
+Examples: (Input --> output)
+
+2 --> 9 (sum of the cubes of 1 and 2 is 1 + 8)
+3 --> 36 (sum of the cubes of 1, 2, and 3 is 1 + 8 + 27)*/
+
+    public static class KataSumCubes
+    {
+        public static long SumCubes(int n)
+        {
+            long sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                sum += (long)Math.Pow(i, 3);
+            }
+            return sum;
+        }
+    }
+
 
     /*Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
 
