@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ForTest._2MonthAlgoFights
 {
@@ -33,7 +29,6 @@ For example (Input --> Output):
             return 1 + Persistence(product);
         }
     }
-
     /*The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
 
     What if the string is empty? Then the result should be empty object literal, {}.*/
@@ -42,7 +37,6 @@ For example (Input --> Output):
         public static Dictionary<char, int> Count(string str)
         {
             Dictionary<char, int> charCount = new Dictionary<char, int>();
-
             foreach (char c in str)
             {
                 if (charCount.ContainsKey(c))
@@ -2463,8 +2457,6 @@ Note: if you need to use Pi in your code, use the native value of your language 
             return array.OrderBy(a => a.Length).ToArray();
         }
     }
-
-
     public static class CenturyFY
     {
         public static int СenturyFromYear(int year)
@@ -2479,7 +2471,6 @@ Note: if you need to use Pi in your code, use the native value of your language 
             }
         }
     }
-
     //O(1)
     public static class GetVowel
     {
@@ -2488,16 +2479,12 @@ Note: if you need to use Pi in your code, use the native value of your language 
             return str.Count(a => a == 97 || a == 101 || a == 105 || a == 111 || a == 117);
         }
     }
-
-
     public class Multiplier
     {
         public static int Multiply(int x)
         {
             return x % 2 == 0 ? x * 8 : x * 9;
         }
-
-
     }
 
     public static class Strungssum

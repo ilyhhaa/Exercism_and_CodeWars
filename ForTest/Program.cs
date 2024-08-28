@@ -30,8 +30,6 @@ Examples: (Input --> output)
             return sum;
         }
     }
-
-
     /*Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
 
   3 -->    15  (  3 * 5¹)
@@ -39,7 +37,6 @@ Examples: (Input --> output)
 200 --> 25000  (200 * 5³)
   0 -->     0  (  0 * 5¹)
  -3 -->   -15  ( -3 * 5¹)*/
-
     public class KataMultiplyОчередной
     {
         public static int Multiply(int number)
@@ -57,7 +54,6 @@ The input will always be made of only lowercase letters and will never be empty.
         public static int WordsToMarks(string str) =>
     str.Sum(c => c - 96);
     }
-
 
     /*Input: Array of elements
 
