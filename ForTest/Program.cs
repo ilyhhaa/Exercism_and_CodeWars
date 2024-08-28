@@ -9,10 +9,28 @@ internal class Program
 
     }
 
+
+    /*Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
+
+  3 -->    15  (  3 * 5¹)
+ 10 -->   250  ( 10 * 5²)
+200 --> 25000  (200 * 5³)
+  0 -->     0  (  0 * 5¹)
+ -3 -->   -15  ( -3 * 5¹)*/
+
+    public class KataMultiplyОчередной
+    {
+        public static int Multiply(int number)
+        {
+            int digits = number == 0 ? 1 : (int)Math.Log10(Math.Abs(number)) + 1;
+            return number * (int)Math.Pow(5, digits);
+        }
+    }
+
     /*Your task is to write a function which calculates the value of a word based off the sum of the alphabet positions of its characters.
 
 The input will always be made of only lowercase letters and will never be empty.*/
-    public static class Kata
+    public static class KataWordsToMarks
     {
         public static int WordsToMarks(string str) =>
     str.Sum(c => c - 96);
