@@ -9,6 +9,16 @@ internal class Program
 
     }
 
+    /*Your task is to write a function which calculates the value of a word based off the sum of the alphabet positions of its characters.
+
+The input will always be made of only lowercase letters and will never be empty.*/
+    public static class Kata
+    {
+        public static int WordsToMarks(string str) =>
+    str.Sum(c => c - 96);
+    }
+
+
     /*Input: Array of elements
 
 ["h","o","l","a"]
