@@ -9,6 +9,34 @@ internal class Program
 
     }
 
+
+    /*Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+
+Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
+Examples
+"is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+"4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+""  -->  ""*/
+
+    //Hard one 
+
+    public static class KataOrder
+    {
+        public static string Order(string words)
+        {
+            if (string.IsNullOrEmpty(words))
+            {
+                return string.Empty;
+            }
+
+            return string.Join(" ", words.Split(' ')
+                                         .OrderBy(word => word.First(char.IsDigit)));
+        }
+    }
+
     /*I assume most of you are familiar with the ancient legend of the rice (but I see wikipedia suggests wheat, for some reason) problem, but a quick recap for you: a young man asks as a compensation only 1 grain of rice for the first square, 2 grains for the second, 4 for the third, 8 for the fourth and so on, always doubling the previous.
 
 Your task is pretty straightforward (but not necessarily easy): given an amount of grains, you need to return up to which square of the chessboard one should count in order to get at least as many.
@@ -22,7 +50,7 @@ As usual, a few examples might be way better than thousands of words from me:
 4 grains need 3 cells
 and etc.*/
 
-    class Kata
+    class KataSqarNeeded
     {
         public static int SquaresNeeded(long grains)
           => grains > 0 ? 1 + SquaresNeeded(grains / 2) : 0;
