@@ -8,6 +8,15 @@ internal class Program
     {
 
     }
+    /*This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
+
+Add the value "codewars" to the array websites 1,000 times.*/
+
+    public static class KataToArray
+    {
+        public static string[] Websites = Enumerable.Repeat("codewars", 1000).ToArray();
+    }
+
 
     /*There are pillars near the road. The distance between the pillars is the same and the width of the pillars is the same. Your function accepts three arguments:
 
