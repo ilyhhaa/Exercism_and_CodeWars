@@ -9,7 +9,42 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+
     }
+
+    /*Your task is simply to count the total number of lowercase letters in a string.
+
+Examples
+"abc" ===> 3
+
+"abcABC123" ===> 3
+
+"abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 3
+
+"" ===> 0;
+
+"ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 0
+
+"abcdefghijklmnopqrstuvwxyz" ===> 26*/
+
+    public class KataLowercaseCountCheck
+    {
+        public static int LowercaseCountCheck(string s)
+        {
+            int count = 0;
+
+            foreach (char c in s)
+            {
+                if (char.IsLower(c))
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+    }
+
     /* Create a function called _if which takes 3 arguments: a value bool and 2 functions(which do not take any parameters) : func1 and func2
      When bool is truthy, func1 should be called, otherwise call the func2.
      Example:
