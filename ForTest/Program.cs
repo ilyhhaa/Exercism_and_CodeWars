@@ -1,13 +1,35 @@
 ﻿
+using System;
 using System.Numerics;
 using System.Text;
 using System.Text.RegularExpressions;
+using static Program.KataShortcut;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 internal class Program
 {
     private static void Main(string[] args)
     {
-
     }
+    /* Create a function called _if which takes 3 arguments: a value bool and 2 functions(which do not take any parameters) : func1 and func2
+     When bool is truthy, func1 should be called, otherwise call the func2.
+     Example:
+ Kata.If(true, () => Console.WriteLine("True"), () => Console.WriteLine("False"));*/
+
+    public class KataIF
+    {
+        public static void If(bool condition, Action func1, Action func2)
+        {
+            if (condition)
+            {
+                func1();
+            }
+            else
+            {
+                func2();
+            }
+        }
+    }
+
     /*This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
 
 Add the value "codewars" to the array websites 1,000 times.*/
