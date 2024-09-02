@@ -8,6 +8,33 @@ internal class Program
 
     }
 }
+
+/*Task
+Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+
+Notes
+Array/list will contain positives only .
+Array/list will always have even size
+Input >> Output Examples
+minSum({5,4,2,3}) ==> return (22) */
+
+class Kata
+{
+    public static int MinSum(int[] a)
+    {
+
+        Array.Sort(a);
+
+        int minSum = 0;
+        for (int i = 0, j = a.Length - 1; i < j; i++, j--)
+        {
+            minSum += a[i] * a[j];
+        }
+
+        return minSum;
+    }
+}
+
 /*Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
 
 Use conditionals to return the proper message:
