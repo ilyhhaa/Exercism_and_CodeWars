@@ -9,6 +9,39 @@ internal class Program
     }
 }
 
+/*Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two. From the corresponding Wikipedia entry:
+
+a power of two is a number of the form 2n where n is an integer, i.e. the result of exponentiation with number two as the base and integer n as the exponent.
+
+You may assume the input is always valid.
+
+Examples
+power_of_two?(1024) # true
+power_of_two?(4096) # true
+power_of_two?(333)  # false
+Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.*/
+
+public static class KataPowerOfTwo
+{
+    public static bool PowerOfTwo(int number)
+    {
+        if (number <= 0)
+        {
+            return false;
+        }
+        while (number > 1)
+        {
+            if (number % 2 != 0)
+            {
+                return false;
+            }
+            number /= 2;
+        }
+
+        return true;
+    }
+}
+
 /*Task
 Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
 
@@ -18,7 +51,7 @@ Array/list will always have even size
 Input >> Output Examples
 minSum({5,4,2,3}) ==> return (22) */
 
-class Kata
+class KataMinSum
 {
     public static int MinSum(int[] a)
     {
