@@ -33,6 +33,8 @@ public class KataISVow
 
         return a;
 
+        //return a.Select(x => "aeiou".Contains(Convert.ToChar(x)) ? Convert.ToChar(x).ToString() : x).ToArray();
+
     }
 }
 
