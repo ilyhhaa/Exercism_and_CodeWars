@@ -9,6 +9,22 @@ internal class Program
     }
 }
 
+/*Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+Example:
+
+"riley" --> "Hello Riley!"
+"JACK"  --> "Hello Jack!"*/
+
+public static class KataGreet
+{
+    public static string Greet(string name)
+    {
+        return "Hello " + name.Substring(0, 1).ToUpper() + name.Substring(1).ToLower() + "!";
+    }
+}
+
+
 /*Exclusive "or" (xor) Logical Operator
 Overview
 In some scripting languages like PHP, there exists a logical operator (e.g. &&, ||, and, or, etc.) called the "Exclusive Or" (hence the name of this Kata). The exclusive or evaluates two booleans. It then returns true if exactly one of the two expressions are true, false otherwise. For example:
