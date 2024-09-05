@@ -8,6 +8,22 @@ internal class Program
 
     }
 }
+/*Very simple, given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
+
+Examples:
+
+1: -1
+14: -14
+-34: 34*/
+
+public class KataOposite
+{
+    public static int Opposite(int number)
+    {
+        return -number;
+    }
+}
+
 
 /*Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
 
