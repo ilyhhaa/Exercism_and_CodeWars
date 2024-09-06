@@ -9,6 +9,44 @@ internal class Program
     }
 }
 
+/*Write a function partlist that gives all the ways to divide a list (an array) of at least two elements into two non-empty parts.
+Each two non empty parts will be in a pair (or an array for languages without tuples or a structin C - C: see Examples test Cases - )
+Each part will be in a string
+Elements of a pair must be in the same order as in the original array.
+Examples of returns in different languages:
+a = ["az", "toto", "picaro", "zone", "kiwi"] -->
+[["az", "toto picaro zone kiwi"], ["az toto", "picaro zone kiwi"], ["az toto picaro", "zone kiwi"], ["az toto picaro zone", "kiwi"]] 
+or
+ a = {"az", "toto", "picaro", "zone", "kiwi"} -->
+{{"az", "toto picaro zone kiwi"}, {"az toto", "picaro zone kiwi"}, {"az toto picaro", "zone kiwi"}, {"az toto picaro zone", "kiwi"}}
+or
+a = ["az", "toto", "picaro", "zone", "kiwi"] -->
+[("az", "toto picaro zone kiwi"), ("az toto", "picaro zone kiwi"), ("az toto picaro", "zone kiwi"), ("az toto picaro zone", "kiwi")]
+or 
+a = [|"az", "toto", "picaro", "zone", "kiwi"|] -->
+[("az", "toto picaro zone kiwi"), ("az toto", "picaro zone kiwi"), ("az toto picaro", "zone kiwi"), ("az toto picaro zone", "kiwi")]
+or
+a = ["az", "toto", "picaro", "zone", "kiwi"] -->
+"(az, toto picaro zone kiwi)(az toto, picaro zone kiwi)(az toto picaro, zone kiwi)(az toto picaro zone, kiwi)"*/
+
+public class PartList
+{
+    public static string[][] Partlist(string[] arr)
+    {
+        int n = arr.Length;
+        string[][] result = new string[n - 1][];
+
+        for (int i = 0; i < n - 1; i++)
+        {
+            result[i] = new string[2];
+            result[i][0] = string.Join(" ", arr.Take(i + 1));
+            result[i][1] = string.Join(" ", arr.Skip(i + 1));
+        }
+
+        return result;
+    }
+}
+
 /*Write a function that returns a string in which firstname is swapped with last name.
 
 Example(Input --> Output)
