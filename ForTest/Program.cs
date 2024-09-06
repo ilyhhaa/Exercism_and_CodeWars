@@ -8,6 +8,33 @@ internal class Program
 
     }
 }
+/*You get any card as an argument. Your task is to return the suit of this card (in lowercase).
+Our deck (is preloaded):
+string[] Deck =
+{
+    "2♣", "3♣", "4♣", "5♣", "6♣", "7♣", "8♣", "9♣", "10♣", "J♣", "Q♣", "K♣", "A♣",
+    "2♦", "3♦", "4♦", "5♦", "6♦", "7♦", "8♦", "9♦", "10♦", "J♦", "Q♦", "K♦", "A♦",
+    "2♥", "3♥", "4♥", "5♥", "6♥", "7♥", "8♥", "9♥", "10♥", "J♥", "Q♥", "K♥", "A♥",
+    "2♠", "3♠", "4♠", "5♠", "6♠", "7♠", "8♠", "9♠", "10♠", "J♠", "Q♠", "K♠", "A♠"
+};
+DefineSuit("3♣") -> return "clubs"DefineSuit("3♦") -> return "diamonds"DefineSuit("3♥") -> return "hearts"DefineSuit("3♠") -> return "spades"*/
+
+public partial class KataDefineSuit
+{
+    public static string DefineSuit(string card)
+    {
+        string suit = card.Substring(card.Length - 1);
+        Dictionary<string, string> Map = new Dictionary<string, string>() {
+    {"♣", "clubs"},
+    {"♦", "diamonds"},
+    {"♥", "hearts"},
+    {"♠", "spades"}
+  };
+
+        return Map[suit];
+    }
+}
+
 
 /*Write a function partlist that gives all the ways to divide a list (an array) of at least two elements into two non-empty parts.
 Each two non empty parts will be in a pair (or an array for languages without tuples or a structin C - C: see Examples test Cases - )
