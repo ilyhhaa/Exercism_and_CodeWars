@@ -9,6 +9,18 @@ internal class Program
     }
 }
 
+/*Basic regex tasks. Write a function that takes in a numeric code of any length. The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
+
+You can assume the input will always be a number.*/
+
+public class KataValidateCode
+{
+    public static bool ValidateCode(string code)
+    {
+        return Regex.IsMatch(code, "^[1-3]");
+    }
+}
+
 /*Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
 
 Examples
