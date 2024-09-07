@@ -33,27 +33,11 @@ If you make it, return "Alive!", if not, return "Shark Bait!".*/
 
 public class KataShark
 {
-    public static string Shark(
-      int pontoonDistance,
-      int sharkDistance,
-      int youSpeed,
-      int sharkSpeed,
-      bool dolphin)
+    public static string Shark(int pontoonDistance, int sharkDistance, int yourSpeed, int sharkSpeed, bool dolphin)
     {
-        if (dolphin)
-        {
-            sharkSpeed /= 2;
-        }
-        double sharkTime = sharkDistance / (double)sharkSpeed;
-        double yourTime = pontoonDistance / (double)youSpeed;
-        if (sharkTime <= yourTime)
-        {
-            return "Shark Bait!";
-        }
-        else
-        {
-            return "Alive!";
-        }
+        return pontoonDistance * sharkSpeed < yourSpeed * sharkDistance * (dolphin ? 2 : 1)
+          ? "Alive!"
+          : "Shark Bait!";
     }
 }
 
