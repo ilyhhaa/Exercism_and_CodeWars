@@ -9,6 +9,22 @@ internal class Program
 
     }
 }
+/*Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
+
+Example:
+
+'acb' --> 'bca'
+'aabacbaa' --> 'bbabcabb'*/
+
+public class KataSwitcheroo
+{
+    public static string Switcheroo(string x)
+    {
+        return x.Replace("a", "d").Replace("b", "a").Replace("d", "b");
+    }
+}
+
+
 
 /*Your task is to return the sum of Triangular Numbers up-to-and-including the nth Triangular Number.
 
@@ -46,7 +62,7 @@ For example
 [10, 14, 2, 23, 19] -->  42 (= 23 + 19)
 [99, 2, 2, 23, 19]  --> 122 (= 99 + 23)
 Input sequence contains minimum two elements and every element is an integer.*/
-public class Kata
+public class KataLargestPairSum
 {
     public static int LargestPairSum(int[] numbers)
        => numbers.OrderByDescending(x => x).Take(2).Sum();
