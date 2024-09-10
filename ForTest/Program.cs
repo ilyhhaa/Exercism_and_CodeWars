@@ -10,6 +10,36 @@ internal class Program
     }
 }
 
+/*Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
+Documentation:
+Kata.ToBinary Method (Int32)
+Returns the binary representation of a non-negative integer as an integer.
+Syntax
+public static int ToBinary(
+int n
+  )
+
+Parameters
+n
+Type: System.Int32
+The integer to convert.
+
+Return Value
+Type: System.Int32
+The binary representation of the argument as an integer.
+to_binary(1) should return 1 
+to_binary(5) should return 101to_binary(11) should return 1011 */
+public static class KataTiBinary
+{
+    public static int ToBinary(int n)
+    {
+
+        return Convert.ToInt32(Convert.ToString(n, 2));
+
+    }
+}
+
+
 /*Consider the word "abode". We can see that the letter a is in position 1 and b is in position 2. In the alphabet, a and b are also in positions 1 and 2. Notice also that d and e in abode occupy the positions they would occupy in the alphabet, which are positions 4 and 5.
 
 Given an array of words, return an array of the number of letters that occupy their positions in the alphabet for each word. For example,
@@ -21,7 +51,7 @@ Input will consist of alphabet characters, both uppercase and lowercase. No spac
 
 Good luck!*/
 
-public static class Kata
+public static class KataSolve
 {
     public static List<int> Solve(List<string> arr)
     {
