@@ -10,6 +10,17 @@ internal class Program
     }
 }
 
+/*Find the total sum of internal angles (in degrees) in an n-sided simple polygon. N will be greater than 2.
+*/
+
+public class KataAngle
+{
+    public static int Angle(int n)
+    {
+        return (n - 2) * 180;
+    }
+}
+
 /*Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
 Documentation:
 Kata.ToBinary Method (Int32)
