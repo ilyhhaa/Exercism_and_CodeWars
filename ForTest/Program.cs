@@ -9,6 +9,36 @@ internal class Program
 
     }
 }
+
+/*Remove the duplicates from a list of integers, keeping the last ( rightmost ) occurrence of each element.
+
+Example:
+For input: [3, 4, 4, 3, 6, 3]
+
+remove the 3 at index 0
+remove the 4 at index 1
+remove the 3 at index 3
+Expected output: [4, 6, 3]
+
+More examples can be found in the test cases.
+
+Good luck!*/
+
+public class SolutionSolve
+{
+    public static int[] Solve(int[] arr)
+    {
+
+        Dictionary<int, int> lastOccurrence = new Dictionary<int, int>();
+        for (int i = 0; i < arr.Length; i++)
+        {
+            lastOccurrence[arr[i]] = i;
+        }
+
+        return lastOccurrence.OrderBy(kv => kv.Value).Select(kv => kv.Key).ToArray();
+    }
+}
+
 /*Determine the total number of digits in the integer (n>=0) given as input to the function. For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
 
 All inputs will be valid.*/
