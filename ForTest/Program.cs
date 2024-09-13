@@ -10,6 +10,26 @@ internal class Program
     }
 }
 
+/*Given a string s, your task is to return another string such that even-indexed and odd-indexed characters of s are grouped and the groups are space-separated. Even-indexed group comes as first, followed by a space, and then by the odd-indexed part.
+
+Examples
+input:    "CodeWars" => "CdWr oeas"
+           ||||||||      |||| ||||
+indices:   01234567      0246 1357
+Even indices 0, 2, 4, 6, so we have "CdWr" as the first group.
+Odd indices are 1, 3, 5, 7, so the second group is "oeas".
+And the final string to return is "Cdwr oeas".*/
+
+public class KataSortMyString
+{
+    public static string SortMyString(string s)
+    {
+        return $"{string.Concat(s.Where((x, i) => i % 2 == 0))} {string.Concat(s.Where((x, i) => i % 2 != 0))}";
+    }
+}
+
+
+
 /*n John's car the GPS records every s seconds the distance travelled from an origin (distances are measured in an arbitrary but consistent unit). For example, below is part of a record with s = 15:
 
 x = [0.0, 0.19, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25]
