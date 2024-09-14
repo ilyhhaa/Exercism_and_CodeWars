@@ -9,6 +9,28 @@ internal class Program
 
     }
 }
+/*Classy Classes
+Basic Classes, this kata is mainly aimed at the new JS ES6 Update introducing classes
+
+Task
+Your task is to complete this Class, the Person class has been created. You must fill in the Constructor method to accept a name as string and an age as number, complete the get Info property and getInfo method/Info getter which should return johns age is 34*/
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public Person(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    public string Info
+    {
+        get { return $"{Name}s age is {Age}"; }
+    }
+}
+
 
 /*Create a method all which takes two params:
 
