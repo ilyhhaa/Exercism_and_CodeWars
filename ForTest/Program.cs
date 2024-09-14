@@ -10,6 +10,24 @@ internal class Program
     }
 }
 
+/*Create a method all which takes two params:
+
+a sequence
+a function (function pointer in C)
+and returns true if the function in the params returns true for every element in the sequence. Otherwise, it should return false. If the sequence is empty, it should return true, since technically nothing failed the test.
+
+Example
+all((1, 2, 3, 4, 5), greater_than_9) -> false
+all((1, 2, 3, 4, 5), less_than_9)    -> True*/
+
+public class KataALL
+{
+    public static bool All(int[] arr, Func<int, bool> fun)
+    {
+        return arr.All(fun);
+    }
+}
+
 /*Given a string s, your task is to return another string such that even-indexed and odd-indexed characters of s are grouped and the groups are space-separated. Even-indexed group comes as first, followed by a space, and then by the odd-indexed part.
 
 Examples
