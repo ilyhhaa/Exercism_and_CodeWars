@@ -10,6 +10,36 @@ internal class Program
     }
 }
 
+/*Color Ghost
+Create a class Ghost
+
+Ghost objects are instantiated without any arguments.
+
+Ghost objects are given a random color attribute of "white" or "yellow" or "purple" or "red" when instantiated
+
+ghost = new Ghost();
+ghost.color //=> "white" or "yellow" or "purple" or "red"*/
+
+public class Ghost
+{
+    private static readonly string[] colors = { "white", "yellow", "purple", "red" };
+    private static readonly Random random = new Random();
+
+    public string Color { get; private set; }
+
+    public Ghost()
+    {
+        Color = colors[random.Next(colors.Length)];
+    }
+
+    public string GetColor()
+    {
+        return Color;
+    }
+
+}
+
+
 /*Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined/None/nil/NULL if any of the values aren't numbers.
 
 Note: There are ONLY integers in the JAVA and C# versions of this Kata.*/
