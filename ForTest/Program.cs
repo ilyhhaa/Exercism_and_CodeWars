@@ -10,6 +10,21 @@ internal class Program
     }
 }
 
+/*Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined/None/nil/NULL if any of the values aren't numbers.
+
+Note: There are ONLY integers in the JAVA and C# versions of this Kata.*/
+
+public class KataCubeOdd
+{
+    public static int CubeOdd(int[] arr)
+    {
+        var oddCubes = arr.Select(z => z * z * z).Where(cube => cube % 2 != 0);
+        int result = oddCubes.Sum();
+        return result;
+    }
+}
+
+
 /*Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
 
 Function:
