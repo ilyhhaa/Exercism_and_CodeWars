@@ -10,6 +10,23 @@ internal class Program
     }
 }
 
+
+/*Write a function which takes a number and returns the corresponding ASCII char for that value.
+
+Example:
+
+65 --> 'A'
+97 --> 'a'
+48 --> '0*/
+
+public class KataGetChar
+{
+    public static char GetChar(int charcode)
+    {
+        return Convert.ToChar(charcode);
+    }
+}
+
 /*Color Ghost
 Create a class Ghost
 
