@@ -10,6 +10,31 @@ internal class Program
     }
 }
 
+/*Count the number of occurrences of each character and return it as a (list of tuples) in order of appearance. For empty output return (an empty list).
+
+Consult the solution set-up for the exact data structure implementation depending on your language.
+
+Example:
+
+Kata.OrderedCount("abracadabra") == new List<Tuple<char, int>> () {
+  new Tuple<char, int>('a', 5),
+  new Tuple<char, int>('b', 2),
+  new Tuple<char, int>('r', 2), 
+  new Tuple<char, int>('c', 1),
+  new Tuple<char, int>('d', 1)
+}
+*/
+
+public class KataOrderedCount
+{
+    public static List<Tuple<char, int>> OrderedCount(string input)
+    {
+        return input.GroupBy(c => c)
+             .Select(g => new Tuple<char, int>(g.Key, g.Count()))
+             .ToList();
+    }
+}
+
 /*Finish the uefaEuro2016() function so it return string just like in the examples below:
 
 uefaEuro2016(['Germany', 'Ukraine'],[2, 0]) // "At match Germany - Ukraine, Germany won!"
