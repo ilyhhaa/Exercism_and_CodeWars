@@ -10,6 +10,40 @@ internal class Program
     }
 }
 
+/*The objective of Duck, duck, goose is to walk in a circle, tapping on each player's head until one is chosen.
+
+Task: Given an array of Player objects (an array of associative arrays in PHP) and an index (1-based), return the name of the chosen Player(name is a property of Player objects, e.g Player.name)
+
+Example:
+
+duck_duck_goose([a, b, c, d], 1) should return a.name
+duck_duck_goose([a, b, c, d], 5) should return a.name
+duck_duck_goose([a, b, c, d], 4) should return d.name
+// PHP only
+duck_duck_goose([$a, $b, $c, $d], 1); // => $a["name"]
+duck_duck_goose([$a, $b, $c, $d], 5); // => $a["name"]
+duck_duck_goose([$a, $b, $c, $d], 4); // => $d["name"]
+*/
+
+public class KataDuckDuckGoose
+{
+    public static string DuckDuckGoose(Player[] players, int goose)
+    {
+        int index = (goose - 1) % players.Length;
+        return players[index].Name;
+    }
+}
+public class Player
+{
+    public string Name { get; set; }
+
+    public Player(string name)
+    {
+        this.Name = name;
+    }
+}
+
+
 /*Count the number of occurrences of each character and return it as a (list of tuples) in order of appearance. For empty output return (an empty list).
 
 Consult the solution set-up for the exact data structure implementation depending on your language.
