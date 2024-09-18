@@ -10,6 +10,37 @@ internal class Program
     }
 }
 
+/*Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
+
+Note
+If num is negative, ignore its sign and treat it as a positive value
+If nth is not positive, return -1
+Keep in mind that 42 = 00042. This means that findDigit(42, 5) would return 0
+Examples(num, nth --> output)
+5673, 4 --> 5
+129, 2 --> 2
+-2825, 3 --> 8
+-456, 4 --> 0
+0, 20 --> 0
+65, 0 --> -1
+24, -8 --> -1*/
+
+public class KataFindDigit
+{
+    public static int FindDigit(int num, int nth)
+    {
+        if (nth <= 0)
+        {
+            return -1;
+        }
+        num = Math.Abs(num);
+        string numStr = num.ToString().PadLeft(nth, '0');
+        return numStr.Reverse().ElementAt(nth - 1) - '0';
+
+    }
+}
+
+
 /*Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
 
 Numerical Score	Letter Grade
