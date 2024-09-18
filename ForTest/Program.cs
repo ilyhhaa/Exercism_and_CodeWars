@@ -10,6 +10,36 @@ internal class Program
     }
 }
 
+
+/*Given a mixed array of number and string representations of integers, add up the non-string integers and subtract the total of the string integers.
+
+Return as a number.*/
+
+public class KataDivCon
+{
+    public static int DivCon(Object[] objArray)
+    {
+        int sum = 0;
+
+        foreach (var item in objArray)
+        {
+            if (item is int)
+            {
+                sum += (int)item;
+            }
+            else if (item is string)
+            {
+                if (int.TryParse((string)item, out int num))
+                {
+                    sum -= num;
+                }
+            }
+        }
+
+        return sum;
+    }
+}
+
 /*Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
 
 Note
