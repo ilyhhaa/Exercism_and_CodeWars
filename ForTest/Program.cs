@@ -9,6 +9,28 @@ internal class Program
 
     }
 }
+
+
+/*You'll be given a string, and have to return the sum of all characters as an int. The function should be able to handle all printable ASCII characters.
+
+Examples:
+
+uniTotal("a") == 97
+uniTotal("aaa") == 291*/
+
+public class KataUniTotal
+{
+    public static int UniTotal(string str)
+    {
+        int sum = 0;
+        foreach (char c in str)
+        {
+            sum += (int)c;
+        }
+        return sum;
+    }
+}
+
 /*We want to generate a function that computes the series starting from 0 and ending until the given number.
 
 Example:
