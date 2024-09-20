@@ -10,6 +10,31 @@ internal class Program
     }
 }
 
+/*You might know some pretty large perfect squares. But what about the NEXT one?
+
+Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+
+If the argument is itself not a perfect square then return either -1 or an empty value like None or null, depending on your language. You may assume the argument is non-negative.
+
+Examples ( Input --> Output )
+121 --> 144
+625 --> 676
+114 --> -1  #  because 114 is not a perfect square*/
+
+public class KataFindNextSquare
+{
+    public static long FindNextSquare(long num)
+    {
+        long sqrt = (long)Math.Sqrt(num);
+        if (sqrt * sqrt == num)
+        {
+            long nextSquare = (sqrt + 1) * (sqrt + 1);
+            return nextSquare;
+        }
+        return -1;
+    }
+}
+
 /*You and a friend have decided to play a game to drill your statistical intuitions. The game works like this:
 
 You have a bunch of red and blue marbles. To start the game you grab a handful of marbles of each color and put them into the bag, keeping track of how many of each color go in. You take turns reaching into the bag, guessing a color, and then pulling one marble out. You get a point if you guessed correctly. The trick is you only have three seconds to make your guess, so you have to think quickly.
