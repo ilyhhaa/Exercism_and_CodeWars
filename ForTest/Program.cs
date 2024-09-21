@@ -9,6 +9,26 @@ internal class Program
 
     }
 }
+
+/*Filter the number
+Oh, no! The number has been mixed up with the text. Your goal is to retrieve the number from the text, can you return the number back to its original state?
+
+Task
+Your task is to return a number from a string.
+
+Details
+You will be given a string of numbers and letters mixed up, you have to return all the numbers in that string in the order they occur.*/
+
+public class KataFilterString
+{
+    public static int FilterString(string s) 
+    {
+        string result = new string(s.Where(char.IsDigit).ToArray());
+        return int.Parse(result);
+    }
+}
+
+
 /*There is a war and nobody knows - the alphabet war!
 There are two groups of hostile letters. The tension between left side letters and right side letters was too high and the war began.
 
