@@ -9,6 +9,36 @@ internal class Program
 
     }
 }
+
+/*
+ * An AI has infected a text with a character!!
+
+This text is now fully mutated to this character.
+
+If the text or the character are empty, return an empty string.
+There will never be a case when both are empty as nothing is going on!!
+
+Note: The character is a string of length 1 or an empty string.
+
+Example
+text before = "abc"
+character   = "z"
+text after  = "zzz"
+ */
+
+
+public class KataContamination
+{
+    public static string Contamination(string text, string character)
+    {
+        if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(character))
+        {
+            return string.Empty;
+        }
+        return new string(character[0], text.Length);
+    }
+}
+
 /*This is a beginner friendly kata especially for UFC/MMA fans.
 
 It's a fight between the two legends: Conor McGregor vs George Saint Pierre in Madison Square Garden. Only one fighter will remain standing, and after the fight in an interview with Joe Rogan the winner will make his legendary statement. It's your job to return the right statement depending on the winner!
