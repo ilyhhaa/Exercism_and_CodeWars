@@ -11,6 +11,25 @@ internal class Program
 }
 
 /*
+Find the number with the most digits.
+
+If two numbers in the argument array have the same number of digits, return the first one in the array.
+*/
+
+public class KataFindLongest
+{
+    public static int FindLongest(int[] number)
+    {
+        if (number == null || number.Length == 0)
+        {
+            throw new ArgumentException("The array must not be null or empty.");
+        }
+
+        return number.OrderByDescending(num => num.ToString().Length).First();
+    }
+}
+
+/*
  You are given two arrays a1 and a2 of strings. Each string is composed with letters from a to z. Let x be any string in the first array and y be any string in the second array.
 
 Find max(abs(length(x) − length(y)))
