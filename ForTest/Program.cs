@@ -10,6 +10,17 @@ internal class Program
     }
 }
 
+/*Time to test your basic knowledge in functions! Return the odds from a list:
+
+[1, 2, 3, 4, 5]  -->  [1, 3, 5]
+[2, 4, 6]        -->  []*/
+
+public static class Kata
+{
+    public static List<int> Odds(List<int> values) => values.Where(v => v % 2 != 0).ToList();
+
+}
+
 /*
 Find the number with the most digits.
 
