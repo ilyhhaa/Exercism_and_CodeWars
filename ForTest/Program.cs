@@ -10,6 +10,20 @@ internal class Program
     }
 }
 
+
+
+/*
+ Implement String#digit? (in Java StringUtils.isDigit(String)), which should return true if given object is a digit (0-9), false otherwise.
+ */
+
+public static class KataDigit
+{
+    public static bool Digit(this string s)
+    {
+        return Regex.IsMatch(s, @"^\d\z");
+    }
+}
+
 /*Time to test your basic knowledge in functions! Return the odds from a list:
 
 [1, 2, 3, 4, 5]  -->  [1, 3, 5]
