@@ -40,6 +40,13 @@ class KataStrongNumber
     {
         return n <= 1 ? 1 : Enumerable.Range(1, n).Aggregate((a, b) => a * b);
     }
+
+
+    /*
+         if(number==1 || number==2 || number==145)
+          return "STRONG!!!!";
+          return "Not Strong !!";
+         */
 }
 
 /*
