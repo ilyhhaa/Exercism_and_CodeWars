@@ -10,6 +10,17 @@ internal class Program
     }
 }
 
+//Write function alternateCase which switch every letter in string from upper to lower and from lower to upper. E.g: Hello World -> hELLO wORLD
+
+public static class KataAlternateCase
+{
+    public static string alternateCase(string s)
+    {
+        return new string(s.Select(c => char.IsLetter(c) ? (char.IsUpper(c) ? char.ToLower(c) : char.ToUpper(c)) : c).ToArray());
+    }
+}
+
+
 /*
  Strong number is a number with the sum of the factorial of its digits is equal to the number itself.
 
