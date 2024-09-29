@@ -9,6 +9,25 @@ internal class Program
 
     }
 }
+/*
+ In this kata you will have to write a function that takes litres and pricePerLitre (in dollar) as arguments.
+
+Purchases of 2 or more litres get a discount of 5 cents per litre, purchases of 4 or more litres get a discount of 10 cents per litre, and so on every two litres, up to a maximum discount of 25 cents per litre. But total discount per litre cannot be more than 25 cents. Return the total cost rounded to 2 decimal places. Also you can guess that there will not be negative or non-numeric inputs.
+
+Good Luck!
+ */
+
+public class KataFuelPrice
+{
+    public static double FuelPrice(double litres, double pricePerLitre)
+    {
+        double discountPerLitre = Math.Min((int)(litres / 2) * 0.05, 0.25);
+        double discountedPricePerLitre = pricePerLitre - discountPerLitre;
+        double totalCost = litres * discountedPricePerLitre;
+        return Math.Round(totalCost, 2);
+    }
+}
+
 
 /*
  Complete the function, which calculates how much you need to tip based on the total amount of the bill and the service.
