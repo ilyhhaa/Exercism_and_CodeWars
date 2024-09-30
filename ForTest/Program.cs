@@ -9,6 +9,37 @@ internal class Program
 
     }
 }
+/*
+ We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+
+So given a string "super", we should return a list of [2, 4].
+
+Some examples:
+Mmmm  => []
+Super => [2,4]
+Apple => [1,5]
+YoMama -> [1,2,4,6]
+ */
+
+public class KataVowelIndices
+{
+    public static int[] VowelIndices(string word)
+    {
+        HashSet<char> vowelSet = new HashSet<char> { 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y' };
+
+        List<int> vowelIndexList = new List<int>();
+
+        for (int i = 0; i < word.Length; i++)
+        {
+            if (vowelSet.Contains(word[i]))
+            {
+                vowelIndexList.Add(i + 1);
+            }
+        }
+        return vowelIndexList.ToArray();
+    }
+}
+
 
 /*
  My friend John likes to go to the cinema. He can choose between system A and system B.
