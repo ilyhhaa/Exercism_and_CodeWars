@@ -10,6 +10,48 @@ internal class Program
     }
 }
 /*
+ The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+Input
+Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+Output
+Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+Example
+input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+ */
+
+public class KataOpenOrSenior
+{
+    public static IEnumerable<string> OpenOrSenior(int[][] data)
+    {
+        List<string> categories = new List<string>();
+
+        foreach (var member in data)
+        {
+            int age = member[0];
+            int handicap = member[1];
+
+            if (age >= 55 && handicap > 7)
+            {
+                categories.Add("Senior");
+            }
+            else
+            {
+                categories.Add("Open");
+            }
+        }
+
+        return categories;
+    }
+}
+
+
+/*
  In this kata you will have to write a function that takes litres and pricePerLitre (in dollar) as arguments.
 
 Purchases of 2 or more litres get a discount of 5 cents per litre, purchases of 4 or more litres get a discount of 10 cents per litre, and so on every two litres, up to a maximum discount of 25 cents per litre. But total discount per litre cannot be more than 25 cents. Return the total cost rounded to 2 decimal places. Also you can guess that there will not be negative or non-numeric inputs.
