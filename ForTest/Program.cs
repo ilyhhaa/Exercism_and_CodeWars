@@ -24,7 +24,7 @@ Examples:
                                        #  9+3 = 12  -->  2
  */
 
-public static class Kata
+public static class KataIncrementer
 {
     public static int[] Incrementer(int[] numbers)
     {
