@@ -10,6 +10,25 @@ internal class Program
     }
 }
 
+//Write function parseFloat which takes an input and returns a number or Nothing if conversion is not possible.
+public class KataParseF
+{
+    public static double? ParseF(object s = null)
+    {
+        if (s == null)
+        {
+            return null;
+        }
+
+        if (double.TryParse(s.ToString(), out double result))
+        {
+            return result;
+        }
+
+        return null;
+    }
+}
+
 /*
  Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
 
