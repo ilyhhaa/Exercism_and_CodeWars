@@ -9,6 +9,16 @@ internal class Program
 
     }
 }
+//Complete the function which converts hex number (given as a string) to a decimal number.
+
+public class KataHexToDec
+{
+    public static int HexToDec(string hexString)
+    {
+        return Convert.ToInt32(hexString.TrimStart('-'), 16) * (hexString[0] == '-' ? -1 : 1);
+    }
+}
+
 
 //Write function parseFloat which takes an input and returns a number or Nothing if conversion is not possible.
 public class KataParseF
