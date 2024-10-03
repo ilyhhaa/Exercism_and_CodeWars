@@ -9,6 +9,39 @@ internal class Program
 
     }
 }
+
+/*
+ Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
+
+Assume the first parameter will always be an array filled with at least 1 number and no duplicates. Assume the second parameter will be a string holding one of two values: 'value' and 'index'.
+
+min([1,2,3,4,5], 'value') // => 1
+min([1,2,3,4,5], 'index') // => 0
+ */
+
+public class KataFindSmallest
+{
+    public static int FindSmallest(int[] numbers, string toReturn)
+    {
+        if (numbers == null || numbers.Length == 0)
+        {
+            throw new ArgumentException("The array must contain at least one element.");
+        }
+
+        int minIndex = 0;
+
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] < numbers[minIndex])
+            {
+                minIndex = i;
+            }
+        }
+
+        return toReturn == "value" ? numbers[minIndex] : minIndex;
+    }
+}
+
 /*
  Given an input of an array of digits, return the array with each digit incremented by its position in the array: the first digit will be incremented by 1, the second digit by 2, etc. Make sure to start counting your positions from 1 ( and not 0 ).
 
