@@ -10,6 +10,39 @@ internal class Program
     }
 }
 /*
+ Given a string and an array of integers representing indices, capitalize all letters at the given indices.
+
+For example:
+
+capitalize("abcdef",[1,2,5]) = "aBCdeF"
+capitalize("abcdef",[1,2,5,100]) = "aBCdeF". There is no index 100.
+The input will be a lowercase string with no spaces and an array of digits.
+
+Good luck!
+
+ */
+
+public static class KataCapitalize
+{
+    public static string Capitalize(string s, List<int> idxs)
+    {
+        var chars = s.ToCharArray();
+
+        foreach (int idx in idxs)
+        {
+            if (idx >= 0 && idx < chars.Length)
+            {
+                chars[idx] = char.ToUpper(chars[idx]);
+            }
+        }
+
+        return new string(chars);
+    }
+}
+
+
+
+/*
  An NBA game runs 48 minutes (Four 12 minute quarters). Players do not typically play the full game, subbing in and out as necessary. Your job is to extrapolate a player's points per game if they played the full 48 minutes.
 
 Write a function that takes two arguments, ppg (points per game) and mpg (minutes per game) and returns a straight extrapolation of ppg per 48 minutes rounded to the nearest tenth. Return 0 if 0.
