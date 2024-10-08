@@ -10,6 +10,14 @@ internal class Program
     }
 }
 
+public class KataCalc2
+{
+    public static int Calc(string s)
+    {
+        return string.Concat(s.Select(x => (int)x)).Count(x => x == '7') * 6;
+    }
+}
+
 /*
  Given a string, turn each character into its ASCII character code and join them together to create a number - let's call this number total1:
 
