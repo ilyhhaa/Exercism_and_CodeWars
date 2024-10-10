@@ -11,6 +11,52 @@ internal class Program
     }
 }
 /*
+ Given an array of numbers (in string format), you must return a string. The numbers correspond to the letters of the alphabet in reverse order: a=26, z=1 etc. You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
+
+All inputs will be valid.
+ */
+public class KataSwitcher
+{
+    public static string Switcher(string[] x)
+    {
+        var dictionary = new Dictionary<string, char>
+        {
+            ["1"] = 'z',
+            ["2"] = 'y',
+            ["3"] = 'x',
+            ["4"] = 'w',
+            ["5"] = 'v',
+            ["6"] = 'u',
+            ["7"] = 't',
+            ["8"] = 's',
+            ["9"] = 'r',
+            ["10"] = 'q',
+            ["11"] = 'p',
+            ["12"] = 'o',
+            ["13"] = 'n',
+            ["14"] = 'm',
+            ["15"] = 'l',
+            ["16"] = 'k',
+            ["17"] = 'j',
+            ["18"] = 'i',
+            ["19"] = 'h',
+            ["20"] = 'g',
+            ["21"] = 'f',
+            ["22"] = 'e',
+            ["23"] = 'd',
+            ["24"] = 'c',
+            ["25"] = 'b',
+            ["26"] = 'a',
+            ["27"] = '!',
+            ["28"] = '?',
+            ["29"] = ' '
+        };
+
+        return new string(x.Select(num => dictionary[num]).ToArray());
+    }
+}
+
+/*
  The medians of a triangle are the segments that unit the vertices with the midpoint of their opposite sides. The three medians of a triangle intersect at the same point, called the barycenter or the centroid. Given a triangle, defined by the cartesian coordinates of its vertices we need to localize its barycenter or centroid.
 
 The function bar_triang() or barTriang or bar-triang, receives the coordinates of the three vertices A, B and C  as three different arguments and outputs the coordinates of the barycenter O in an array [xO, yO]
