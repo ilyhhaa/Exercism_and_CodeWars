@@ -10,6 +10,42 @@ internal class Program
 
     }
 }
+
+/*
+ Given a point in a Euclidean plane (x and y), return the quadrant the point exists in: 1, 2, 3 or 4 (integer). x and y are non-zero integers, therefore the given point never lies on the axes.
+
+Examples
+(1, 2)     => 1
+(3, 5)     => 1
+(-10, 100) => 2
+(-1, -9)   => 3
+(19, -56)  => 4
+Reference
+QuadrantsQuadrants
+There are four quadrants:
+
+First quadrant, the quadrant in the top-right, contains all points with positive X and Y
+Second quadrant, the quadrant in the top-left, contains all points with negative X, but positive Y
+Third quadrant, the quadrant in the bottom-left, contains all points with negative X and Y
+Fourth quadrant, the quadrant in the bottom-right, contains all points with positive X, but negative Y
+More on quadrants: Quadrant (plane geometry) - Wikipedia
+ */
+
+public static class KataQuadrant
+{
+    public static int Quadrant(int x, int y)
+    {
+        if (x > 0 && y > 0)
+            return 1;
+        else if (x < 0 && y > 0)
+            return 2;
+        else if (x < 0 && y < 0)
+            return 3;
+        else
+            return 4;
+    }
+}
+
 /*
  Given an array of numbers (in string format), you must return a string. The numbers correspond to the letters of the alphabet in reverse order: a=26, z=1 etc. You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
 
@@ -53,6 +89,20 @@ public class KataSwitcher
         };
 
         return new string(x.Select(num => dictionary[num]).ToArray());
+
+        /*
+         public static string Switcher(string[] x)
+    {
+        var alphabet = "zyxwvutsrqponmlkjihgfedcba!? ";
+        var res = string.Empty;
+        foreach (var a in x)
+        {
+            res += alphabet[int.Parse(a)-1];
+        }
+        
+        return res;
+    }
+         */
     }
 }
 
