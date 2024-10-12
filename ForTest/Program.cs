@@ -12,6 +12,39 @@ internal class Program
 }
 
 /*
+ Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
+
+Valid examples, should return true:
+
+isDigit("3")
+isDigit("  3  ")
+isDigit("-3.23")
+should return false:
+
+isDigit("3-4")
+isDigit("  3   5")
+isDigit("3 5")
+isDigit("zero")
+ */
+
+public class CodeWars
+{
+    public static bool IsDigit(string s)
+    {
+        if (string.IsNullOrWhiteSpace(s))
+        {
+            return false;
+        }
+
+        s = s.Trim();
+
+        double number;
+        return double.TryParse(s, out number);
+    }
+}
+
+
+/*
  Your task in this kata is to implement a function that calculates the sum of the integers inside a string. For example, in the string "The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog", the sum of the integers is 3635.
 
 Note: only positive integers will be tested.
