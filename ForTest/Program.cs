@@ -7,9 +7,32 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-
+      
     }
 }
+
+/*
+ Your task in this kata is to implement a function that calculates the sum of the integers inside a string. For example, in the string "The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog", the sum of the integers is 3635.
+
+Note: only positive integers will be tested.
+ */
+
+public class KataSumOfIntegersInString
+{
+    public static int SumOfIntegersInString(string s)
+    {
+        var matches = Regex.Matches(s, @"\d+");
+        int sum = 0;
+
+        foreach (Match match in matches)
+        {
+            sum += int.Parse(match.Value);
+        }
+
+        return sum;
+    }
+}
+
 /*
  Description:
 Remove n exclamation marks in the sentence from left to right. n is positive integer.
