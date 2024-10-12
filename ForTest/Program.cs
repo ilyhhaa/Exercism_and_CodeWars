@@ -2705,7 +2705,7 @@ Examples
 "Hi! Hi!" ---> "Hi! Hi"
 "Hi"      ---> "Hi"*/
 
-public class KataRemove
+public class KataRemove3
 {
     public static string Remove(string s)
     {
