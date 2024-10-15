@@ -12,6 +12,39 @@ internal class Program
 }
 
 /*
+ Write a function to get the first element(s) of a sequence. Passing a parameter n (default=1) will return the first n element(s) of the sequence.
+
+If n == 0 return an empty sequence []
+
+Examples
+var arr = new object[] { 'a', 'b', 'c', 'd', 'e' };
+Kata.TakeFirstElements(arr); //=> new object[] { 'a' }
+Kata.TakeFirstElements(arr, 2);// => new object[] { 'a', 'b' }
+Kata.TakeFirstElements(arr, 3); //=> new object[] { 'a', 'b', 'c' }
+Kata.TakeFirstElements(arr, 0); //=> new object[] { }
+ */
+
+public class KataTakeFirstElements
+{
+    public static object[] TakeFirstElements(object[] array, int n = 1)
+    {
+        if (n == 0)
+        {
+            return new object[0];
+        }
+
+        if (n > array.Length)
+        {
+            n = array.Length;
+        }
+
+        object[] result = new object[n];
+        Array.Copy(array, result, n);
+        return result;
+    }
+}
+
+/*
  Given an array with exactly 5 strings "a", "b" or "c" (chars in Java, characters in Fortran, Chars in Haskell), check if the array contains three and two of the same values.
 
 Examples
