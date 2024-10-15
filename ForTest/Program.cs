@@ -10,6 +10,25 @@ internal class Program
       
     }
 }
+
+/*
+ Given an array with exactly 5 strings "a", "b" or "c" (chars in Java, characters in Fortran, Chars in Haskell), check if the array contains three and two of the same values.
+
+Examples
+["a", "a", "a", "b", "b"] ==> true  // 3x "a" and 2x "b"
+["a", "b", "c", "b", "c"] ==> false // 1x "a", 2x "b" and 2x "c"
+["a", "a", "a", "a", "a"] ==> false // 5x "a"
+ */
+
+public class KataCheckThreeAndTwo
+{
+    public static bool CheckThreeAndTwo(string[] array)
+    {
+        var counts = array.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
+        return counts.Values.Contains(3) && counts.Values.Contains(2);
+    }
+}
+
 /*
  Task
 Given an array/list [] of n integers , find maximum triplet sum in the array Without duplications .
