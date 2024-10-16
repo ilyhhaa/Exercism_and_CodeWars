@@ -10,6 +10,35 @@ internal class Program
       
     }
 }
+
+/*
+ You will be given a string (x) featuring a cat 'C' and a mouse 'm'. The rest of the string will be made up of '.'.
+
+You need to find out if the cat can catch the mouse from it's current position. The cat can jump over three characters. So:
+
+C.....m returns 'Escaped!' <-- more than three characters between
+
+C...m returns 'Caught!' <-- as there are three characters between the two, the cat can jump.
+ */
+
+public class KataCatMouse
+{
+    public static string CatMouse(string x)
+    {
+        int catIndex = x.IndexOf('C');
+        int mouseIndex = x.IndexOf('m');
+
+        if (Math.Abs(mouseIndex - catIndex) <= 4)
+        {
+            return "Caught!";
+        }
+        else
+        {
+            return "Escaped!";
+        }
+    }
+}
+
 /*
  The longest street in the world, MAX_STREET, is crossed by many other streets and driven by many drivers. Determine how many streets each driver crosses.
 
