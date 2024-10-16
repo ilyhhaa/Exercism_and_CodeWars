@@ -11,6 +11,52 @@ internal class Program
     }
 }
 /*
+ The longest street in the world, MAX_STREET, is crossed by many other streets and driven by many drivers. Determine how many streets each driver crosses.
+
+Inputs
+(1) A list (or array, depending on language) of streets that intersect MAX_STREET. (2) A list (or array, depending on language) of drivers. Each driver is represented by a pair of streets. The first element of the pair is the street where they enter MAX_STREET; the second is the street they exit. The driver crosses all the streets between those two streets.
+
+Output
+A list (or array, depending on language) showing how many streets each driver crosses.
+
+Example
+CountStreets(new string[] {"first", "second", "third", "fourth", "fifth", "sixth", "seventh"},
+              new string[] {new string[] {"first", "second"}, new string[] {"second", "seventh"}, new string[] {"sixth", "fourth"}}) should return new string[] {0,4,1}.
+
+Details:
+(1) Each street name is a non-empty word of no more than 10 letters. There are no duplicate street names.
+
+(2) The entry and exit streets for each driver are distinct. They are guaranteed to come from the list of streets.
+
+(3) The number of streets n satisfies 2 ≤ n ≤ 105. The number of drivers d satisfies 1 ≤ d ≤ 105. So efficiency is important.
+
+Source: International Collegiate Programming Contest, North Central North American Regional, 2022
+ */
+public class HowManyStreets
+{
+    public static int[] CountStreets(string[] streets, string[][] drivers)
+    {
+        var streetIndices = new Dictionary<string, int>();
+        for (int i = 0; i < streets.Length; i++)
+        {
+            streetIndices[streets[i]] = i;
+        }
+
+        var result = new int[drivers.Length];
+
+        for (int i = 0; i < drivers.Length; i++)
+        {
+            int entryIndex = streetIndices[drivers[i][0]];
+            int exitIndex = streetIndices[drivers[i][1]];
+            result[i] = Math.Abs(exitIndex - entryIndex) - 1;
+        }
+
+        return result;
+    }
+}
+
+
+/*
  You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
 
 The returned value must be a string, and have "***" between each of its letters.
