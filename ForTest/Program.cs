@@ -52,6 +52,13 @@ Explanation:
 Adjacent digits differ by 1
  */
 
+/*
+ public static string JumpingNumber(int n)
+    {
+        return n < 10 ? "Jumping!!" : Math.Abs(n%10 - (n/10)%10) != 1 ? "Not!!" : JumpingNumber(n/10);
+    }
+ */
+
 public class KataJumpingNumber
 {
     public static string JumpingNumber(int number)
