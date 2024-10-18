@@ -10,6 +10,64 @@ internal class Program
       
     }
 }
+/*
+ Definition
+Jumping number is the number that All adjacent digits in it differ by 1.
+
+Task
+Given a number, Find if it is Jumping or not .
+
+Warm-up (Highly recommended)
+Playing With Numbers Series
+Notes
+Number passed is always Positive .
+
+Return the result as String .
+
+The difference between ‘9’ and ‘0’ is not considered as 1 .
+
+All single digit numbers are considered as Jumping numbers.
+
+Input >> Output Examples
+jumpingNumber(9) ==> return "Jumping!!"
+Explanation:
+It's single-digit number
+jumpingNumber(79) ==> return "Not!!"
+Explanation:
+Adjacent digits don't differ by 1
+jumpingNumber(23) ==> return "Jumping!!"
+Explanation:
+Adjacent digits differ by 1
+jumpingNumber(556847) ==> return "Not!!"
+Explanation:
+Adjacent digits don't differ by 1
+jumpingNumber(4343456) ==> return "Jumping!!"
+Explanation:
+Adjacent digits differ by 1
+jumpingNumber(89098) ==> return "Not!!"
+Explanation:
+Adjacent digits don't differ by 1
+jumpingNumber(32) ==> return "Jumping!!"
+Explanation:
+Adjacent digits differ by 1
+ */
+
+public class KataJumpingNumber
+{
+    public static string JumpingNumber(int number)
+    {
+        string numStr = number.ToString();
+
+        if (numStr.Length == 1) return "Jumping!!";
+
+        for (int i = 0; i < numStr.Length - 1; i++)
+        {
+            if (Math.Abs(numStr[i] - numStr[i + 1]) != 1) return "Not!!";
+        }
+
+        return "Jumping!!";
+    }
+}
 
 /*
  To complete this Kata you need to make a function multiplyAll/multiply_all which takes an array of integers as an argument. This function must return another function, which takes a single integer as an argument and returns a new array.
