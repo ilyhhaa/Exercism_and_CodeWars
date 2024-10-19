@@ -42,6 +42,11 @@ public class KataVowel2Index
         }
 
         return result.ToString();
+
+        /*public static string Vowel2Index(string str)
+        {
+            return Regex.Replace(str, "[aeiou]", x => (x.Index + 1).ToString());
+        }*/
     }
 }
 
