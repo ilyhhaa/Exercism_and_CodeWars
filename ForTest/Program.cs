@@ -10,6 +10,9 @@ internal class Program
       
     }
 }
+
+
+
 /*
  Find the difference between the square of the sum of the first n natural numbers (1 <= n <= 100) and the sum of their squares.
 
@@ -34,6 +37,8 @@ public class KataDifferenceOfSquares
         int squareOfSum = sumOfNumbers * sumOfNumbers;
 
         return squareOfSum - sumOfSquares;
+
+        //return n * (n + 1) * (3 * n * n - n - 2) / 12;
     }
 }
 
