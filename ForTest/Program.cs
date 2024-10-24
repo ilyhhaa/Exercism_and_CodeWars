@@ -12,6 +12,39 @@ internal class Program
 }
 
 /*
+ Given a string "abc" and assuming that each letter in the string has a value equal to its position in the alphabet, our string will have a value of 1 + 2 + 3 = 6. This means that: a = 1, b = 2, c = 3 ... z = 26.
+
+You will be given a list of strings and your task will be to return the values of the strings as explained above multiplied by the position of that string in the list. For our purpose, position begins with 1.
+
+["abc", "abc abc"] should return [6, 24] because of [ 6 * 1, 12 * 2 ]. Note how spaces are ignored.
+
+"abc" has a value of 6, while "abc abc" has a value of 12. Now, the value at position 1 is multiplied by 1 while the value at position 2 is multiplied by 2.
+
+Input will only contain lowercase characters and spaces.
+
+Good luck!
+ */
+
+public class KataWordValue
+{
+    public static int[] WordValue(string[] a)
+    {
+        int[] result = new int[a.Length];
+
+        for (int i = 0; i < a.Length; i++)
+        {
+            int value = a[i]
+                .Replace(" ", "")
+                .Sum(c => c - 'a' + 1);
+
+            result[i] = value * (i + 1);
+        }
+
+        return result;
+    }
+}
+
+/*
  You have stumbled across the divine pleasure that is owning a dog and a garden. Now time to pick up all the cr@p! :D
 
 Given a 2D array to represent your garden, you must find and collect all of the dog cr@p - represented by '@'.
