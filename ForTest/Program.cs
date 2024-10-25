@@ -7,7 +7,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-      
+
     }
 }
 
@@ -87,7 +87,6 @@ public class KataDataReverse
 
                 result[i] = value * (i + 1);
             }
-
             return result;
         }
     }
