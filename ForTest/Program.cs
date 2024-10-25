@@ -30,6 +30,8 @@ The data is given in an array as such:
 Note: In the C and NASM languages you are given the third parameter which is the number of segment blocks.
  */
 
+
+
 public class KataDataReverse
 {
     public static int[] DataReverse(int[] data)
@@ -44,6 +46,16 @@ public class KataDataReverse
 
         return reversedData;
 
+        /*
+         public static int[] DataReverse(int[] data) =>
+       Enumerable.Range(0,data.Length/8)
+         .Select(i => data
+           .Skip(i*8)
+           .Take(8))
+         .Reverse()
+         .SelectMany(i => i)
+         .ToArray();
+         */
 
     }
 
