@@ -12,6 +12,31 @@ internal class Program
 }
 
 /*
+ You must implement a function that returns the difference between the largest and the smallest value in a given list / array (lst) received as the parameter.
+
+lst contains integers, that means it may contain some negative numbers
+if lst is empty or contains a single element, return 0
+lst is not sorted
+[1, 2, 3, 4]   //  returns 3 because 4 -   1  == 3
+[1, 2, 3, -4]  //  returns 7 because 3 - (-4) == 7
+ */
+public class Kata
+{
+    public static int MaxDiff(int[] lst)
+    {
+        if (lst == null || lst.Length < 2)
+        {
+            return 0;
+        }
+
+        int max = lst.Max();
+        int min = lst.Min();
+
+        return max - min;
+    }
+}
+
+/*
  The number n is Evil if it has an even number of 1's in its binary representation.
 The first few Evil numbers: 3, 5, 6, 9, 10, 12, 15, 17, 18, 20
 
