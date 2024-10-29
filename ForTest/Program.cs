@@ -12,6 +12,18 @@ internal class Program
 }
 
 /*
+ Just a simple sorting usage. Create a function that returns the elements of the input-array / list sorted in lexicographical order.
+ */
+public class KataSortMe
+{
+    public static string[] SortMe(string[] names)
+    {
+        Array.Sort(names);
+        return names;
+    }
+}
+
+/*
  In this kata, your job is to return the two distinct highest values in a list. If there're less than 2 unique values, return as many of them, as possible.
 
 The result should also be ordered from highest to lowest.
