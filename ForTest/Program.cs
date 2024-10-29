@@ -12,6 +12,26 @@ internal class Program
 }
 
 /*
+ In this kata, your job is to return the two distinct highest values in a list. If there're less than 2 unique values, return as many of them, as possible.
+
+The result should also be ordered from highest to lowest.
+
+Examples:
+
+[4, 10, 10, 9]  =>  [10, 9]
+[1, 1, 1]  =>  [1]
+[]  =>  []
+ */
+
+public static class KataTwoHighest
+{
+    public static int[] TwoHighest(int[] arr)
+    {
+        return arr.Distinct().OrderByDescending(x => x).Take(2).ToArray();
+    }
+}
+
+/*
  You must implement a function that returns the difference between the largest and the smallest value in a given list / array (lst) received as the parameter.
 
 lst contains integers, that means it may contain some negative numbers
