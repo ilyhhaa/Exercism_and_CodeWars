@@ -10,6 +10,16 @@ internal class Program
 
     }
 }
+/*
+ Enjoying your holiday, you head out on a scuba diving trip! Disaster!! The boat has caught fire!! You will be provided a string that lists many boat related items. If any of these items are "Fire" you must spring into action. Change any instance of "Fire" into "~~". Then return the string. Go to work!
+ */
+public class KataFireFight
+{
+    public static string FireFight(string s)
+    {
+        return s.Replace("Fire", "~~");
+    }
+}
 
 /*
  Implement a function that takes two numbers m and n and returns an array of the first m multiples of the real number n. Assume that m is a positive integer.
