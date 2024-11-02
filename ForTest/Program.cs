@@ -11,6 +11,19 @@ internal class Program
     }
 }
 /*
+ Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
+
+Unfortunately for you, your drive is very bumpy! Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return Car Dead
+ */
+class KataBump
+{
+    public static string Bump(string input)
+    {
+        int bumpCount = input.Count(c => c == 'n'); return bumpCount <= 15 ? "Woohoo!" : "Car Dead";
+    }
+}
+
+/*
  Enjoying your holiday, you head out on a scuba diving trip! Disaster!! The boat has caught fire!! You will be provided a string that lists many boat related items. If any of these items are "Fire" you must spring into action. Change any instance of "Fire" into "~~". Then return the string. Go to work!
  */
 public class KataFireFight
