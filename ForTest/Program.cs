@@ -11,6 +11,24 @@ internal class Program
     }
 }
 /*
+ Define a method/function that removes from a given array of integers all the values contained in a second array.
+
+Examples (input -> output):
+* [1, 1, 2, 3, 1, 2, 3, 4], [1, 3] -> [2, 2, 4]
+* [1, 1, 2, 3, 1, 2, 3, 4, 4, 3, 5, 6, 7, 2, 8], [1, 3, 4, 2] -> [5, 6, 7, 8]
+* [8, 2, 7, 2, 3, 4, 6, 5, 4, 4, 1, 2, 3], [2, 4, 3] -> [8, 7, 6, 5, 1]
+ */
+public class KataRemoveRemoveRemove
+{
+    public static int[] Remove(int[] integerList, int[] valuesList)
+    {
+        HashSet<int> valuesSet = new HashSet<int>(valuesList);
+
+        return integerList.Where(x => !valuesSet.Contains(x)).ToArray();
+    }
+}
+
+/*
  
  Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
 
