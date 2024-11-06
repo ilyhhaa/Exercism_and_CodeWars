@@ -31,6 +31,8 @@ And a tower with 6 floors looks like this:
   " ********* ", 
   "***********"
 ]
+
+//return Enumerable.Range(1, nFloors).Select(i => string.Format("{0}{1}{0}", i == nFloors ? "" : new string(' ', nFloors - i), new string('*', 2 * i - 1))).ToArray();
  */
 public class Kata
 {
