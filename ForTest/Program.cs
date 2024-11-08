@@ -61,6 +61,8 @@ class KataSpecialNumber
             }
         }
         return "Special!!";
+
+        //public static string SpecialNumber(int number) => Regex.IsMatch(number.ToString(), "[^0-5]") ? "NOT!!" : "Special!!";
     }
 }
 
