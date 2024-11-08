@@ -12,6 +12,69 @@ internal class Program
 }
 
 /*
+ The word i18n is a common abbreviation of internationalization in the developer community, used instead of typing the whole word and trying to spell it correctly. Similarly, a11y is an abbreviation of accessibility.
+
+Write a function that takes a string and turns any and all "words" (see below) within that string of length 4 or greater into an abbreviation, following these rules:
+
+A "word" is a sequence of alphabetical characters. By this definition, any other character like a space or hyphen (eg. "elephant-ride") will split up a series of letters into two words (eg. "elephant" and "ride").
+The abbreviated version of the word should have the first letter, then the number of removed characters, then the last letter (eg. "elephant ride" => "e6t r2e").
+Example
+abbreviate("elephant-rides are really fun!")
+//          ^^^^^^^^*^^^^^*^^^*^^^^^^*^^^*
+// words (^):   "elephant" "rides" "are" "really" "fun"
+//                123456     123     1     1234     1
+// ignore short words:               X              X
+
+// abbreviate:    "e6t"     "r3s"  "are"  "r4y"   "fun"
+// all non-word characters (*) remain in place
+//                     "-"      " "    " "     " "     "!"
+=== "e6t-r3s are r4y fun!"
+ */
+
+public static class AbbreviationHelper { public static string Abbreviate(string input)
+    { 
+        StringBuilder result = new StringBuilder();
+
+        int wordStartIndex = -1;
+
+        for (int i = 0; i <= input.Length; i++)
+        { 
+            if (IsLetterAt(input, i))
+            { 
+                wordStartIndex = wordStartIndex == -1 ? i : wordStartIndex;
+            }
+            else
+            { 
+                if (wordStartIndex != -1)
+                {
+                    AppendWordOrAbbreviation(input, result, wordStartIndex, i);
+                    wordStartIndex = -1; } if (i < input.Length)
+                { result.Append(input[i]); }
+            }
+        }
+        
+        return result.ToString();
+    }
+    private static bool IsLetterAt(string input, int index)
+    { 
+        return index < input.Length && char.IsLetter(input[index]);
+    } 
+    private static void AppendWordOrAbbreviation(string input, StringBuilder result, int start, int end)
+    { 
+        int wordLength = end - start; if (wordLength > 3)
+        { result.Append(input[start]);
+            result.Append(wordLength - 2);
+            result.Append(input[end - 1]); 
+        }
+        else 
+        { 
+            result.Append(input, start, wordLength);
+        }
+    }
+}
+
+
+/*
  A number is a Special Number if it’s digits only consist 0, 1, 2, 3, 4 or 5
 
 Given a number determine if it special number or not .
@@ -190,7 +253,8 @@ public static class KataExecute
             '-' => num1 - num2,
             '*' => num1 * num2,
             '/' when num2 != 0 => num1 / num2,
-            '/' => null, _ => throw new ArgumentException("Invalid operator"),
+            '/' => null,
+            _ => throw new ArgumentException("Invalid operator"),
         };
     }
 
