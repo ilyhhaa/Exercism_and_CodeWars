@@ -37,6 +37,13 @@ public static class StringHelper
     {
         return str[index] == '9' && index > 0 && index < str.Length - 1 && str[index - 1] == '7' && str[index + 1] == '7';
     }
+
+    /*
+     public static string SevenAteNine(string str)
+  {
+  	return Regex.Replace(str, @"(?<=7)9(?=7)", "");
+  }
+     */
 }
 
 /*
