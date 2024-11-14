@@ -12,6 +12,34 @@ internal class Program
 }
 
 /*
+ * Write a function that removes every lone 9 that is inbetween 7s.
+
+"79712312" --> "7712312"
+"79797"    --> "777"
+ */
+public static class StringHelper
+{ 
+    public static string SevenAteNine(string str)
+    {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.Length; i++)
+        
+        {
+            if (IsLoneNine(str, i))
+            {
+                continue;
+            }
+            result.Append(str[i]);
+        }
+        return result.ToString();
+    }
+    private static bool IsLoneNine(string str, int index)
+    {
+        return str[index] == '9' && index > 0 && index < str.Length - 1 && str[index - 1] == '7' && str[index + 1] == '7';
+    }
+}
+
+/*
  The word i18n is a common abbreviation of internationalization in the developer community, used instead of typing the whole word and trying to spell it correctly. Similarly, a11y is an abbreviation of accessibility.
 
 Write a function that takes a string and turns any and all "words" (see below) within that string of length 4 or greater into an abbreviation, following these rules:
@@ -31,43 +59,48 @@ abbreviate("elephant-rides are really fun!")
 === "e6t-r3s are r4y fun!"
  */
 
-public static class AbbreviationHelper { public static string Abbreviate(string input)
-    { 
+public static class AbbreviationHelper
+{
+    public static string Abbreviate(string input)
+    {
         StringBuilder result = new StringBuilder();
 
         int wordStartIndex = -1;
 
         for (int i = 0; i <= input.Length; i++)
-        { 
+        {
             if (IsLetterAt(input, i))
-            { 
+            {
                 wordStartIndex = wordStartIndex == -1 ? i : wordStartIndex;
             }
             else
-            { 
+            {
                 if (wordStartIndex != -1)
                 {
                     AppendWordOrAbbreviation(input, result, wordStartIndex, i);
-                    wordStartIndex = -1; } if (i < input.Length)
+                    wordStartIndex = -1;
+                }
+                if (i < input.Length)
                 { result.Append(input[i]); }
             }
         }
-        
+
         return result.ToString();
     }
     private static bool IsLetterAt(string input, int index)
-    { 
+    {
         return index < input.Length && char.IsLetter(input[index]);
-    } 
+    }
     private static void AppendWordOrAbbreviation(string input, StringBuilder result, int start, int end)
-    { 
+    {
         int wordLength = end - start; if (wordLength > 3)
-        { result.Append(input[start]);
+        {
+            result.Append(input[start]);
             result.Append(wordLength - 2);
-            result.Append(input[end - 1]); 
+            result.Append(input[end - 1]);
         }
-        else 
-        { 
+        else
+        {
             result.Append(input, start, wordLength);
         }
     }
@@ -4184,4 +4217,5 @@ public static class KataExecute
             }
             // return array.Skip(1).Select((x,i) => x * array[i]).Max();
         }
-    }
+    } 
+}
