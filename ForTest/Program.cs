@@ -33,6 +33,8 @@ public static class StringHelper
 
         return words.Select(word => word[0]);
     }
+
+    //return string.Join("", s.Split(' ').Select(x => x[0]));
 }
 
 // Example usage
