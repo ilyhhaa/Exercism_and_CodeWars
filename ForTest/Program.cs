@@ -11,6 +11,34 @@ internal class Program
     }
 }
 
+
+/*
+In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
+
+For example:
+
+"This Is A Test" ==> "TIAT"
+Strings will only contain letters and spaces, with exactly 1 space between words, and no leading/trailing spaces.
+*/
+public static class StringHelper
+{
+    public static string MakeString(string s)
+    {
+        return string.Concat(GetFirstCharacters(s));
+    }
+
+    private static IEnumerable<char> GetFirstCharacters(string s)
+    {
+        var words = s.Split(' ');
+
+        return words.Select(word => word[0]);
+    }
+}
+
+// Example usage
+// Console.WriteLine(StringHelper.MakeString("This Is A Test")); // Output: "TIAT"
+
+
 /*
  Create a public class called Cube without a constructor which gets one single private integer variable Side, a getter GetSide() and a setter SetSide(int num) method for this property. Actually, getter and setter methods are not the common way to write this code in C#. In the next kata of this series, we gonna refactor the code and make it a bit more professional...
 
@@ -41,7 +69,7 @@ public class Cube
 "79712312" --> "7712312"
 "79797"    --> "777"
  */
-public static class StringHelper
+public static class StringHelper1
 { 
     public static string SevenAteNine(string str)
     {
