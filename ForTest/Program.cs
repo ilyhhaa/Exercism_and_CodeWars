@@ -11,6 +11,25 @@ internal class Program
     }
 }
 
+
+/*
+ Complete the solution so that it returns a formatted string. The return value should equal "Value is VALUE" where value is a 5 digit padded number.
+
+Example:
+
+solution(5); // should return "Value is 00005"
+ */
+
+public class PaddedNumbers
+{
+    public static string Solution(int value)
+    {
+        string paddedValue = value.ToString("D5");
+        return $"Value is {paddedValue}";
+    }
+}
+
+
 /*
  You received a whatsup message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
 
