@@ -11,6 +11,28 @@ internal class Program
     }
 }
 
+/*
+ In this kata, we will make a function to test whether a period is late.
+
+Our function will take three parameters:
+
+last - The Date object with the date of the last period
+
+today - The Date object with the date of the check
+
+cycleLength - Integer representing the length of the cycle in days
+
+Return true if the number of days passed from last to today is greater than cycleLength. Otherwise, return false.
+ */
+public static class KataPeriodIsLate
+{
+    public static bool PeriodIsLate(DateTime last, DateTime today, int cycleLength)
+    {
+        int daysPassed = (today - last).Days;
+        return daysPassed > cycleLength;
+    }
+}
+
 
 /*
  Complete the solution so that it returns a formatted string. The return value should equal "Value is VALUE" where value is a 5 digit padded number.
