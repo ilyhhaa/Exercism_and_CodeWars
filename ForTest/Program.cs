@@ -10,6 +10,19 @@ internal class Program
 
     }
 }
+/*
+ Create a function that returns the average of an array of numbers ("scores"), rounded to the nearest whole number. You are not allowed to use any loops (including for, for/in, while, and do/while loops).
+
+The array will never be empty.
+ */
+public class KataAverage
+{
+    public static int Average(int[] scores)
+    {
+        return (int)Math.Round(scores.Average());
+    }
+}
+
 
 /*
  In this kata, we will make a function to test whether a period is late.
