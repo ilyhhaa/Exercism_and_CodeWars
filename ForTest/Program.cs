@@ -36,6 +36,32 @@ Depending on the cumulative score of the team, return the appropriate sentiment:
 < 100 & > 80: 'i can handle this'
 100 or over: 'party time!!'
  */
+
+
+/*
+ public class Kata
+{
+  public static string Boredom(Dictionary<string, string> staff)
+  {
+    var score = staff.Sum(x => x.Value switch
+    {
+        "accounts" => 1,
+        "finance" => 2,
+        "canteen" => 10,
+        "regulation" => 3,
+        "trading" => 6,
+        "change" => 6,
+        "IS" => 8,
+        "retail" => 5,
+        "cleaning" => 4,
+        "pissing about" => 25,
+        _ => 0
+    });
+    
+    return score >= 100 ? "party time!!" : score <= 80 ? "kill me now" : "i can handle this";
+  }
+}
+ */
 public class KataBoredom
 {
     public static string Boredom(Dictionary<string, string> staff)
