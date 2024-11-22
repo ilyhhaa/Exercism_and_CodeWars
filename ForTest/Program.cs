@@ -47,6 +47,15 @@ new_avg([14, 30, 5, 7, 9, 11, 15], 2)
 should raise an error (ValueError or invalid_argument or argument-error or DomainError or ... ) 
 or return `-1` or ERROR or Nothing or None depending on the language.
  */
+
+/*
+   public static long NewAvg(double[] arr, double navg)
+  {
+    var don = (arr.Length + 1) * navg - arr.Sum();
+    return don > 0 ? (long) Math.Ceiling(don) : throw new ArgumentException();
+  }
+ */
+
 public class NewAverage
 {
     public static long NewAvg(double[] arr, double navg)
