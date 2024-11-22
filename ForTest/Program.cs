@@ -47,6 +47,13 @@ public class Rotations
         }
         return true;
     }
+
+    /*
+     public static bool ContainAllRots(string s, List<string> arr)
+  {
+    return !s.Where((c, i) => !arr.Contains((s + s).Substring(i, s.Length))).Any();
+  }
+     */
 }
 
 
