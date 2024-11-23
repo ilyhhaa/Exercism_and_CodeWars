@@ -12,6 +12,37 @@ internal class Program
 }
 
 /*
+ Write a function that takes an integer num (num >= 0) and inserts dashes ('-') between each two odd digits in num.
+
+Examples
+454793 ---> "4547-9-3"
+     0 ---> "0"
+     1 ---> "1"
+13579  ---> "1-3-5-7-9"
+ 86420 ---> "86420"
+ */
+public class KataInsertDash
+{
+    public static string InsertDash(int num)
+    {
+        var numStr = num.ToString();
+        var result = new StringBuilder();
+
+        for (int i = 0; i < numStr.Length; i++)
+        {
+            result.Append(numStr[i]);
+            if (i < numStr.Length - 1 && (numStr[i] - '0') % 2 != 0 && (numStr[i + 1] - '0') % 2 != 0)
+            {
+                result.Append('-');
+            }
+        }
+
+        return result.ToString();
+    }
+}
+
+
+/*
  You are given a list of unique integers arr, and two integers a and b. Your task is to find out whether or not a and b appear consecutively in arr, and return a boolean value (True if a and b are consecutive, False otherwise).
 
 It is guaranteed that a and b are both present in arr.
