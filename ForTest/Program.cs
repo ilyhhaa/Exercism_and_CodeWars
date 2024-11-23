@@ -10,6 +10,9 @@ internal class Program
 
     }
 }
+
+
+
 /*
  Write a function that returns the number of occurrences of an element in an array.
 
@@ -34,6 +37,16 @@ public class OccurrencesKata
         }
         return count;
     }
+
+    /*
+     public class OccurrencesKata
+{
+	public static int NumberOfOccurrences(int x, int[] xs)
+  {
+    return xs.Count(el => el == x);
+  }
+}
+     */
 }
 
 
