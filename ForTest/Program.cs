@@ -11,6 +11,34 @@ internal class Program
     }
 }
 /*
+ Write a function that returns the number of occurrences of an element in an array.
+
+Examples
+var sample = { 1, 0, 2, 2, 3 };
+NumberOfOccurrences(0, sample) == 1;
+NumberOfOccurrences(4, sample) == 0;
+NumberOfOccurrences(2, sample) == 2;
+NumberOfOccurrences(3, sample) == 1;
+ */
+public class OccurrencesKata
+{
+    public static int NumberOfOccurrences(int x, int[] xs)
+    {
+        int count = 0;
+        foreach (int item in xs)
+        {
+            if (item == x)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+
+
+/*
  Input:
 
 a string strng
