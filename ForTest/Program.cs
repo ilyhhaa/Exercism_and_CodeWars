@@ -44,6 +44,9 @@ public class SequenceSum
         }
 
         return result;
+
+        
+        //return Enumerable.Range(0, n + 1).Select(x => x * (x + 1) / 2).ToArray();
     }
 }
 
