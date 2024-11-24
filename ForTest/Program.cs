@@ -11,6 +11,15 @@ internal class Program
     }
 }
 
+//Get ASCII value of a character.
+public static class KataGetASCII
+{
+    public static int GetASCII(char c)
+    {
+        return (int)c;
+    }
+}
+
 /*
  Write a function that takes an integer num (num >= 0) and inserts dashes ('-') between each two odd digits in num.
 
