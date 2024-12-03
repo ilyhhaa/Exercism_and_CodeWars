@@ -10,6 +10,35 @@ internal class Program
 
     }
 }
+
+
+class BubbleSort
+{
+    static void BubbleSorting(int[] array)
+    {
+        bool swapped;
+        int n = array.Length;
+
+        do
+        {
+            swapped = false;
+            for (int i = 1; i < n; i++)
+            {
+                if (array[i - 1] > array[i])
+                {
+                    int temp = array[i - 1];
+                    array[i - 1] = array[i];
+                    array[i] = temp;
+                    swapped = true;
+                }
+            }
+            n--;
+        } while (swapped);
+    }
+
+}
+
+
 /*
  Imagine you are creating a game where the user has to guess the correct number. But there is a limit of how many guesses the user can do.
 
