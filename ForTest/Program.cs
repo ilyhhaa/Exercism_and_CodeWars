@@ -11,6 +11,60 @@ internal class Program
     }
 }
 /*
+Task
+
+Given a list of positive integers, determine the minimum non-negative integer that needs to be inserted so that the sum of all elements becomes a prime number.
+
+Notes
+
+The list will always have at least 2 elements.
+All elements will be positive integers (n > 0).
+The list may contain duplicate values.
+The new sum must be the closest prime number that is greater than or equal to the current sum.
+*/
+
+class ConvertToPrime
+	{
+		public static int MinimumNumber(int[] numbers)
+{
+    
+    int sum = numbers.Sum();
+    
+    int target = sum;
+    while (!IsPrime(target))
+    {
+        target++; 
+    }
+    
+   
+    return target - sum;
+}
+
+
+private static bool IsPrime(int number)
+{
+    
+    if (number <= 1) return false;
+    
+    
+    if (number == 2) return true;
+    
+    
+    if (number % 2 == 0) return false;
+    
+    
+    for (int i = 3; i <= Math.Sqrt(number); i += 2)
+    {
+        if (number % i == 0) return false; 
+    }
+    
+    return true; 
+}
+	}
+}
+
+
+/*
 The vowel substrings in the word codewarriors are o,e,a,io. The longest of these has a length of 2. Given a lowercase string that has alphabetic characters only (both vowels and consonants) and no spaces, return the length of the longest vowel substring. Vowels are any of aeiou.
 */
 public static class LongestVowelChain
