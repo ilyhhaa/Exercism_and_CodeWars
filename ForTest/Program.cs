@@ -10,6 +10,50 @@ internal class Program
 
     }
 }
+public class Revrot 
+{
+    public static string RevRot(string strng, int sz)
+    {
+        
+        if (string.IsNullOrEmpty(strng) || sz <= 0 || sz > strng.Length)
+            return ""; 
+        
+       
+        int chunkCount = strng.Length / sz;
+        int resultLength = chunkCount * sz; 
+        
+        return String.Create(resultLength, (strng, sz), (span, state) =>
+        {
+            int targetIndex = 0; 
+            
+            
+            for (int i = 0; i < state.strng.Length - state.sz + 1; i += state.sz)
+            {
+                
+                int sum = 0;
+                for (int j = i; j < i + state.sz; j++)
+                    sum += state.strng[j] - '0';
+                
+              
+                if (sum % 2 == 0)
+                {
+                  
+                    for (int j = i + state.sz - 1; j >= i; j--)
+                        span[targetIndex++] = state.strng[j];
+                }
+                else
+                {
+                    
+                    for (int j = i + 1; j < i + state.sz; j++)
+                        span[targetIndex++] = state.strng[j];
+                    span[targetIndex++] = state.strng[i];
+                }
+            }
+        });
+    }
+}
+
+
 public class KataSPLIT
 {
     public static string SplitInParts(string s, int partLength)
