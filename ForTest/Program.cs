@@ -10,6 +10,32 @@ internal class Program
 
     }
 }
+
+public class Thirteen 
+{
+    private static readonly int[] r = { 1, 10, 9, 12, 3, 4 };
+    
+    public static long Thirt(long n)
+    {
+        while (true)
+        {
+            long sum = 0;
+            long temp = n;
+            int i = 0;
+            
+            while (temp > 0)
+            {
+                sum += (temp % 10) * r[i % 6];
+                temp /= 10;
+                i++;
+            }
+            
+            if (sum == n) return sum;
+            n = sum;
+        }
+    }
+}
+
 /*
 Task
 
