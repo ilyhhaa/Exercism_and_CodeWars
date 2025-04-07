@@ -10,6 +10,34 @@ internal class Program
 
     }
 }
+public class KataSPLIT
+{
+    public static string SplitInParts(string s, int partLength)
+    {
+        int spaces = (s.Length - 1) / partLength;
+        int totalLength = s.Length + spaces;
+        
+        return String.Create(totalLength, (s, partLength), (span, state) =>
+        {
+            int sourceIndex = 0;
+            int targetIndex = 0;
+            int charsInPart = 0;
+            
+            while (sourceIndex < state.s.Length)
+            {
+                span[targetIndex++] = state.s[sourceIndex++];
+                charsInPart++;
+                
+                if (charsInPart == state.partLength && sourceIndex < state.s.Length)
+                {
+                    span[targetIndex++] = ' ';
+                    charsInPart = 0;
+                }
+            }
+        });
+    }
+}
+
 
 public class Thirteen 
 {
