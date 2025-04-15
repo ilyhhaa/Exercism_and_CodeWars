@@ -11,6 +11,13 @@ internal class Program
     }
 }
 
+
+
+/*public static class Kata
+  {
+    public static string RemoveParentheses(string s)
+      => s.Contains('(') ? RemoveParentheses(Regex.Replace(s, @"\([^()]*\)","")) : s;    
+  }*/
 public static class KataRemoveParentheses
   {
     public static string RemoveParentheses(string s)
