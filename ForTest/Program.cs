@@ -11,7 +11,30 @@ internal class Program
     }
 }
 
+public static class KataExpandedForm
+{
+    public static string ExpandedForm(long num)
+{
+    StringBuilder result = new StringBuilder();
+    string numStr = num.ToString();
+    int len = numStr.Length;
 
+    for (int i = 0; i < len; i++)
+    {
+        if (numStr[i] != '0')
+        {
+            if (result.Length > 0)
+            {
+                result.Append(" + ");
+            }
+            result.Append(numStr[i]);
+            result.Append('0', len - i - 1);
+        }
+    }
+
+    return result.ToString();
+}
+}
 
 /*public static class Kata
   {
