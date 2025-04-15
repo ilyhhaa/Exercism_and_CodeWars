@@ -10,6 +10,36 @@ internal class Program
 
     }
 }
+
+public static class KataRemoveParentheses
+  {
+    public static string RemoveParentheses(string s)
+{
+    char[] result = new char[s.Length];
+    int index = 0;
+    int depth = 0;
+
+    for (int i = 0; i < s.Length; i++)
+    {
+        if (s[i] == '(')
+        {
+            depth++;
+        }
+        else if (s[i] == ')')
+        {
+            depth--;
+        }
+        else if (depth == 0)
+        {
+            result[index++] = s[i];
+        }
+    }
+
+    return new string(result, 0, index);
+}
+  }
+
+
 public class Revrot 
 {
     public static string RevRot(string strng, int sz)
